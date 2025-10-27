@@ -1,0 +1,668 @@
+---
+import { getCollection } from 'astro:content';
+
+// Get all services sorted by order
+const allServices = await getCollection('services');
+const services = allServices.sort((a, b) => a.data.order - b.data.order);
+
+// Page metadata
+const pageTitle = "Our Services | Expert Building Services in Cornwall & Devon";
+const pageDescription = "Comprehensive building services in Cornwall & Devon including full builds, renovations, stone masonry, project management, heat pumps, and lime works. Quality craftsmanship guaranteed.";
+const canonicalURL = new URL('/services', Astro.site);
+
+// Schema.org structured data for the services page
+const serviceSchemas = services.map(service => ({
+  "@type": "Service",
+  "serviceType": service.data.title,
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Arron Bennett Building Contractors",
+    "image": "/images/logo.png",
+    "telephone": "+44-1234-567890",
+    "email": "info@arronbennettbuilding.co.uk",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Cornwall",
+      "addressRegion": "Cornwall",
+      "addressCountry": "GB"
+    }
+  },
+  "areaServed": [
+    {
+      "@type": "State",
+      "name": "Cornwall"
+    },
+    {
+      "@type": "State",
+      "name": "Devon"
+    }
+  ],
+  "description": service.data.description,
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock"
+  }
+}));
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": pageTitle,
+      "description": pageDescription,
+      "url": canonicalURL.toString(),
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": Astro.site?.toString()
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": canonicalURL.toString()
+        }
+      ]
+    },
+    ...serviceSchemas
+  ]
+};
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{pageTitle}</title>
+  <meta name="description" content={pageDescription}>
+  <link rel="canonical" href={canonicalURL}>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content={canonicalURL}>
+  <meta property="og:title" content={pageTitle}>
+  <meta property="og:description" content={pageDescription}>
+  <meta property="og:image" content={new URL('/images/services-og.jpg', Astro.site)}>
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content={canonicalURL}>
+  <meta property="twitter:title" content={pageTitle}>
+  <meta property="twitter:description" content={pageDescription}>
+  <meta property="twitter:image" content={new URL('/images/services-og.jpg', Astro.site)}>
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --color-primary: #1a2d4d;
+      --color-secondary: #2d4a6b;
+      --color-accent: #c99a6e;
+      --color-text: #333;
+      --color-text-light: #666;
+      --color-bg: #fff;
+      --color-bg-light: #f8f9fa;
+      --color-border: #e0e0e0;
+      --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      --spacing-xs: 0.5rem;
+      --spacing-sm: 1rem;
+      --spacing-md: 1.5rem;
+      --spacing-lg: 2rem;
+      --spacing-xl: 3rem;
+      --spacing-2xl: 4rem;
+      --container-max: 1200px;
+      --border-radius: 8px;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--color-text);
+      line-height: 1.6;
+      background: var(--color-bg);
+    }
+
+    .container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 var(--spacing-md);
+    }
+
+    /* Header Styles */
+    .header {
+      background: var(--color-primary);
+      color: white;
+      padding: var(--spacing-md) 0;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      text-decoration: none;
+    }
+
+    .nav {
+      display: flex;
+      gap: var(--spacing-lg);
+      list-style: none;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .nav a:hover {
+      color: var(--color-accent);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+      color: white;
+      padding: var(--spacing-2xl) 0;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: var(--spacing-md);
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .hero p {
+      font-size: clamp(1.1rem, 2vw, 1.3rem);
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.95;
+    }
+
+    /* Breadcrumbs */
+    .breadcrumbs {
+      padding: var(--spacing-md) 0;
+      background: var(--color-bg-light);
+    }
+
+    .breadcrumbs nav {
+      display: flex;
+      gap: var(--spacing-xs);
+      font-size: 0.9rem;
+      color: var(--color-text-light);
+    }
+
+    .breadcrumbs a {
+      color: var(--color-secondary);
+      text-decoration: none;
+    }
+
+    .breadcrumbs a:hover {
+      text-decoration: underline;
+    }
+
+    /* Services Grid */
+    .services-section {
+      padding: var(--spacing-2xl) 0;
+    }
+
+    .section-intro {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto var(--spacing-xl);
+    }
+
+    .section-intro h2 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      color: var(--color-primary);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .section-intro p {
+      font-size: 1.1rem;
+      color: var(--color-text-light);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: var(--spacing-xl);
+      margin-bottom: var(--spacing-2xl);
+    }
+
+    .service-card {
+      background: white;
+      border: 1px solid var(--color-border);
+      border-radius: var(--border-radius);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+
+    .service-image {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      background: var(--color-bg-light);
+    }
+
+    .service-content {
+      padding: var(--spacing-lg);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      color: var(--color-primary);
+      margin-bottom: var(--spacing-sm);
+      line-height: 1.3;
+    }
+
+    .service-description {
+      color: var(--color-text);
+      margin-bottom: var(--spacing-md);
+      line-height: 1.7;
+      flex: 1;
+    }
+
+    .service-features {
+      list-style: none;
+      margin-bottom: var(--spacing-md);
+    }
+
+    .service-features li {
+      padding: var(--spacing-xs) 0;
+      padding-left: 1.5rem;
+      position: relative;
+      color: var(--color-text-light);
+      font-size: 0.95rem;
+    }
+
+    .service-features li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--color-accent);
+      font-weight: bold;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: var(--spacing-sm) var(--spacing-lg);
+      background: var(--color-accent);
+      color: white;
+      text-decoration: none;
+      border-radius: var(--border-radius);
+      font-weight: 600;
+      text-align: center;
+      transition: background 0.3s, transform 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #b8895e;
+      transform: scale(1.02);
+    }
+
+    .btn-primary {
+      background: var(--color-primary);
+    }
+
+    .btn-primary:hover {
+      background: var(--color-secondary);
+    }
+
+    /* Process Section */
+    .process-section {
+      background: var(--color-bg-light);
+      padding: var(--spacing-2xl) 0;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--spacing-xl);
+      margin-top: var(--spacing-xl);
+    }
+
+    .process-step {
+      text-align: center;
+      padding: var(--spacing-lg);
+    }
+
+    .process-number {
+      width: 60px;
+      height: 60px;
+      background: var(--color-primary);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0 auto var(--spacing-md);
+    }
+
+    .process-step h3 {
+      color: var(--color-primary);
+      margin-bottom: var(--spacing-sm);
+      font-size: 1.3rem;
+    }
+
+    .process-step p {
+      color: var(--color-text-light);
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+      color: white;
+      padding: var(--spacing-2xl) 0;
+      text-align: center;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .cta-section p {
+      font-size: 1.2rem;
+      margin-bottom: var(--spacing-lg);
+      opacity: 0.95;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: var(--spacing-md);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-buttons .btn {
+      min-width: 200px;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--color-primary);
+      color: white;
+      padding: var(--spacing-xl) 0 var(--spacing-md);
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--spacing-xl);
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .footer h3 {
+      margin-bottom: var(--spacing-md);
+      font-size: 1.2rem;
+    }
+
+    .footer ul {
+      list-style: none;
+    }
+
+    .footer a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer a:hover {
+      color: var(--color-accent);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: var(--spacing-md);
+      text-align: center;
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+    }
+
+    .accreditations {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--spacing-md);
+      margin-top: var(--spacing-md);
+    }
+
+    .accreditation-badge {
+      background: rgba(255,255,255,0.1);
+      padding: var(--spacing-xs) var(--spacing-md);
+      border-radius: var(--border-radius);
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav {
+        display: none;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="header-content">
+        <a href="/" class="logo">Arron Bennett Building</a>
+        <ul class="nav">
+          <li><a href="/">Home</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/work">Work</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <nav aria-label="Breadcrumb">
+        <a href="/">Home</a>
+        <span>/</span>
+        <span>Services</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Building Services in Cornwall & Devon</h1>
+      <p>Comprehensive construction services from traditional stone masonry to modern renewable heating systems. Quality craftsmanship backed by over 20 years of experience.</p>
+    </div>
+  </section>
+
+  <!-- Services Grid Section -->
+  <section class="services-section">
+    <div class="container">
+      <div class="section-intro">
+        <h2>Expert Building Services</h2>
+        <p>From full builds and renovations to specialist stone masonry and lime works, we offer a comprehensive range of building services tailored to Cornwall and Devon's unique architectural heritage.</p>
+      </div>
+
+      <div class="services-grid">
+        {services.map((service) => (
+          <article class="service-card">
+            {service.data.image && (
+              <img
+                src={service.data.image}
+                alt={service.data.title}
+                class="service-image"
+                loading="lazy"
+              />
+            )}
+            <div class="service-content">
+              <h3>{service.data.title}</h3>
+              <p class="service-description">{service.data.description}</p>
+
+              {service.data.features && service.data.features.length > 0 && (
+                <ul class="service-features">
+                  {service.data.features.slice(0, 4).map((feature) => (
+                    <li>{feature}</li>
+                  ))}
+                </ul>
+              )}
+
+              <a href="/contact" class="btn">Discuss This Project</a>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process-section">
+    <div class="container">
+      <div class="section-intro">
+        <h2>How We Work</h2>
+        <p>Our collaborative approach ensures your project runs smoothly from initial consultation to final handover.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="process-number">1</div>
+          <h3>Consultation</h3>
+          <p>Understanding your vision, requirements, and budget to provide honest advice and accurate estimates.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-number">2</div>
+          <h3>Planning</h3>
+          <p>Detailed project planning, design coordination, and liaising with architects, engineers, and building control.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-number">3</div>
+          <h3>Execution</h3>
+          <p>Professional construction with regular updates, quality control, and seamless coordination of all trades.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-number">4</div>
+          <h3>Completion</h3>
+          <p>Final inspections, snagging, and handover with full documentation and aftercare support.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Discuss Your Project?</h2>
+      <p>Get in touch today for a free consultation and no-obligation quote.</p>
+      <div class="cta-buttons">
+        <a href="tel:+441234567890" class="btn">Call 01234 567890</a>
+        <a href="/contact" class="btn btn-primary">Send Enquiry</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <h3>Arron Bennett Building</h3>
+          <p>Quality building services in Cornwall and Devon since 2003.</p>
+          <div class="accreditations">
+            <span class="accreditation-badge">✓ Fully Insured</span>
+            <span class="accreditation-badge">✓ 20+ Years Experience</span>
+            <span class="accreditation-badge">✓ Quality Guaranteed</span>
+          </div>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/work">Our Work</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Services</h3>
+          <ul>
+            <li><a href="/services#full-builds">Full Builds</a></li>
+            <li><a href="/services#renovations">Renovations</a></li>
+            <li><a href="/services#stone-masonry">Stone Masonry</a></li>
+            <li><a href="/services#project-management">Project Management</a></li>
+            <li><a href="/services#heat-pumps">Heat Pumps</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Contact</h3>
+          <ul>
+            <li>Phone: <a href="tel:+441234567890">01234 567890</a></li>
+            <li>Email: <a href="mailto:info@arronbennettbuilding.co.uk">info@arronbennettbuilding.co.uk</a></li>
+            <li>Cornwall & Devon</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; {new Date().getFullYear()} Arron Bennett Building Contractors. All rights reserved. | <a href="/privacy-policy">Privacy Policy</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

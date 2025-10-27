@@ -1,0 +1,271 @@
+---
+/**
+ * Hero Component
+ *
+ * Flexible hero section for homepage and service pages.
+ * Supports multiple variants, alignments, and optional image.
+ *
+ * @component
+ * @example
+ * <Hero
+ *   variant="primary"
+ *   alignment="left"
+ *   title="Transform Your Leadership"
+ *   subtitle="Board-Level Coaching & Wellbeing Advisory"
+ *   description="Executive coaching with 20+ years of board-level experience..."
+ *   ctaPrimary="Book Discovery Call"
+ *   ctaPrimaryHref="/contact"
+ *   credentials={['Fellow CMI', 'FRSPH', 'IoD Ambassador']}
+ *   image="/craig-fearn.jpg"
+ * />
+ */
+
+import type { HeroProps } from '../types/components';
+import Button from './Button.astro';
+
+interface Props extends HeroProps {}
+
+const {
+  variant = 'primary',
+  alignment = 'left',
+  title,
+  subtitle,
+  description,
+  ctaPrimary,
+  ctaPrimaryHref,
+  ctaSecondary,
+  ctaSecondaryHref,
+  image,
+  imageAlt = '',
+  credentials = [],
+  class: className = '',
+} = Astro.props;
+
+// Variant-specific styles
+const variantStyles = {
+  primary: 'bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 text-white',
+  secondary: 'bg-gray-50 text-navy-900',
+  minimal: 'bg-white text-navy-900',
+};
+
+// Alignment styles
+const alignmentStyles = {
+  left: 'text-left',
+  center: 'text-center',
+};
+
+const heroClass = `
+  relative overflow-hidden
+  ${variantStyles[variant]}
+  ${className}
+`.trim().replace(/\s+/g, ' ');
+---
+
+<section class={heroClass}>
+  <!-- Background Pattern (for primary variant) -->
+  {variant === 'primary' && (
+    <div class="absolute inset-0 opacity-5">
+      <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+            <circle cx="16" cy="16" r="1" fill="currentColor" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+      </svg>
+    </div>
+  )}
+
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 relative z-10">
+    <div class={`grid grid-cols-1 ${image ? 'lg:grid-cols-2' : 'lg:grid-cols-1'} gap-12 lg:gap-16 items-center`}>
+      <!-- Content Column -->
+      <div class={`${alignment === 'center' ? 'mx-auto max-w-3xl' : ''} ${alignmentStyles[alignment]}`}>
+        {/* Subtitle/Kicker */}
+        {subtitle && (
+          <p class={`
+            text-sm sm:text-base font-semibold uppercase tracking-wider mb-4
+            ${variant === 'primary' ? 'text-coral-400' : 'text-coral-500'}
+          `}>
+            {subtitle}
+          </p>
+        )}
+
+        {/* Main Title */}
+        <h1 class={`
+          text-4xl sm:text-5xl lg:text-6xl xl:text-7xl
+          font-bold leading-tight mb-6
+          ${variant === 'primary' ? 'text-white' : 'text-navy-900'}
+        `}>
+          {title}
+        </h1>
+
+        {/* Description */}
+        {description && (
+          <p class={`
+            text-lg sm:text-xl leading-relaxed mb-8 max-w-2xl
+            ${variant === 'primary' ? 'text-gray-200' : 'text-gray-700'}
+            ${alignment === 'center' ? 'mx-auto' : ''}
+          `}>
+            {description}
+          </p>
+        )}
+
+        {/* Credentials */}
+        {credentials.length > 0 && (
+          <div class={`flex flex-wrap gap-3 mb-8 ${alignment === 'center' ? 'justify-center' : ''}`}>
+            {credentials.map((credential) => (
+              <span class={`
+                inline-flex items-center px-4 py-2 rounded-full text-sm font-medium
+                ${variant === 'primary'
+                  ? 'bg-white/10 text-white border border-white/20'
+                  : 'bg-navy-100 text-navy-700 border border-navy-200'
+                }
+              `}>
+                <svg
+                  class="w-4 h-4 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                {credential}
+              </span>
+            ))}
+          </div>
+        )}
+
+        {/* CTAs */}
+        {(ctaPrimary || ctaSecondary) && (
+          <div class={`flex flex-col sm:flex-row gap-4 ${alignment === 'center' ? 'justify-center' : ''}`}>
+            {ctaPrimary && ctaPrimaryHref && (
+              <Button
+                variant={variant === 'primary' ? 'secondary' : 'primary'}
+                size="lg"
+                href={ctaPrimaryHref}
+                class="min-w-[200px]"
+              >
+                {ctaPrimary}
+              </Button>
+            )}
+
+            {ctaSecondary && ctaSecondaryHref && (
+              <Button
+                variant="ghost"
+                size="lg"
+                href={ctaSecondaryHref}
+                class={`min-w-[200px] ${variant === 'primary' ? 'border-white text-white hover:bg-white/10' : ''}`}
+              >
+                {ctaSecondary}
+              </Button>
+            )}
+          </div>
+        )}
+
+        {/* Slot for additional content */}
+        <div class="mt-8">
+          <slot />
+        </div>
+      </div>
+
+      {/* Image Column */}
+      {image && (
+        <div class="relative">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+            <img
+              src={image}
+              alt={imageAlt}
+              class="w-full h-auto object-cover"
+              loading="eager"
+            />
+
+            {/* Decorative gradient overlay */}
+            <div class={`
+              absolute inset-0 bg-gradient-to-tr
+              ${variant === 'primary'
+                ? 'from-navy-900/20 to-transparent'
+                : 'from-coral-500/10 to-transparent'
+              }
+            `} />
+          </div>
+
+          {/* Decorative elements */}
+          <div class={`
+            absolute -z-10 -bottom-8 -right-8 w-64 h-64 rounded-full blur-3xl
+            ${variant === 'primary' ? 'bg-coral-500/20' : 'bg-navy-900/10'}
+          `} />
+        </div>
+      )}
+    </div>
+  </div>
+
+  {/* Wave divider (optional for primary variant) */}
+  {variant === 'primary' && (
+    <div class="absolute bottom-0 left-0 right-0">
+      <svg
+        class="w-full h-auto"
+        viewBox="0 0 1440 120"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0 0L60 10C120 20 240 40 360 46.7C480 53.3 600 46.7 720 40C840 33.3 960 26.7 1080 30C1200 33.3 1320 46.7 1380 53.3L1440 60V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0V0Z"
+          fill="white"
+        />
+      </svg>
+    </div>
+  )}
+</section>
+
+<style>
+  /* Smooth scroll animations */
+  section {
+    animation: fadeIn 0.8s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Title animation on load */
+  h1 {
+    animation: slideInLeft 0.6s ease-out 0.2s both;
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Description animation */
+  p {
+    animation: fadeIn 0.8s ease-out 0.4s both;
+  }
+
+  /* Image hover effect */
+  img {
+    transition: transform 0.6s ease;
+  }
+
+  div:hover img {
+    transform: scale(1.02);
+  }
+</style>

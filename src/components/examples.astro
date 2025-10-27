@@ -1,0 +1,431 @@
+---
+/**
+ * Component Library Examples
+ *
+ * This file demonstrates all components with real-world usage examples.
+ * Use this as a reference when building pages.
+ */
+
+import {
+  Button,
+  Card,
+  ServiceCard,
+  TestimonialCard,
+  Header,
+  Footer,
+  Hero,
+  ContactForm,
+} from './index';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Component Library Examples - Lighthouse Mentoring</title>
+</head>
+<body class="bg-gray-50">
+
+  <!-- ========================================
+       HEADER COMPONENT
+       ======================================== -->
+  <Header
+    logo="/images/lighthouse-logo.svg"
+    logoAlt="Lighthouse Mentoring"
+    phoneNumber="07773 463383"
+    navLinks={[
+      { label: 'Home', href: '/', isActive: true },
+      { label: 'Services', href: '/services' },
+      { label: 'About', href: '/about' },
+      { label: 'Insights', href: '/insights' },
+      { label: 'Contact', href: '/contact' }
+    ]}
+  />
+
+  <main>
+    <!-- ========================================
+         HERO COMPONENT - PRIMARY VARIANT
+         ======================================== -->
+    <Hero
+      variant="primary"
+      alignment="left"
+      title="Transform Your Leadership with Board-Level Expertise"
+      subtitle="Leadership Coaching • Executive Mentoring • Wellbeing Advisory"
+      description="Over 20 years of board-level experience helping C-suite executives and senior leaders achieve breakthrough results through coaching, mentoring, and strategic wellbeing advisory."
+      ctaPrimary="Book Discovery Call"
+      ctaPrimaryHref="/contact"
+      ctaSecondary="Learn More"
+      ctaSecondaryHref="/about"
+      credentials={[
+        'Fellow CMI',
+        'FRSPH',
+        'IoD Wellbeing Ambassador'
+      ]}
+      image="/images/craig-fearn-professional.jpg"
+      imageAlt="Craig Fearn, Leadership Coach and Wellbeing Advisor"
+    />
+
+    <!-- ========================================
+         BUTTON EXAMPLES
+         ======================================== -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-navy-900 mb-8 text-center">
+          Button Component Examples
+        </h2>
+
+        <div class="max-w-4xl mx-auto space-y-8">
+          <!-- Primary Buttons -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Primary Buttons</h3>
+            <div class="flex flex-wrap gap-4">
+              <Button variant="primary" size="sm">Small Primary</Button>
+              <Button variant="primary" size="md">Medium Primary</Button>
+              <Button variant="primary" size="lg">Large Primary</Button>
+            </div>
+          </div>
+
+          <!-- Secondary Buttons -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Secondary Buttons</h3>
+            <div class="flex flex-wrap gap-4">
+              <Button variant="secondary" size="sm">Small Secondary</Button>
+              <Button variant="secondary" size="md">Medium Secondary</Button>
+              <Button variant="secondary" size="lg">Large Secondary</Button>
+            </div>
+          </div>
+
+          <!-- Ghost Buttons -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Ghost Buttons</h3>
+            <div class="flex flex-wrap gap-4">
+              <Button variant="ghost" size="sm">Small Ghost</Button>
+              <Button variant="ghost" size="md">Medium Ghost</Button>
+              <Button variant="ghost" size="lg">Large Ghost</Button>
+            </div>
+          </div>
+
+          <!-- Link Buttons -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Link Buttons</h3>
+            <div class="flex flex-wrap gap-4">
+              <Button variant="primary" href="/services">Go to Services</Button>
+              <Button variant="secondary" href="/contact">Contact Us</Button>
+            </div>
+          </div>
+
+          <!-- States -->
+          <div>
+            <h3 class="text-xl font-semibold mb-4">Button States</h3>
+            <div class="flex flex-wrap gap-4">
+              <Button variant="primary" disabled>Disabled Button</Button>
+              <Button variant="primary" fullWidth>Full Width Button</Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         SERVICE CARDS
+         ======================================== -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-navy-900 mb-4 text-center">
+          Our Services
+        </h2>
+        <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+          Comprehensive leadership and wellbeing solutions tailored for C-suite executives and senior leaders
+        </p>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <ServiceCard
+            title="Leadership Coaching"
+            description="One-on-one executive coaching with board-level perspective to transform your leadership approach and drive organizational success."
+            icon="users"
+            features={[
+              'Personalized coaching sessions',
+              'Strategic leadership frameworks',
+              'Board-level insights',
+              'Confidential environment'
+            ]}
+            href="/services/leadership-coaching"
+            cta="Learn More"
+          />
+
+          <ServiceCard
+            title="Executive Mentoring"
+            description="Board-level mentoring for senior leaders navigating complex organizational challenges and career transitions."
+            icon="briefcase"
+            features={[
+              '20+ years board experience',
+              'Strategic guidance',
+              'Career development',
+              'Succession planning'
+            ]}
+            href="/services/executive-mentoring"
+            cta="Discover More"
+          />
+
+          <ServiceCard
+            title="Wellbeing Advisory"
+            description="Strategic wellbeing advisory services helping organizations build cultures of wellbeing and sustainable performance."
+            icon="heart"
+            features={[
+              'Wellbeing strategy design',
+              'ROI measurement frameworks',
+              'Board-level reporting',
+              'Implementation support'
+            ]}
+            href="/services/wellbeing-advisory"
+            cta="Get Started"
+          />
+
+          <ServiceCard
+            title="Board Advisory"
+            description="Non-executive director services and board advisory for organizations seeking strategic leadership and governance expertise."
+            icon="chart"
+            features={[
+              'NED appointments',
+              'Board effectiveness',
+              'Strategic oversight',
+              'Governance guidance'
+            ]}
+            href="/services/board-advisory"
+            cta="Explore"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         TESTIMONIAL CARDS
+         ======================================== -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-navy-900 mb-4 text-center">
+          Client Success Stories
+        </h2>
+        <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+          Hear from leaders who have transformed their approach through coaching and mentoring
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <TestimonialCard
+            name="Sarah Johnson"
+            role="Chief Executive Officer"
+            company="TechCorp Solutions"
+            content="Craig's coaching completely transformed how I approach leadership challenges. His board-level perspective brought insights I couldn't have gained elsewhere. The impact on our organization has been measurable and profound."
+            rating={5}
+            image="/images/testimonials/sarah-johnson.jpg"
+          />
+
+          <TestimonialCard
+            name="Michael Chen"
+            role="Managing Director"
+            company="Financial Services Ltd"
+            content="Working with Craig as a mentor during a critical career transition was invaluable. His experience at board level, combined with his genuine care for wellbeing, made all the difference. I can't recommend him highly enough."
+            rating={5}
+          />
+
+          <TestimonialCard
+            name="Emma Williams"
+            role="HR Director"
+            company="Global Healthcare"
+            content="Craig's wellbeing advisory work helped us build a framework that actually delivers ROI. His ability to speak the language of the board while understanding frontline needs is exceptional. A game-changer for our organization."
+            rating={5}
+            image="/images/testimonials/emma-williams.jpg"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         CARD COMPONENT EXAMPLES
+         ======================================== -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-navy-900 mb-8 text-center">
+          Card Component Variants
+        </h2>
+
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <!-- Default Card -->
+          <Card
+            variant="default"
+            title="Default Card"
+            description="Standard card with clean styling and subtle hover effects."
+            image="/images/card-example-1.jpg"
+            imageAlt="Example image"
+          >
+            <p class="text-sm text-gray-600">Additional content can go here in the slot.</p>
+          </Card>
+
+          <!-- Service Card Variant -->
+          <Card
+            variant="service"
+            title="Service Card"
+            description="Enhanced card with lift animation on hover, perfect for service offerings."
+            href="/services/example"
+          />
+
+          <!-- Feature Card -->
+          <Card
+            variant="feature"
+            title="Feature Card"
+            description="Feature card with coral accent on hover, ideal for highlighting key benefits."
+          >
+            <ul class="text-sm space-y-2 mt-4">
+              <li>✓ Feature benefit one</li>
+              <li>✓ Feature benefit two</li>
+              <li>✓ Feature benefit three</li>
+            </ul>
+          </Card>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         HERO VARIANTS
+         ======================================== -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-navy-900 mb-8 text-center">
+          Hero Component Variants
+        </h2>
+
+        <!-- Secondary Hero -->
+        <div class="mb-8">
+          <Hero
+            variant="secondary"
+            alignment="center"
+            title="Secondary Hero Variant"
+            subtitle="Light Background Option"
+            description="Perfect for service pages and secondary landing pages with a clean, professional appearance."
+            ctaPrimary="Primary Action"
+            ctaPrimaryHref="#"
+          />
+        </div>
+
+        <!-- Minimal Hero -->
+        <div class="mb-8">
+          <Hero
+            variant="minimal"
+            alignment="left"
+            title="Minimal Hero Variant"
+            description="Clean, simple hero for blog posts, case studies, and content pages."
+            ctaPrimary="Read More"
+            ctaPrimaryHref="#"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         CONTACT FORM
+         ======================================== -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-2xl mx-auto">
+          <ContactForm
+            title="Get in Touch"
+            description="Book your complimentary discovery call today. We typically respond within 24 hours."
+            submitText="Send Message"
+            formAction="/api/contact"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================
+         CTA SECTION EXAMPLE
+         ======================================== -->
+    <section class="py-20 bg-navy-900 text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-6">
+          Ready to Transform Your Leadership?
+        </h2>
+        <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+          Book a complimentary discovery call to explore how board-level coaching can help you achieve breakthrough results.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button variant="secondary" size="lg" href="/contact">
+            Book Discovery Call
+          </Button>
+          <Button
+            variant="ghost"
+            size="lg"
+            href="/services"
+            class="border-white text-white hover:bg-white/10"
+          >
+            View Services
+          </Button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================
+       FOOTER COMPONENT
+       ======================================== -->
+  <Footer
+    logo="/images/lighthouse-logo.svg"
+    logoAlt="Lighthouse Mentoring"
+    description="Board-level leadership coaching, executive mentoring, and wellbeing advisory services for senior leaders and C-suite executives."
+    columns={[
+      {
+        title: 'Services',
+        links: [
+          { label: 'Leadership Coaching', href: '/services/leadership-coaching' },
+          { label: 'Executive Mentoring', href: '/services/executive-mentoring' },
+          { label: 'Wellbeing Advisory', href: '/services/wellbeing-advisory' },
+          { label: 'Board Advisory', href: '/services/board-advisory' }
+        ]
+      },
+      {
+        title: 'Company',
+        links: [
+          { label: 'About Craig', href: '/about' },
+          { label: 'Insights', href: '/insights' },
+          { label: 'Contact', href: '/contact' },
+          { label: 'Book Discovery Call', href: '/contact#booking' }
+        ]
+      },
+      {
+        title: 'Legal',
+        links: [
+          { label: 'Privacy Policy', href: '/privacy' },
+          { label: 'Terms of Service', href: '/terms' },
+          { label: 'Cookie Policy', href: '/cookies' }
+        ]
+      }
+    ]}
+    socialLinks={[
+      {
+        platform: 'linkedin',
+        href: 'https://www.linkedin.com/in/craigfearn',
+        ariaLabel: 'Connect with Craig Fearn on LinkedIn'
+      }
+    ]}
+    copyright={`© ${new Date().getFullYear()} Lighthouse Mentoring. All rights reserved.`}
+  />
+
+</body>
+</html>
+
+<style>
+  /* Example page specific styles */
+  section {
+    position: relative;
+  }
+
+  h2 {
+    scroll-margin-top: 6rem;
+  }
+
+  /* Container utilities */
+  .container {
+    max-width: 1280px;
+  }
+</style>

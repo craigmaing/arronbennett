@@ -1,0 +1,50 @@
+# Robots.txt for Arron Bennett Building
+# https://arronbennettbuilding.co.uk
+
+User-agent: *
+Allow: /
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.well-known/
+
+# Allow all images
+Allow: /images/
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /*.svg$
+
+# Crawl delay for respectful bots
+Crawl-delay: 1
+
+# Sitemap location
+Sitemap: https://arronbennettbuilding.co.uk/sitemap-index.xml
+Sitemap: https://arronbennettbuilding.co.uk/sitemap-0.xml
+
+# Block aggressive bots
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: DotBot
+Crawl-delay: 10
+
+# Allow Google
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Allow Bing
+User-agent: Bingbot
+Allow: /
+
+# Allow Yandex
+User-agent: Yandex
+Allow: /

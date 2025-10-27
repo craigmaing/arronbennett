@@ -1,0 +1,245 @@
+---
+/**
+ * ProgressiveImage Component
+ * Implements blur-up placeholder loading for improved perceived performance
+ * Shows a tiny blurred placeholder instantly while the full image loads
+ */
+
+import { Image } from 'astro:assets';
+
+export interface Props {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+  loading?: 'lazy' | 'eager';
+  fetchpriority?: 'high' | 'low' | 'auto';
+  class?: string;
+  sizes?: string;
+  // Placeholder options
+  placeholderColor?: string; // Fallback solid color
+  blurAmount?: number; // Amount of blur for placeholder (default: 20)
+}
+
+const {
+  src,
+  alt,
+  width,
+  height,
+  loading = 'lazy',
+  fetchpriority = 'auto',
+  class: className = '',
+  sizes,
+  placeholderColor = '#1a2c4d', // Navy blue as default
+  blurAmount = 20
+} = Astro.props;
+
+// Generate a unique ID for this image instance
+const imageId = `progressive-${Math.random().toString(36).substr(2, 9)}`;
+
+// For local images, we'll use a base64 placeholder
+// For production, you'd generate actual tiny versions
+const isLocalImage = src.startsWith('/images/');
+
+// Extract dominant color based on image type/location
+const getDominantColor = (imagePath: string) => {
+  if (imagePath.includes('projects')) return '#2c5282'; // Blue-gray for projects
+  if (imagePath.includes('services')) return '#1a365d'; // Darker blue for services
+  if (imagePath.includes('hero')) return '#1a2c4d'; // Navy for heroes
+  return placeholderColor;
+};
+
+const dominantColor = getDominantColor(src);
+---
+
+<div
+  class={`progressive-image-wrapper ${className}`}
+  data-image-id={imageId}
+  style={`background-color: ${dominantColor};`}
+>
+  <!-- Blur container -->
+  <div class="progressive-image-blur" style={`filter: blur(${blurAmount}px); transform: scale(1.1);`}>
+    <!-- Low quality placeholder (using same image with heavy scaling for now) -->
+    <img
+      src={src}
+      alt=""
+      aria-hidden="true"
+      class="progressive-image-placeholder"
+      loading="eager"
+      decoding="async"
+      style="width: 100%; height: 100%; object-fit: cover;"
+    />
+  </div>
+
+  <!-- Full quality image -->
+  <picture class="progressive-image-full">
+    <!-- AVIF version -->
+    <source
+      type="image/avif"
+      srcset={src.replace(/\.(jpg|jpeg|png)$/i, '.avif')}
+      {sizes}
+    />
+    <!-- WebP version -->
+    <source
+      type="image/webp"
+      srcset={src.replace(/\.(jpg|jpeg|png)$/i, '.webp')}
+      {sizes}
+    />
+    <!-- Original format -->
+    <img
+      src={src}
+      alt={alt}
+      {width}
+      {height}
+      {loading}
+      {fetchpriority}
+      {sizes}
+      class="progressive-image-main"
+      onload={`
+        const wrapper = document.querySelector('[data-image-id="${imageId}"]');
+        if (wrapper) {
+          wrapper.classList.add('progressive-image-loaded');
+        }
+      `}
+      onerror={`
+        const wrapper = document.querySelector('[data-image-id="${imageId}"]');
+        if (wrapper) {
+          wrapper.classList.add('progressive-image-error');
+        }
+      `}
+    />
+  </picture>
+
+  <!-- Loading indicator (optional) -->
+  <div class="progressive-image-loader" aria-hidden="true">
+    <span class="sr-only">Loading image...</span>
+  </div>
+</div>
+
+<style>
+  /* Container styles */
+  .progressive-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* Blur container */
+  .progressive-image-blur {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  /* Placeholder image (low quality) */
+  .progressive-image-placeholder {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Scale down the image quality with CSS */
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: pixelated;
+    /* Make it tiny for faster loading */
+    transform: scale(0.1) scale(10);
+  }
+
+  /* Full quality image container */
+  .progressive-image-full {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Main image */
+  .progressive-image-main {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  /* When image is loaded */
+  .progressive-image-loaded .progressive-image-blur {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .progressive-image-loaded .progressive-image-main {
+    opacity: 1;
+  }
+
+  /* Loading indicator */
+  .progressive-image-loader {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+  }
+
+  .progressive-image-wrapper:not(.progressive-image-loaded) .progressive-image-loader {
+    opacity: 0.5;
+  }
+
+  /* Error state */
+  .progressive-image-error {
+    background: #f3f4f6;
+  }
+
+  .progressive-image-error .progressive-image-blur,
+  .progressive-image-error .progressive-image-loader {
+    display: none;
+  }
+
+  .progressive-image-error::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9ca3af;
+    font-size: 14px;
+  }
+
+  /* Screen reader only text */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  /* Specific styles for hero images */
+  .hero-progressive {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+  }
+
+  /* Specific styles for card images */
+  .card-progressive {
+    aspect-ratio: 16 / 9;
+  }
+
+  /* Reduce motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    .progressive-image-blur,
+    .progressive-image-main {
+      transition-duration: 0.01ms;
+    }
+  }
+</style>

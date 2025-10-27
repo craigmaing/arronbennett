@@ -1,0 +1,589 @@
+---
+// Our Services Page - Exact match to original arronbennettbuilding.co.uk
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const pageTitle = "Our Services – Arron Bennett Cornwall";
+const pageDescription = "Expert building services in Cornwall & Devon. Extensions, renovations, new builds, stone masonry & project management. Quality craftsmanship.";
+const canonicalURL = new URL('/our-services', Astro.site);
+
+// Schema.org structured data for services
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Arron Bennett Building Services",
+  "description": pageDescription,
+  "url": canonicalURL.toString(),
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Building Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Full Builds",
+          "description": "Bespoke full builds using traditional and modern building methods"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Home Renovations",
+          "description": "Complete home renovation services"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Bathroom and Kitchen Renovations",
+          "description": "Expert bathroom and kitchen renovation services"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Hard Landscaping",
+          "description": "Professional hard landscaping services"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Mini Excavator and Waste Away Services",
+          "description": "Excavation and waste removal services"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Stone and Block Masonry",
+          "description": "Specialist stone and block masonry work"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Project Management",
+          "description": "Professional project management services"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Ground Source and Air Source Installations",
+          "description": "Renewable energy system installations"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Traditional Lime Mortars",
+          "description": "Traditional lime mortar work for heritage buildings"
+        }
+      }
+    ]
+  },
+  "areaServed": [
+    {
+      "@type": "State",
+      "name": "Cornwall"
+    },
+    {
+      "@type": "State",
+      "name": "Devon"
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  canonicalURL={canonicalURL}
+>
+  <Fragment slot="head">
+    <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+  </Fragment>
+
+  <!-- Page Title Section with Breadcrumb -->
+  <section class="page-title-section" id="main-content">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a><span aria-hidden="true"> > </span></li>
+          <li aria-current="page">Our Services</li>
+        </ol>
+      </nav>
+      <h1 class="page-title">Our Services</h1>
+      <p class="page-subtitle">Expert building services across Cornwall and Devon</p>
+    </div>
+  </section>
+
+  <!-- Service 1: Full Builds (Image Right) -->
+  <section class="service-section service-image-right" aria-label="Full Builds service">
+    <div class="container">
+      <div class="service-grid">
+        <div class="service-content">
+          <h2 class="service-heading">Full Builds</h2>
+          <div class="service-description">
+            <p>We undertake bespoke full builds using traditional and modern building methods. We work closely with you throughout the project to ensure that you get what you dream of. We specialise in traditional stone and lime construction along with modern timber frame techniques, all to the highest quality. Completing full builds using traditional lime mortars, insulating hemp lime and local stone and slate for roofing, walls and flooring, all enhancing your home's aesthetic appeal.</p>
+            <p>We also undertake high quality carpentry work inside and out, including bespoke timber frame structures. We work with both traditional cob and natural earth building methods as well as modern high performance materials and construction methods.</p>
+          </div>
+          <a href="/contact-us" class="cta-button" aria-label="Contact us about Full Builds">Get in Touch</a>
+        </div>
+        <div class="service-image">
+          <img src="/images/services/A-Bennett-5.png" alt="Full Builds - Traditional and modern construction" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service 2: Home Renovations (Image Left) -->
+  <section class="service-section service-image-left" aria-label="Home Renovations service">
+    <div class="container">
+      <div class="service-grid">
+        <div class="service-image">
+          <img src="/images/projects/A-Bennett-190.png" alt="Home Renovations - Expert renovation services" loading="lazy" />
+        </div>
+        <div class="service-content">
+          <h2 class="service-heading">Home Renovations</h2>
+          <div class="service-description">
+            <p>We carry out complete home renovations from turning the old pigsty into an amazing barn conversion to bringing a listed farmhouse back to its former glory. We know how important it is to not only get the structure right but also choose the right materials and finishes to enhance your home.</p>
+            <p>We can project manage the whole renovation from start to finish, liaising with all trades to ensure your renovation runs smoothly and on schedule. Extensions, conversions, internal alterations, new windows and doors – we handle it all with care and expertise.</p>
+          </div>
+          <a href="/contact-us" class="cta-button" aria-label="Contact us about Home Renovations">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service 3: Bathroom and Kitchen Renovations (Image Right) -->
+  <section class="service-section service-image-right" aria-label="Bathroom and Kitchen Renovations service">
+    <div class="container">
+      <div class="service-grid">
+        <div class="service-content">
+          <h2 class="service-heading">Bathroom and Kitchen Renovations</h2>
+          <div class="service-description">
+            <p>We can transform your bathroom or kitchen into a beautiful and functional space. From initial design through to completion, we manage every aspect of the renovation. Whether it's a complete refit or updating existing features, we work to the highest standards.</p>
+            <p>Our team handles all plumbing, electrical work, tiling, and carpentry to create the perfect finish. We source quality materials and fixtures that combine style with durability, ensuring your new space looks great and lasts for years to come.</p>
+          </div>
+          <a href="/contact-us" class="cta-button" aria-label="Contact us about Bathroom and Kitchen Renovations">Get in Touch</a>
+        </div>
+        <div class="service-image">
+          <img src="/images/services/A-Bennett-11-1.jpg" alt="Bathroom and Kitchen Renovations - Complete refit and design services" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service 4: Hard Landscaping (Image Left) -->
+  <section class="service-section service-image-left" aria-label="Hard Landscaping service">
+    <div class="container">
+      <div class="service-grid">
+        <div class="service-image">
+          <img src="/images/services/A-Bennett-12-1.jpg" alt="Hard Landscaping - Patios and driveways" loading="lazy" />
+        </div>
+        <div class="service-content">
+          <h2 class="service-heading">Hard Landscaping</h2>
+          <div class="service-description">
+            <p>We design and build beautiful outdoor spaces including patios, driveways, retaining walls, and garden features. Using natural stone, slate, and other quality materials, we create durable and attractive landscapes that complement your property.</p>
+            <p>From excavation and groundwork through to the final finish, we handle every stage of your landscaping project. Whether traditional or contemporary design, we bring your outdoor vision to life with skilled craftsmanship and attention to detail.</p>
+          </div>
+          <a href="/contact-us" class="cta-button" aria-label="Contact us about Hard Landscaping">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service 5: Mini Excavator (Image Right) -->
+  <section class="service-section service-image-right" aria-label="Mini Excavator and Waste Away Services">
+    <div class="container">
+      <div class="service-grid">
+        <div class="service-content">
+          <h2 class="service-heading">Mini Excavator and Waste Away Services</h2>
+          <div class="service-description">
+            <p>We offer mini excavator hire with an experienced operator for groundworks, drainage, and landscaping projects. Our compact machinery is perfect for accessing tight spaces while still delivering powerful performance for your excavation needs.</p>
+            <p>We also provide waste removal services to keep your site clean and safe throughout your project. From initial groundwork through to final clearance, we ensure efficient and professional service every step of the way.</p>
+          </div>
+          <a href="/contact-us" class="cta-button" aria-label="Contact us about Mini Excavator and Waste Away Services">Get in Touch</a>
+        </div>
+        <div class="service-image">
+          <img src="/images/projects/A-Bennett-108.jpg" alt="Mini Excavator Services - Groundworks and waste removal" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service 6: Stone and Block Masonry (Image Left) -->
+  <section class="service-section service-image-left" aria-label="Stone and Block Masonry service">
+    <div class="container">
+      <div class="service-grid">
+        <div class="service-image">
+          <img src="/images/services/A-Bennett-13.jpg" alt="Stone and Block Masonry - Traditional and modern stonework" loading="lazy" />
+        </div>
+        <div class="service-content">
+          <h2 class="service-heading">Stone and Block Masonry</h2>
+          <div class="service-description">
+            <p>We are specialists in stone and block masonry, working with natural stone, reconstituted stone, and concrete blocks. From traditional stone walls to modern blockwork, we combine time-honored techniques with contemporary methods.</p>
+            <p>Our masonry work includes new builds, extensions, boundary walls, and restoration projects. We take pride in our craftsmanship, whether working on listed buildings or new construction, always ensuring structural integrity and visual appeal.</p>
+          </div>
+          <a href="/contact-us" class="cta-button" aria-label="Contact us about Stone and Block Masonry">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service 7: Project Management (Image Right) -->
+  <section class="service-section service-image-right" aria-label="Project Management service">
+    <div class="container">
+      <div class="service-grid">
+        <div class="service-content">
+          <h2 class="service-heading">Project Management</h2>
+          <div class="service-description">
+            <p>We offer comprehensive project management services for building projects of all sizes. From initial planning and scheduling through to final completion, we coordinate all aspects of your project to ensure it runs smoothly and stays on track.</p>
+            <p>Our project management includes liaising with architects, engineers, and all trades, managing timelines and budgets, ensuring quality control, and keeping you informed throughout. We take the stress out of building projects, delivering professional results on time and within budget.</p>
+          </div>
+          <a href="/contact-us" class="cta-button" aria-label="Contact us about Project Management">Get in Touch</a>
+        </div>
+        <div class="service-image">
+          <img src="/images/projects/A-Bennett-41.jpg" alt="Project Management Services" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service 8: Ground Source and Air Source (Image Left) -->
+  <section class="service-section service-image-left" aria-label="Ground Source and Air Source Installations service">
+    <div class="container">
+      <div class="service-grid">
+        <div class="service-image">
+          <img src="/images/projects/A-Bennett-110.jpg" alt="Ground Source and Air Source Heat Pumps" loading="lazy" />
+        </div>
+        <div class="service-content">
+          <h2 class="service-heading">Ground Source and Air Source Installations</h2>
+          <div class="service-description">
+            <p>We install ground source and air source heat pump systems as part of our commitment to sustainable building practices. These renewable energy systems provide efficient heating and hot water while reducing carbon emissions and energy costs.</p>
+            <p>From system design and installation through to commissioning and aftercare, we ensure your renewable heating system performs optimally. We work with leading manufacturers and hold the necessary certifications for professional installation.</p>
+          </div>
+          <a href="/contact-us" class="cta-button" aria-label="Contact us about Ground Source and Air Source Installations">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service 9: Traditional Lime Mortars (Image Right) -->
+  <section class="service-section service-image-right" aria-label="Traditional Lime Mortars service">
+    <div class="container">
+      <div class="service-grid">
+        <div class="service-content">
+          <h2 class="service-heading">Traditional Lime Mortars</h2>
+          <div class="service-description">
+            <p>We specialise in working with traditional lime mortars for heritage buildings and conservation projects. Lime mortar is essential for older properties, allowing walls to breathe while providing structural strength and durability.</p>
+            <p>Our expertise includes lime pointing, lime rendering, and lime plastering for both interior and exterior work. We understand the unique properties of lime and how to work with traditional building materials to preserve and enhance historic structures while ensuring they remain weatherproof and structurally sound.</p>
+          </div>
+          <a href="/contact-us" class="cta-button" aria-label="Contact us about Traditional Lime Mortars">Get in Touch</a>
+        </div>
+        <div class="service-image">
+          <img src="/images/services/A-Bennett-2.jpg" alt="Traditional Lime Mortars" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="final-cta-section" aria-label="Contact call to action">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Start Your Project?</h2>
+        <p>Get in touch today to discuss your building requirements and receive a free, no-obligation quote.</p>
+        <a href="/contact-us" class="cta-button cta-button-large" aria-label="Contact us today to discuss your building project">Contact Us Today</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Design Tokens */
+  :root {
+    --color-navy: #021f59;
+    --color-coral: #F27A5E;
+    --color-white: #ffffff;
+    --color-gray-light: #f5f5f5;
+    --color-gray-medium: #666666;
+    --color-gray-dark: #333333;
+    --font-heading: 'Roboto', sans-serif;
+    --font-body: 'Open Sans', sans-serif;
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 3rem;
+    --spacing-xl: 4rem;
+    --spacing-2xl: 6rem;
+  }
+
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+  }
+
+  /* Page Title Section */
+  .page-title-section {
+    background-color: var(--color-gray-light);
+    padding: var(--spacing-xl) 0 var(--spacing-lg);
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .breadcrumb {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .breadcrumb ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: var(--spacing-xs);
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    color: var(--color-gray-medium);
+  }
+
+  .breadcrumb li span[aria-hidden] {
+    margin: 0 var(--spacing-xs);
+    color: var(--color-gray-medium);
+  }
+
+  .breadcrumb a {
+    color: var(--color-navy);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    border-radius: 2px;
+  }
+
+  .breadcrumb a:hover {
+    color: var(--color-coral);
+  }
+
+  .breadcrumb a:focus-visible {
+    outline: 2px solid var(--color-coral);
+    outline-offset: 2px;
+  }
+
+  .page-title {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--color-navy);
+    margin: 0 0 var(--spacing-sm);
+    line-height: 1.2;
+  }
+
+  @media (min-width: 1024px) {
+    .page-title {
+      font-size: 3.5rem;
+    }
+  }
+
+  .page-subtitle {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    color: var(--color-gray-medium);
+    margin: 0;
+  }
+
+  /* Service Section */
+  .service-section {
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .service-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .service-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .service-image-right .service-content {
+      order: 1;
+    }
+
+    .service-image-right .service-image {
+      order: 2;
+    }
+
+    .service-image-left .service-image {
+      order: 1;
+    }
+
+    .service-image-left .service-content {
+      order: 2;
+    }
+  }
+
+  .service-heading {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-navy);
+    margin: 0 0 var(--spacing-md);
+    line-height: 1.3;
+    position: relative;
+    padding-bottom: var(--spacing-sm);
+  }
+
+  .service-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-coral);
+  }
+
+  .service-description {
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--color-gray-dark);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .service-description p {
+    margin: 0 0 var(--spacing-md);
+  }
+
+  .service-description p:last-child {
+    margin-bottom: 0;
+  }
+
+  .service-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .service-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .service-image:hover img {
+    transform: scale(1.05);
+  }
+
+  /* CTA Button */
+  .cta-button {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    background-color: var(--color-coral);
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 2px solid var(--color-coral);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .cta-button:hover {
+    background-color: transparent;
+    color: var(--color-coral);
+    border-color: var(--color-coral);
+  }
+
+  .cta-button:focus-visible {
+    outline: 3px solid var(--color-coral);
+    outline-offset: 4px;
+    box-shadow: 0 0 0 4px rgba(242, 122, 94, 0.2);
+  }
+
+  /* Final CTA Section */
+  .final-cta-section {
+    background-color: var(--color-navy);
+    padding: var(--spacing-2xl) 0;
+    text-align: center;
+    margin-top: var(--spacing-2xl);
+  }
+
+  .cta-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-white);
+    margin: 0 0 var(--spacing-md);
+  }
+
+  .cta-content p {
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    color: var(--color-white);
+    margin: 0 0 var(--spacing-lg);
+    opacity: 0.9;
+  }
+
+  .cta-button-large {
+    padding: 1.125rem 2.5rem;
+    font-size: 1.0625rem;
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Mobile Responsive */
+  @media (max-width: 767px) {
+    .page-title {
+      font-size: 2rem;
+    }
+
+    .page-subtitle {
+      font-size: 1rem;
+    }
+
+    .service-heading {
+      font-size: 1.5rem;
+    }
+
+    .service-description {
+      font-size: 0.9375rem;
+    }
+
+    .cta-content h2 {
+      font-size: 1.75rem;
+    }
+
+    .cta-content p {
+      font-size: 1rem;
+    }
+
+    .page-title-section {
+      padding: var(--spacing-lg) 0 var(--spacing-md);
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .service-section {
+      margin-bottom: var(--spacing-lg);
+    }
+  }
+</style>

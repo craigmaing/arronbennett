@@ -1,0 +1,111 @@
+---
+/**
+ * Button Component
+ *
+ * A flexible, accessible button component with multiple variants and sizes.
+ * Supports both button and anchor tag rendering.
+ *
+ * @component
+ * @example
+ * <Button variant="primary" size="lg">Click me</Button>
+ * <Button variant="secondary" href="/contact">Contact Us</Button>
+ * <Button variant="ghost" disabled>Disabled</Button>
+ */
+
+import type { ButtonProps } from '../types/components';
+
+interface Props extends ButtonProps {}
+
+const {
+  variant = 'primary',
+  size = 'md',
+  href,
+  type = 'button',
+  disabled = false,
+  fullWidth = false,
+  ariaLabel,
+  class: className = '',
+} = Astro.props;
+
+// Determine if we should render as a link or button
+const Tag = href ? 'a' : 'button';
+
+// Base styles (mobile-first)
+const baseStyles = `
+  inline-flex items-center justify-center gap-2
+  font-medium rounded-lg
+  transition-all duration-200 ease-in-out
+  focus:outline-none focus:ring-2 focus:ring-offset-2
+  disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none
+  ${fullWidth ? 'w-full' : ''}
+`;
+
+// Variant styles based on design system
+const variantStyles = {
+  primary: `
+    bg-navy-900 text-white
+    hover:bg-navy-800 active:bg-navy-950
+    focus:ring-navy-500
+    shadow-sm hover:shadow-md
+  `,
+  secondary: `
+    bg-coral-500 text-white
+    hover:bg-coral-600 active:bg-coral-700
+    focus:ring-coral-400
+    shadow-sm hover:shadow-md
+  `,
+  ghost: `
+    bg-transparent text-navy-900 border-2 border-navy-900
+    hover:bg-navy-50 active:bg-navy-100
+    focus:ring-navy-500
+  `,
+};
+
+// Size styles
+const sizeStyles = {
+  sm: 'px-4 py-2 text-sm',
+  md: 'px-6 py-3 text-base',
+  lg: 'px-8 py-4 text-lg',
+};
+
+const computedClass = `
+  ${baseStyles}
+  ${variantStyles[variant]}
+  ${sizeStyles[size]}
+  ${className}
+`.trim().replace(/\s+/g, ' ');
+
+// Props for the rendered element
+const elementProps = {
+  class: computedClass,
+  'aria-label': ariaLabel,
+  ...(Tag === 'button' && { type, disabled }),
+  ...(Tag === 'a' && { href, role: 'button' }),
+};
+---
+
+<Tag {...elementProps}>
+  <slot />
+</Tag>
+
+<style>
+  /* Ensure consistent button rendering across browsers */
+  button,
+  a[role="button"] {
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Smooth transitions for all interactive states */
+  button,
+  a[role="button"] {
+    transform: translateY(0);
+  }
+
+  button:active:not(:disabled),
+  a[role="button"]:active {
+    transform: translateY(1px);
+  }
+</style>

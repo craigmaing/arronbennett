@@ -1,0 +1,267 @@
+---
+/**
+ * About Us Page - Arron Bennett Building Contractors
+ *
+ * This page recreates the exact hero layout from the original site:
+ * - Page title section with dark navy background
+ * - Hero section with image left, content right
+ * - Additional content sections
+ */
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import AboutHero from '../components/AboutHero.astro';
+import Footer from '../components/Footer.astro';
+
+// SEO metadata
+const pageTitle = 'About Us | Arron Bennett Building Contractors';
+const pageDescription = 'Learn about Arron Bennett, a highly skilled traditional builder based in Cornwall. 20+ years experience in stone masonry and project management.';
+
+// Navigation links
+const navLinks = [
+  { label: 'Home', href: '/', isActive: false },
+  { label: 'Our Services', href: '/services', isActive: false },
+  { label: 'Work Gallery', href: '/gallery', isActive: false },
+  { label: 'About Us', href: '/about', isActive: true },
+  { label: 'Contact', href: '/contact', isActive: false },
+];
+
+// Hero content - exact text from original site
+const heroTitle = "Arron Bennett – Traditional Builder in Cornwall";
+const heroContent = `Welcome to Arron Bennett Inc, as an experienced, dependable and highly skilled traditional builder based on the Roseland Peninsula, covering Falmouth, Truro and across Cornwall. We specialise in our 'built for you' services/stone masonry and project management/as, combining traditional building methods with modern techniques.
+
+Beginning his career in the construction industry at the age of 16, Arron has built a wealth of experience across the sector, developing the skills and expertise to achieve his reputation as an exceptional stone and block mason, general builder and project manager. With 20 years experience combining traditional building methods with modern techniques, he has an in-depth understanding of building control/housing building control and planning regulations/sa.`;
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+>
+  <!-- Header -->
+  <Header
+    logo="/images/logo.svg"
+    logoAlt="Arron Bennett Building"
+    phoneNumber="07773 463383"
+    navLinks={navLinks}
+  />
+
+  <!-- Page Title Bar -->
+  <section class="page-title-bar">
+    <div class="container">
+      <div class="title-bar-content">
+        <h1 class="page-title">About Us</h1>
+        <div class="breadcrumbs">
+          <a href="/">HOME</a>
+          <span class="separator">›</span>
+          <span class="current">ABOUT US</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="main-content">
+    <!-- Hero Section - Image Left, Content Right -->
+    <AboutHero
+      title={heroTitle}
+      content={heroContent}
+      buttonText="OUR SERVICES"
+      buttonHref="/services"
+      imageSrc="/images/placeholder-stone-house.jpg"
+      imageAlt="Traditional stone house in Cornwall"
+    />
+
+    <!-- Additional About Section -->
+    <section class="about-details">
+      <div class="container">
+        <div class="details-grid">
+          <!-- About Arron Bennett -->
+          <div class="detail-column">
+            <h2>About Arron Bennett</h2>
+            <p>
+              We collaborate with a network of contractors and specialists in their field, and liaise closely with architects and structural engineers, to deliver our clients' architectural vision to the highest possible standards.
+            </p>
+            <p>
+              We can oversee all aspects of your building project, from ordering construction materials through to completing the finishing touches, and pride ourselves on our outstanding reputation. Read our <a href="/testimonials">testimonials</a> to see what our customers have to say.
+            </p>
+            <div class="cta-button">
+              <a href="/contact" class="btn-secondary">CONTACT US</a>
+            </div>
+          </div>
+
+          <!-- Expertise Section -->
+          <div class="detail-column">
+            <h2>Our Expertise in Stone Masonry & Project Management</h2>
+            <p>
+              With decades of experience in traditional stone masonry and comprehensive project management, we bring unparalleled expertise to every build. Our approach combines time-honored craftsmanship with modern building techniques to deliver exceptional results.
+            </p>
+            <p>
+              From listed building renovations to contemporary new builds, we handle projects of all scales with the same attention to detail and commitment to quality that has built our reputation across Cornwall.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <Footer />
+</BaseLayout>
+
+<style>
+  /* Page Title Bar - Dark Navy Background */
+  .page-title-bar {
+    background-color: #1a2c4d;
+    padding: 60px 0 50px;
+    position: relative;
+  }
+
+  .page-title-bar .container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .title-bar-content {
+    text-align: left;
+  }
+
+  .page-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 15px 0;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.2;
+  }
+
+  .breadcrumbs {
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .breadcrumbs a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .breadcrumbs a:hover {
+    opacity: 0.8;
+  }
+
+  .breadcrumbs .separator {
+    margin: 0 10px;
+    opacity: 0.6;
+  }
+
+  .breadcrumbs .current {
+    opacity: 0.7;
+  }
+
+  /* About Details Section */
+  .about-details {
+    padding: 80px 0;
+    background: #f8f9fa;
+  }
+
+  .about-details .container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  .detail-column h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0 0 25px 0;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.3;
+  }
+
+  .detail-column p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666666;
+    margin: 0 0 20px 0;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .detail-column p a {
+    color: #1a2c4d;
+    text-decoration: underline;
+  }
+
+  .detail-column p a:hover {
+    color: #f27a5e;
+  }
+
+  .cta-button {
+    margin-top: 30px;
+  }
+
+  .btn-secondary {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: transparent;
+    color: #1a2c4d;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    font-family: 'Open Sans', sans-serif;
+    border: 2px solid #1a2c4d;
+  }
+
+  .btn-secondary:hover {
+    background-color: #1a2c4d;
+    color: #ffffff;
+  }
+
+  /* Responsive */
+  @media (max-width: 991px) {
+    .page-title {
+      font-size: 38px;
+    }
+
+    .details-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .page-title-bar {
+      padding: 40px 0 35px;
+    }
+
+    .page-title {
+      font-size: 32px;
+    }
+
+    .breadcrumbs {
+      font-size: 12px;
+    }
+
+    .about-details {
+      padding: 50px 0;
+    }
+
+    .detail-column h2 {
+      font-size: 24px;
+    }
+  }
+</style>
