@@ -8,7 +8,8 @@
 
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { projects } from '../data/projects';
-import ProgressiveImage from '../components/ProgressiveImage.astro';
+import { Image } from 'astro:assets';
+// import ProgressiveImage from '../components/ProgressiveImage.astro';
 
 // SEO metadata
 const pageTitle = 'Our Projects – Cornwall Building Portfolio | Arron Bennett Building - Cornwall';
@@ -58,13 +59,14 @@ const pageDescription = 'View our portfolio of completed building projects acros
             <a href={`/our-projects/${project.id}`} class="project-card-link">
               <article class="project-card">
                 <div class="project-image">
-                  <ProgressiveImage
+                  <Image
                     src={project.image}
                     alt={project.title}
+                    width={600}
+                    height={400}
                     loading="lazy"
-                    class="card-progressive"
-                    placeholderColor="#2c5282"
-                    blurAmount={15}
+                    format="avif"
+                    quality={80}
                   />
                   <div class="project-category">{project.category}</div>
                 </div>
