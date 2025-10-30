@@ -1,0 +1,404 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import SEO from '../components/SEO.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+// Import Roboto fonts from @fontsource for optimal performance
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/600.css';
+import '@fontsource/roboto/700.css';
+
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  canonicalURL?: string;
+  schema?: object;
+  noindex?: boolean;
+  article?: {
+    publishedTime?: string;
+    modifiedTime?: string;
+  };
+}
+
+const {
+  title,
+  description,
+  ogImage = '/og-image.jpg',
+  canonicalURL = Astro.url.href,
+  schema,
+  noindex = false,
+  article
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en-GB">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Enhanced SEO Component -->
+    <SEO
+      title={title}
+      description={description}
+      canonical={canonicalURL}
+      ogImage={ogImage}
+      noindex={noindex}
+      article={article}
+      schema={schema}
+    />
+
+    <!-- View Transitions for smooth page navigation -->
+    <ViewTransitions />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- CRITICAL CSS - Inlined for faster FCP -->
+    <style is:inline>
+      /* Critical CSS for above-the-fold content */
+      /* This ensures instant rendering of visible content */
+
+      /* Reset and base styles */
+      *, *::before, *::after { box-sizing: border-box; }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.6;
+        color: #111827;
+        background: #F0EAD6;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      /* CSS Variables for instant theming */
+      :root {
+        --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        --font-serif: "Iowan Old Style", "Palatino Linotype", "URW Palladio L", P052, serif;
+        --color-primary: #021f59;
+        --color-accent: #F27A5E;
+        --color-white: #ffffff;
+        --color-gray-900: #111827;
+        --header-height: 80px;
+      }
+
+      /* Critical typography for headings */
+      h1, h2, h3, h4, h5, h6 {
+        margin: 0;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+
+      /* Mobile-first heading sizes */
+      h1 { font-size: 2.5rem; }
+      h2 { font-size: 2rem; }
+      h3 { font-size: 1.75rem; }
+
+      @media (min-width: 768px) {
+        h1 { font-size: 3.5rem; }
+        h2 { font-size: 2.5rem; }
+        h3 { font-size: 2rem; }
+      }
+
+      /* Critical container styles */
+      .container {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 1.25rem;
+      }
+
+      /* Header critical styles */
+      .page-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: var(--color-primary);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      }
+
+      .page-header-inner {
+        background-color: var(--color-primary);
+      }
+
+      .header-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: var(--header-height);
+        gap: 2.5rem;
+      }
+
+      /* Logo critical styles */
+      .branding-logo {
+        display: block;
+        line-height: 0;
+      }
+
+      .logo-image {
+        height: auto;
+        max-height: 70px;
+        width: auto;
+        display: block;
+        mix-blend-mode: screen;
+        filter: brightness(1.1);
+      }
+
+      /* Navigation critical styles - desktop */
+      .navigation {
+        flex: 1;
+        display: none;
+        justify-content: center;
+      }
+
+      @media (min-width: 769px) {
+        .navigation { display: flex; }
+      }
+
+      .menu-container {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .menu-item a {
+        display: block;
+        padding: 1.75rem 1rem;
+        color: var(--color-white);
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s;
+      }
+
+      /* Mobile menu button */
+      .page-open-mobile-menu {
+        display: flex;
+        background: none;
+        border: none;
+        padding: 0.625rem;
+        cursor: pointer;
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      @media (min-width: 769px) {
+        .page-open-mobile-menu { display: none; }
+      }
+
+      .page-open-mobile-menu .icon span {
+        display: block;
+        width: 28px;
+        height: 3px;
+        background: var(--color-white);
+        border-radius: 2px;
+        transition: all 0.3s;
+      }
+
+      /* Hero section critical styles */
+      .hero-section {
+        position: relative;
+        overflow: hidden;
+        background: var(--color-primary);
+        color: var(--color-white);
+        padding: 5rem 0;
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+      }
+
+      @media (min-width: 768px) {
+        .hero-section {
+          padding: 7rem 0;
+          min-height: 70vh;
+        }
+      }
+
+      .hero-section h1 {
+        margin-bottom: 1.5rem;
+        font-weight: 700;
+      }
+
+      .hero-section p {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        opacity: 0.95;
+      }
+
+      /* Button critical styles */
+      .inline-block {
+        display: inline-block;
+        padding: 1rem 2rem;
+        border-radius: 9999px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.2s;
+      }
+
+      /* Section critical styles */
+      section {
+        padding: 5rem 0;
+      }
+
+      @media (min-width: 1024px) {
+        section { padding: 7rem 0; }
+      }
+
+      /* Utility classes for instant rendering */
+      .text-center { text-align: center; }
+      .relative { position: relative; }
+      .absolute { position: absolute; }
+      .inset-0 { top: 0; right: 0; bottom: 0; left: 0; }
+      .z-0 { z-index: 0; }
+      .z-10 { z-index: 10; }
+      .overflow-hidden { overflow: hidden; }
+      .object-cover { object-fit: cover; }
+      .w-full { width: 100%; }
+      .h-full { height: 100%; }
+      .mx-auto { margin-left: auto; margin-right: auto; }
+      .max-w-4xl { max-width: 56rem; }
+      .max-w-5xl { max-width: 64rem; }
+
+      /* Hide elements until JS loads */
+      .mobile-menu[hidden] { display: none; }
+
+      /* Prevent FOUC (Flash of Unstyled Content) */
+      .antialiased {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      /* Skip link for accessibility */
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+
+      .focus\:not-sr-only:focus {
+        position: absolute;
+        width: auto;
+        height: auto;
+        padding: 0.5rem 1rem;
+        margin: 0;
+        overflow: visible;
+        clip: auto;
+        white-space: normal;
+      }
+
+      /* Reduce motion for accessibility */
+      @media (prefers-reduced-motion: reduce) {
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !important;
+        }
+      }
+
+      /* Main content focus styles for skip link */
+      main:focus {
+        outline: 2px solid #3b82f6;
+        outline-offset: -2px;
+      }
+    </style>
+
+    <!-- Font preloading is handled by @fontsource package -->
+  </head>
+  <body class="bg-eggshell text-gray-900 antialiased">
+    <!-- Skip to main content for accessibility -->
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:rounded"
+      style="background-color: #a83820; color: #ffffff;"
+    >
+      Skip to main content
+    </a>
+
+    <Header />
+
+    <main id="main-content" tabindex="-1">
+      <slot />
+    </main>
+
+    <Footer />
+
+    <!-- Load non-critical styles asynchronously -->
+    <link rel="preload" href="/styles/main.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/styles/main.css"></noscript>
+  </body>
+</html>
+
+<style is:global>
+  /* Non-critical global styles loaded after initial paint */
+  /* These will be loaded asynchronously to not block FCP */
+
+  /* Tailwind v4 base styles */
+  @import "tailwindcss";
+
+  /* Legacy CSS from original site - imported for visual accuracy */
+  @import "../styles/legacy.css";
+
+  /* Font definitions are now handled by @fontsource/roboto imports in the frontmatter */
+  /* This provides better performance and automatic optimization */
+
+  /* Smooth scrolling enhancement (progressive) */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  /* Focus visible styles (progressive enhancement) */
+  *:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+
+  /* Additional utility classes that aren't critical */
+  .backdrop-blur {
+    backdrop-filter: blur(8px);
+  }
+
+  .shadow-xl {
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  }
+
+  /* Animation classes for progressive enhancement */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+</style>

@@ -37,7 +37,7 @@ const pageDescription = 'View our portfolio of completed building projects on th
         format="avif"
       />
       <div class="absolute inset-0" style="background-color: rgba(26, 45, 77, 0.75);"></div>
-      <div class="relative z-10 container mx-auto px-4 text-center">
+      <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
           Our Projects
         </h1>
@@ -133,17 +133,6 @@ const pageDescription = 'View our portfolio of completed building projects on th
       </div>
     </section>
 
-    <!-- Testimonials CTA -->
-    <section class="intro-section">
-      <div class="container">
-        <div class="intro-content">
-          <h2>What Our Clients Say</h2>
-          <p>Don't just take our word for it - read testimonials from our satisfied clients on the Roseland Peninsula</p>
-          <a href="/#testimonials" class="cta-button-secondary">View Testimonials</a>
-        </div>
-      </div>
-    </section>
-
     <!-- Call to Action -->
     <section class="cta-section">
       <div class="container">
@@ -205,7 +194,7 @@ const pageDescription = 'View our portfolio of completed building projects on th
   .intro-content h2 {
     font-size: 32px;
     font-weight: 700;
-    color: #1a2c4d;
+    color: #1A2D4D;
     margin: 0 0 25px 0;
   }
 
@@ -218,7 +207,7 @@ const pageDescription = 'View our portfolio of completed building projects on th
 
   .projects-section {
     padding: 60px 0 80px;
-    background: #FAF9F6; /* Eggshell section */
+    background: #F0EAD6; /* Eggshell section */
   }
 
   .projects-section .container {
@@ -275,8 +264,8 @@ const pageDescription = 'View our portfolio of completed building projects on th
     position: absolute;
     top: 20px;
     right: 20px;
-    background: #a83820;
-    color: #ffffff;
+    background: #A83820;
+    color: white;
     padding: 8px 16px;
     border-radius: 4px;
     font-size: 12px;
@@ -292,7 +281,7 @@ const pageDescription = 'View our portfolio of completed building projects on th
   .project-content h3 {
     font-size: 24px;
     font-weight: 700;
-    color: #1a2c4d;
+    color: #1A2D4D;
     margin: 0 0 10px 0;
   }
 
@@ -306,7 +295,7 @@ const pageDescription = 'View our portfolio of completed building projects on th
   }
 
   .project-location svg {
-    color: #a83820;
+    color: #A83820;
   }
 
   .project-description {
@@ -334,7 +323,7 @@ const pageDescription = 'View our portfolio of completed building projects on th
     content: "✓";
     position: absolute;
     left: 0;
-    color: #a83820;
+    color: #A83820;
     font-weight: 700;
   }
 
@@ -356,7 +345,7 @@ const pageDescription = 'View our portfolio of completed building projects on th
   }
 
   .project-duration svg {
-    color: #1a2c4d;
+    color: #1A2D4D;
   }
 
   .view-project-cta {
@@ -366,7 +355,7 @@ const pageDescription = 'View our portfolio of completed building projects on th
     margin-top: 20px;
     padding-top: 20px;
     border-top: 1px solid #e9ecef;
-    color: #a83820;
+    color: #A83820;
     font-weight: 600;
     font-size: 14px;
     text-transform: uppercase;
@@ -378,7 +367,7 @@ const pageDescription = 'View our portfolio of completed building projects on th
   }
 
   .project-card-link:hover .view-project-cta {
-    color: #e06a4e;
+    color: #A83820;
   }
 
   .project-card-link:hover .view-project-cta svg {
@@ -400,7 +389,7 @@ const pageDescription = 'View our portfolio of completed building projects on th
   .testimonials-cta h2 {
     font-size: 32px;
     font-weight: 700;
-    color: #1a2c4d;
+    color: #1A2D4D;
     margin: 0 0 15px 0;
   }
 
@@ -414,7 +403,7 @@ const pageDescription = 'View our portfolio of completed building projects on th
     display: inline-block;
     padding: 14px 32px;
     background-color: transparent;
-    color: #1a2c4d;
+    color: #1A2D4D;
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
@@ -422,17 +411,17 @@ const pageDescription = 'View our portfolio of completed building projects on th
     text-decoration: none;
     border-radius: 4px;
     transition: all 0.3s ease;
-    border: 2px solid #1a2c4d;
+    border: 2px solid #1A2D4D;
   }
 
   .cta-button-secondary:hover {
-    background-color: #1a2c4d;
-    color: #ffffff;
+    background-color: #1A2D4D;
+    color: white;
   }
 
   .cta-section {
     padding: 80px 0;
-    background: #1a2c4d;
+    background: #1A2D4D;
     text-align: center;
   }
 
@@ -445,13 +434,13 @@ const pageDescription = 'View our portfolio of completed building projects on th
   .cta-section h2 {
     font-size: 36px;
     font-weight: 700;
-    color: #ffffff;
+    color: white;
     margin: 0 0 20px 0;
   }
 
   .cta-section p {
     font-size: 18px;
-    color: #ffffff;
+    color: white;
     margin: 0 0 30px 0;
     opacity: 0.9;
   }
@@ -459,8 +448,8 @@ const pageDescription = 'View our portfolio of completed building projects on th
   .cta-button {
     display: inline-block;
     padding: 16px 40px;
-    background-color: #a83820;
-    color: #ffffff !important;
+    background-color: #A83820;
+    color: white !important;
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
@@ -471,8 +460,8 @@ const pageDescription = 'View our portfolio of completed building projects on th
   }
 
   .cta-button:hover {
-    background-color: #8b2e19;
-    color: #ffffff !important;
+    background-color: #8B2E19;
+    color: white !important;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(168, 56, 32, 0.3);
   }

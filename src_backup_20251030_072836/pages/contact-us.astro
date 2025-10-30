@@ -1,0 +1,197 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactCard from '../components/ContactCard.astro';
+import ContactForm from '../components/ContactForm.astro';
+import { Image } from 'astro:assets';
+import { getProjectImage } from '../data/imageRegistry';
+import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
+import { generateContactPageSchema, createSchemaGraph } from '../utils/schema-helpers';
+import { companyInfo } from '../data/company-info';
+
+const pageTitle = "Contact Arron Bennett - Cornwall Builders";
+const pageDescription = "Contact Arron Bennett Building for expert construction services on the Roseland Peninsula, Cornwall. Free quotes, 24hr response. Call 07773 463383 or email today.";
+const siteUrl = companyInfo.url;
+
+// Generate comprehensive contact page schema
+const contactPageSchema = generateContactPageSchema('/contact-us', siteUrl);
+const breadcrumbData = [
+  { name: 'Home', url: '/' },
+  { name: 'Contact Us', url: '/contact-us' }
+];
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <section
+    class="relative h-[70vh] flex items-center justify-center overflow-hidden"
+    aria-label="Contact Us hero banner"
+  >
+    <Image
+      src={getProjectImage('A-Bennett-169.jpg')}
+      alt="Contact Arron Bennett Building for expert traditional stone masonry and construction services in Cornwall"
+      class="absolute inset-0 w-full h-full object-cover"
+      widths={[640, 750, 828, 1080, 1200]}
+      sizes="100vw"
+      loading="eager"
+      format="avif"
+    />
+    <div class="absolute inset-0" style="background-color: rgba(26, 45, 77, 0.75);"></div>
+    <div class="relative z-10 container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+        Get in Touch
+      </h1>
+      <p class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
+        Let's discuss your building project and how we can bring your vision to life
+      </p>
+    </div>
+  </section>
+
+    <section class="py-12 px-4 bg-white">
+      <div class="max-w-4xl mx-auto text-center">
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Need expert building services on the Roseland Peninsula? Arron Bennett Building offers reliable construction
+          and renovation services throughout the Roseland Peninsula in Cornwall. We provide comprehensive services including
+          extensions, renovations, and new builds with 20+ years of experience.
+        </p>
+      </div>
+    </section>
+
+    <section class="py-16 px-4 bg-eggshell">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
+          Contact Information
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <ContactCard
+            title="Call us"
+            icon="phone"
+            content="07773 463383"
+            link="tel:07773463383"
+          />
+          
+          <ContactCard
+            title="Email Us"
+            icon="email"
+            content="enquiries@arronbennettbuilding.co.uk"
+            link="mailto:enquiries@arronbennettbuilding.co.uk"
+          />
+          
+          <ContactCard
+            title="Location"
+            icon="location"
+            content="Roseland Peninsula, Cornwall"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 px-4 bg-white">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+            Send Us a Message
+          </h2>
+          <p class="text-lg text-gray-600">
+            Fill out the form below and we'll get back to you within 24 hours
+          </p>
+        </div>
+        
+        <ContactForm />
+      </div>
+    </section>
+
+    <section class="py-16 px-4 bg-eggshell">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+          Why Choose Us?
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center p-6">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">
+              <span role="img" aria-label="Timer emoji representing quick response time">⏱️</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-gray-900">Quick Response</h3>
+            <p class="text-gray-600">We respond to all inquiries within 24 hours</p>
+          </div>
+
+          <div class="text-center p-6">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">
+              <span role="img" aria-label="Checkmark emoji representing free consultation available">✓</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-gray-900">Free Consultation</h3>
+            <p class="text-gray-600">Initial consultation and quote at no cost</p>
+          </div>
+
+          <div class="text-center p-6">
+            <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">
+              <span role="img" aria-label="Star emoji representing 20 plus years of experience">⭐</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-gray-900">20+ Years Experience</h3>
+            <p class="text-gray-600">Proven track record of quality workmanship</p>
+          </div>
+
+          <div class="text-center p-6">
+            <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4 text-3xl">
+              <span role="img" aria-label="Shield emoji representing fully insured business">🛡️</span>
+            </div>
+            <h3 class="text-xl font-semibold mb-2 text-gray-900">Fully Insured</h3>
+            <p class="text-gray-600">Complete peace of mind for your project</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 px-4" style="background: linear-gradient(to bottom right, #a83820, #8b2e19);">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-white">
+          Ready to Start Your Project?
+        </h2>
+        <p class="text-xl mb-8 text-white opacity-95">
+          Contact us today for a free consultation and quote
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="tel:07773463383"
+            class="inline-block bg-white font-semibold px-8 py-4 rounded-lg hover:bg-eggshell transition-colors duration-200"
+            style="color: #a83820;"
+          >
+            Call 07773 463383
+          </a>
+          <a
+            href="mailto:enquiries@arronbennettbuilding.co.uk"
+            class="inline-block text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-200 border-2 border-white hover:bg-white"
+            style="hover:color: #a83820;"
+            onmouseover="this.style.backgroundColor='#ffffff'; this.style.color='#a83820';"
+            onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ffffff';"
+          >
+            Send Email
+          </a>
+        </div>
+      </div>
+    </section>
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json" set:html={JSON.stringify(contactPageSchema)} />
+  <BreadcrumbSchema items={breadcrumbData} siteUrl={siteUrl} />
+</BaseLayout>
+
+<style>
+  @media (max-width: 640px) {
+    .hero {
+      padding: 3rem 1rem;
+    }
+
+    .hero h1 {
+      font-size: 2.25rem;
+    }
+  }
+
+  /* Focus visible states for all interactive elements */
+  .hero *:focus-visible {
+    outline: 3px solid white;
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+</style>

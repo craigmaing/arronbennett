@@ -40,7 +40,6 @@ export function getProjectImage(filename: string): ImageMetadata {
   const image = projectImages[path];
 
   if (!image) {
-    console.error(`Available project images:`, Object.keys(projectImages));
     throw new Error(`Project image not found: ${filename} (path: ${path})`);
   }
 
@@ -58,7 +57,6 @@ export function getGalleryImage(filename: string): ImageMetadata {
   const image = galleryImages[path];
 
   if (!image) {
-    console.error(`Available gallery images:`, Object.keys(galleryImages));
     throw new Error(`Gallery image not found: ${filename} (path: ${path})`);
   }
 

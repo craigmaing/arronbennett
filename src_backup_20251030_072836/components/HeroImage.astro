@@ -1,0 +1,155 @@
+---
+/**
+ * Hero Image Component with AVIF Support
+ * Optimized for above-the-fold hero images with priority loading
+ * Uses AVIF format with WebP and JPEG fallbacks
+ */
+import { getImage } from 'astro:assets';
+
+interface Props {
+  src: string | ImageMetadata;
+  alt: string;
+  width?: number;
+  height?: number;
+  class?: string;
+  overlay?: boolean;
+}
+
+const {
+  src,
+  alt,
+  width = 1920,
+  height = 1080,
+  class: className,
+  overlay = false
+} = Astro.props;
+
+// Generate optimized images with higher quality for hero sections
+const avifImage = await getImage({
+  src,
+  format: 'avif',
+  width,
+  height,
+  quality: 85 // Higher quality for hero images
+});
+
+const webpImage = await getImage({
+  src,
+  format: 'webp',
+  width,
+  height,
+  quality: 85
+});
+
+const jpegImage = await getImage({
+  src,
+  format: 'jpeg',
+  width,
+  height,
+  quality: 90 // Highest quality for JPEG fallback
+});
+
+// Mobile versions (smaller for performance)
+const avifMobile = await getImage({
+  src,
+  format: 'avif',
+  width: 768,
+  height: Math.round((768 / width) * height),
+  quality: 80
+});
+
+const webpMobile = await getImage({
+  src,
+  format: 'webp',
+  width: 768,
+  height: Math.round((768 / width) * height),
+  quality: 80
+});
+---
+
+<div class={`hero-image-wrapper ${className || ''}`}>
+  <picture>
+    <!-- AVIF sources -->
+    <source
+      type="image/avif"
+      media="(max-width: 768px)"
+      srcset={avifMobile.src}
+    />
+    <source
+      type="image/avif"
+      media="(min-width: 769px)"
+      srcset={avifImage.src}
+    />
+
+    <!-- WebP sources -->
+    <source
+      type="image/webp"
+      media="(max-width: 768px)"
+      srcset={webpMobile.src}
+    />
+    <source
+      type="image/webp"
+      media="(min-width: 769px)"
+      srcset={webpImage.src}
+    />
+
+    <!-- JPEG fallback with eager loading for hero images -->
+    <img
+      src={jpegImage.src}
+      alt={alt}
+      width={width}
+      height={height}
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+      class="hero-image"
+    />
+  </picture>
+
+  {overlay && (
+    <div class="hero-overlay" aria-hidden="true"></div>
+  )}
+</div>
+
+<style>
+  .hero-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(26, 44, 77, 0.4) 0%,
+      rgba(26, 44, 77, 0.6) 100%
+    );
+    pointer-events: none;
+  }
+
+  /* Preload hint for browsers */
+  @media (prefers-reduced-motion: no-preference) {
+    .hero-image {
+      animation: fadeIn 0.5s ease-out;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+</style>

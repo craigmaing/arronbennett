@@ -1,0 +1,395 @@
+---
+/**
+ * SEO Component for Arron Bennett Building
+ * Comprehensive meta tags, Open Graph, Twitter Cards, and Schema.org structured data
+ *
+ * @param title - Page title (will be suffixed with site name)
+ * @param description - Meta description (150-160 characters recommended)
+ * @param canonical - Canonical URL (defaults to current page)
+ * @param ogImage - Open Graph image URL (1200x630 recommended)
+ * @param ogType - Open Graph type (default: 'website')
+ * @param noindex - Set to true to prevent indexing
+ * @param article - Article metadata (published/modified dates)
+ * @param schema - Additional schema.org structured data
+ */
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: 'website' | 'article' | 'profile';
+  noindex?: boolean;
+  article?: {
+    publishedTime?: string;
+    modifiedTime?: string;
+  };
+  schema?: Record<string, any>;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  ogImage = '/images/og-default.jpg',
+  ogType = 'website',
+  noindex = false,
+  article,
+  schema
+} = Astro.props;
+
+// Site configuration
+const siteName = 'Arron Bennett Building - Cornwall';
+const siteUrl = 'https://arronbennettbuilding.co.uk';
+const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
+const fullOgImage = ogImage.startsWith('http') ? ogImage : `${siteUrl}${ogImage}`;
+
+// Default Organization Schema
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${siteUrl}/#organization`,
+  "name": "Arron Bennett Building Contractors",
+  "url": siteUrl,
+  "logo": {
+    "@type": "ImageObject",
+    "url": `${siteUrl}/images/logo.png`,
+    "width": 180,
+    "height": 107
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+44-7773-463383",
+    "contactType": "customer service",
+    "email": "enquiries@arronbennettbuilding.co.uk",
+    "areaServed": "GB",
+    "availableLanguage": "English"
+  },
+  "sameAs": [
+    // Add social media profiles here when available
+  ]
+};
+
+// LocalBusiness Schema (Cornwall-based) - Enhanced with HomeAndConstructionBusiness type
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+  "@id": `${siteUrl}/#localbusiness`,
+  "name": "Arron Bennett Building Contractors",
+  "alternateName": "Arron Bennett Building",
+  "description": "Traditional building contractors specializing in stone masonry, heritage restoration, and modern construction methods. Serving the Roseland Peninsula, Cornwall with over 20 years of experience.",
+  "image": [
+    `${siteUrl}/images/logo.png`,
+    `${siteUrl}/images/arron-bennett.jpg`
+  ],
+  "logo": {
+    "@type": "ImageObject",
+    "url": `${siteUrl}/images/logo.png`,
+    "width": 180,
+    "height": 107
+  },
+  "url": siteUrl,
+  "telephone": "+44-7773-463383",
+  "email": "enquiries@arronbennettbuilding.co.uk",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "Cornwall",
+    "addressLocality": "Roseland Peninsula",
+    "addressCountry": "GB"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "50.2660",
+    "longitude": "-5.0527"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Roseland Peninsula, Cornwall",
+    "containedInPlace": {
+      "@type": "AdministrativeArea",
+      "name": "Cornwall",
+      "containedInPlace": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      }
+    }
+  },
+  "priceRange": "£££",
+  "paymentAccepted": ["Cash", "Bank Transfer", "Cheque"],
+  "currenciesAccepted": "GBP",
+  "openingHours": "Mo-Fr 08:00-18:00, Sa 08:00-14:00",
+  "foundingDate": "2003",
+  "founder": {
+    "@type": "Person",
+    "name": "Arron Bennett",
+    "jobTitle": "Master Builder & Stone Mason"
+  },
+  "knowsAbout": [
+    "Stone Masonry",
+    "Traditional Building",
+    "Heritage Restoration",
+    "Lime Mortar Work",
+    "Project Management",
+    "Heat Pump Installation",
+    "New Build Construction",
+    "Barn Conversions",
+    "Listed Building Work"
+  ],
+  "slogan": "Quality craftsmanship backed by over 20 years of experience",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "bestRating": "5",
+    "worstRating": "1",
+    "reviewCount": "5"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Building Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "serviceType": "Construction",
+          "name": "Full Builds",
+          "description": "Complete new construction projects including new build homes, barn conversions, and bespoke properties using traditional and modern methods",
+          "provider": {
+            "@id": `${siteUrl}/#localbusiness`
+          },
+          "areaServed": "Roseland Peninsula, Cornwall"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "serviceType": "Renovation",
+          "name": "Home Renovations",
+          "description": "Full restoration and renovation projects combining traditional methods with new technology, specializing in period properties and listed buildings",
+          "provider": {
+            "@id": `${siteUrl}/#localbusiness`
+          },
+          "areaServed": "Roseland Peninsula, Cornwall"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "serviceType": "Masonry",
+          "name": "Stone and Block Masonry",
+          "description": "Specialist stone and block masonry including stone cladding, chimneys, boundary walls, retaining walls, Cornish dry stone walling, and granite hedging",
+          "provider": {
+            "@id": `${siteUrl}/#localbusiness`
+          },
+          "areaServed": "Roseland Peninsula, Cornwall"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "serviceType": "Interior Renovation",
+          "name": "Kitchen and Bathroom Renovations",
+          "description": "Complete kitchen and bathroom renovation projects preserving traditional character while incorporating modern fixtures and fittings",
+          "provider": {
+            "@id": `${siteUrl}/#localbusiness`
+          },
+          "areaServed": "Roseland Peninsula, Cornwall"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "serviceType": "Landscaping",
+          "name": "Hard Landscaping",
+          "description": "Retaining walls, Cornish dry stone walling, block paving for patios, driveways, and entrances using traditional techniques",
+          "provider": {
+            "@id": `${siteUrl}/#localbusiness`
+          },
+          "areaServed": "Roseland Peninsula, Cornwall"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "serviceType": "Project Management",
+          "name": "Project Management",
+          "description": "Full project oversight from material ordering to finishing touches, liaising with clients, contractors, architects, and engineers",
+          "provider": {
+            "@id": `${siteUrl}/#localbusiness`
+          },
+          "areaServed": "Roseland Peninsula, Cornwall"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "serviceType": "HVAC Installation",
+          "name": "Ground Source and Air Source Heat Pump Installations",
+          "description": "Energy-efficient, sustainable heating solutions with certified installations and thorough suitability assessments",
+          "provider": {
+            "@id": `${siteUrl}/#localbusiness`
+          },
+          "areaServed": "Roseland Peninsula, Cornwall"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "serviceType": "Heritage Restoration",
+          "name": "Traditional Lime Mortars",
+          "description": "Lime rendering, plastering, lime putties, and repointing for conservation and new traditional builds with over 20 years of experience",
+          "provider": {
+            "@id": `${siteUrl}/#localbusiness`
+          },
+          "areaServed": "Roseland Peninsula, Cornwall"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "serviceType": "Excavation",
+          "name": "Mini Excavator and Waste Management Services",
+          "description": "Professional site preparation and responsible waste disposal for construction projects",
+          "provider": {
+            "@id": `${siteUrl}/#localbusiness`
+          },
+          "areaServed": "Roseland Peninsula, Cornwall"
+        }
+      }
+    ]
+  }
+};
+
+// Person Schema (Arron Bennett)
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": `${siteUrl}/#person`,
+  "name": "Arron Bennett",
+  "jobTitle": "Master Builder & Building Contractor",
+  "description": "Traditional builder with 20+ years of experience specializing in stone masonry, heritage restoration, and modern construction methods in Cornwall",
+  "url": siteUrl,
+  "image": `${siteUrl}/images/arron-bennett.jpg`,
+  "telephone": "+44-7773-463383",
+  "email": "enquiries@arronbennettbuilding.co.uk",
+  "worksFor": {
+    "@id": `${siteUrl}/#organization`
+  },
+  "knowsAbout": [
+    "Stone Masonry",
+    "Traditional Building Methods",
+    "Heritage Restoration",
+    "Project Management",
+    "Renewable Energy Installation",
+    "Lime Mortar Techniques"
+  ],
+  "areaServed": {
+    "@type": "State",
+    "name": "Cornwall"
+  }
+};
+
+// BreadcrumbList Schema (for navigation)
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": siteUrl
+    }
+  ]
+};
+
+// Add current page to breadcrumbs if not homepage
+if (Astro.url.pathname !== '/') {
+  const pathParts = Astro.url.pathname.split('/').filter(part => part);
+  pathParts.forEach((part, index) => {
+    breadcrumbSchema.itemListElement.push({
+      "@type": "ListItem",
+      "position": index + 2,
+      "name": part.charAt(0).toUpperCase() + part.slice(1).replace(/-/g, ' '),
+      "item": `${siteUrl}/${pathParts.slice(0, index + 1).join('/')}`
+    });
+  });
+}
+
+// Combine all schemas
+const schemaData = [
+  organizationSchema,
+  localBusinessSchema,
+  personSchema,
+  breadcrumbSchema,
+  ...(schema ? [schema] : [])
+];
+---
+
+<!-- Primary Meta Tags -->
+<title>{fullTitle}</title>
+<meta name="title" content={fullTitle} />
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalUrl} />
+
+<!-- Robots -->
+{noindex ? (
+  <meta name="robots" content="noindex, nofollow" />
+) : (
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+)}
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={ogType} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={fullOgImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:site_name" content={siteName} />
+<meta property="og:locale" content="en_GB" />
+
+{article && article.publishedTime && (
+  <meta property="article:published_time" content={article.publishedTime} />
+)}
+{article && article.modifiedTime && (
+  <meta property="article:modified_time" content={article.modifiedTime} />
+)}
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonicalUrl} />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={fullOgImage} />
+
+<!-- Additional Meta Tags -->
+<meta name="author" content="Arron Bennett Building Contractors" />
+<meta name="theme-color" content="#021f59" />
+<meta name="msapplication-TileColor" content="#021f59" />
+
+<!-- Geo Tags for Local SEO -->
+<meta name="geo.region" content="GB-CON" />
+<meta name="geo.placename" content="Cornwall" />
+<meta name="geo.position" content="50.2660;-5.0527" />
+<meta name="ICBM" content="50.2660, -5.0527" />
+
+<!-- Schema.org Structured Data -->
+<script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+
+<!-- Preconnect for Performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<!-- DNS Prefetch -->
+<link rel="dns-prefetch" href="https://www.google-analytics.com" />

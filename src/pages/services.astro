@@ -43,7 +43,7 @@ const canonicalURL = new URL('/services', Astro.site);
       format="avif"
     />
     <div class="absolute inset-0" style="background-color: rgba(26, 45, 77, 0.75);"></div>
-    <div class="relative z-10 container mx-auto px-4 text-center">
+    <div class="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
         Building Services in Cornwall & Devon
       </h1>
@@ -132,7 +132,7 @@ const canonicalURL = new URL('/services', Astro.site);
   </section>
 
   <!-- Projects Showcase CTA -->
-  <section class="process-section">
+  <section class="projects-showcase-section">
     <div class="container">
       <div class="section-intro">
         <h2>See Our Work in Action</h2>
@@ -213,6 +213,18 @@ const canonicalURL = new URL('/services', Astro.site);
     padding: 0 15px;
   }
 
+  /* Projects Showcase CTA */
+  .projects-showcase-section {
+    padding: 80px 0;
+    background: #F0EAD6; /* Eggshell section */
+  }
+
+  .projects-showcase-section .container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
   .section-intro {
     text-align: center;
     max-width: 800px;
@@ -222,7 +234,7 @@ const canonicalURL = new URL('/services', Astro.site);
   .section-intro h2 {
     font-size: 36px;
     font-weight: 700;
-    color: #1a2c4d;
+    color: #1A2D4D;
     margin: 0 0 20px 0;
   }
 
@@ -270,7 +282,7 @@ const canonicalURL = new URL('/services', Astro.site);
 
   .service-card h3 {
     font-size: 24px;
-    color: #1a2c4d;
+    color: #1A2D4D;
     margin: 0 0 15px 0;
     line-height: 1.3;
     font-weight: 700;
@@ -302,7 +314,7 @@ const canonicalURL = new URL('/services', Astro.site);
     content: "✓";
     position: absolute;
     left: 0;
-    color: #a83820;
+    color: #A83820;
     font-weight: bold;
     font-size: 18px;
   }
@@ -310,7 +322,7 @@ const canonicalURL = new URL('/services', Astro.site);
   .btn {
     display: inline-block;
     padding: 14px 32px;
-    background: #a83820;
+    background: #A83820;
     color: white;
     text-decoration: none;
     border-radius: 4px;
@@ -325,13 +337,13 @@ const canonicalURL = new URL('/services', Astro.site);
   }
 
   .btn:hover {
-    background: #e06a4e;
+    background: #A83820;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(242, 122, 94, 0.3);
   }
 
   .btn-primary {
-    background: #1a2c4d;
+    background: #1A2D4D;
   }
 
   .btn-primary:hover {
@@ -340,7 +352,7 @@ const canonicalURL = new URL('/services', Astro.site);
 
   /* Process Section */
   .process-section {
-    background: #FAF9F6; /* Eggshell section */
+    background: #F0EAD6; /* Eggshell section */
     padding: 80px 0;
   }
 
@@ -359,39 +371,81 @@ const canonicalURL = new URL('/services', Astro.site);
 
   .process-step {
     text-align: center;
-    padding: 30px;
+    padding: 2.5rem;
+    background: linear-gradient(135deg, #ffffff 0%, #F0EAD6 100%);
+    border-radius: 12px;
+    border-top: 4px solid #A83820;
+    box-shadow:
+      0 10px 30px rgba(26, 45, 77, 0.1),
+      0 1px 8px rgba(26, 45, 77, 0.06);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .process-step::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(168, 56, 32, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+    transition: transform 0.6s ease;
+  }
+
+  .process-step:hover {
+    transform: translateY(-4px);
+    box-shadow:
+      0 15px 40px rgba(26, 45, 77, 0.15),
+      0 5px 15px rgba(26, 45, 77, 0.08);
+    border-top-color: #1A2D4D;
+  }
+
+  .process-step:hover::before {
+    transform: translate(-10%, -10%);
   }
 
   .process-number {
-    width: 70px;
-    height: 70px;
-    background: #1a2c4d;
+    width: 80px;
+    height: 80px;
+    background: #1A2D4D;
     color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 700;
-    margin: 0 auto 20px;
+    margin: 0 auto 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(26, 45, 77, 0.2);
+  }
+
+  .process-step:hover .process-number {
+    background: #A83820;
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 6px 20px rgba(168, 56, 32, 0.3);
   }
 
   .process-step h3 {
-    color: #1a2c4d;
-    margin-bottom: 15px;
-    font-size: 22px;
+    color: #1A2D4D;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
     font-weight: 700;
+    line-height: 1.3;
   }
 
   .process-step p {
-    color: #666666;
-    line-height: 1.8;
-    font-size: 16px;
+    color: #4A5568;
+    line-height: 1.7;
+    font-size: 1rem;
   }
 
   /* CTA Section */
   .cta-section {
-    background: #1a2c4d;
+    background: #1A2D4D;
     color: white;
     padding: 80px 0;
     text-align: center;

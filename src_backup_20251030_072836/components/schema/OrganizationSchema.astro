@@ -1,0 +1,16 @@
+---
+/**
+ * Organization Schema Component
+ * Generates Schema.org Organization/LocalBusiness markup
+ */
+import { generateOrganizationSchema } from '../../utils/schema-helpers';
+
+interface Props {
+  siteUrl?: string;
+}
+
+const { siteUrl } = Astro.props;
+const schema = generateOrganizationSchema(siteUrl);
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

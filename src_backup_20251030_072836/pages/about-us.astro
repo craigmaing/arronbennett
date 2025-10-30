@@ -1,0 +1,385 @@
+---
+/**
+ * About Us Page - Arron Bennett Building Contractors
+ * URL: /about-us
+ */
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import { getProjectImage } from '../data/imageRegistry';
+
+// SEO metadata
+const pageTitle = 'About Arron Bennett – Traditional Builder Cornwall | Arron Bennett Building - Cornwall';
+const pageDescription = 'Learn about Arron Bennett, a highly skilled traditional builder based in Cornwall. 20+ years experience in stone masonry, renovations, and project management.';
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+>
+  <!-- Hero Section -->
+  <section
+    class="relative h-[70vh] flex items-center justify-center overflow-hidden"
+    aria-label="About Us hero banner"
+  >
+    <Image
+      src={getProjectImage('A-Bennett-72.jpg')}
+      alt="Professional Cornwall building exterior showcasing traditional craftsmanship by Arron Bennett Building"
+      class="absolute inset-0 w-full h-full object-cover"
+      widths={[640, 750, 828, 1080, 1200]}
+      sizes="100vw"
+      loading="eager"
+      format="avif"
+    />
+    <div class="absolute inset-0" style="background-color: rgba(26, 45, 77, 0.75);"></div>
+    <div class="relative z-10 container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+        About Us
+      </h1>
+      <p class="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto">
+        Expert building services on the Roseland Peninsula, Cornwall
+      </p>
+    </div>
+  </section>
+
+    <!-- Main Content Section -->
+    <section class="about-content">
+      <div class="container">
+        <div class="content-grid">
+          <!-- About Arron -->
+          <div class="content-column">
+            <h2>Arron Bennett – Traditional Builder in Cornwall</h2>
+            <p>
+              Welcome to Arron Bennett Building Contractors, an experienced, dependable and highly skilled traditional builder based on the Roseland Peninsula in Cornwall. We specialise in stone masonry and project management, combining traditional building methods with modern techniques. Serving the beautiful Roseland Peninsula including St Mawes, Portscatho, Gerrans, and surrounding villages.
+            </p>
+            <p>
+              Beginning his career in the construction industry at the age of 16, Arron has built a wealth of experience across the sector, developing the skills and expertise to achieve his reputation as an exceptional stone and block mason, general builder and project manager.
+            </p>
+            <p>
+              With 20+ years experience combining traditional building methods with modern techniques, he has an in-depth understanding of building control and planning regulations.
+            </p>
+          </div>
+
+          <!-- Image Column -->
+          <div class="image-column">
+            <Image
+              src={getProjectImage('A-Bennett-143.jpg')}
+              alt="Traditional Cornwall building showing expert craftsmanship and professional construction work"
+              widths={[400, 600, 800]}
+              sizes="(max-width: 768px) 100vw, 50vw"
+              loading="lazy"
+              format="avif"
+              quality={80}
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section class="expertise-section">
+      <div class="container">
+        <h2>Our Expertise in Stone Masonry & Project Management</h2>
+        <div class="expertise-grid">
+          <div class="expertise-item">
+            <h3>Traditional Craftsmanship</h3>
+            <p>
+              We collaborate with a network of contractors and specialists in their field, and liaise closely with architects and structural engineers, to deliver our clients' architectural vision to the highest possible standards.
+            </p>
+          </div>
+
+          <div class="expertise-item">
+            <h3>Project Management</h3>
+            <p>
+              We can oversee all aspects of your building project, from ordering construction materials through to completing the finishing touches, and pride ourselves on our outstanding reputation.
+            </p>
+          </div>
+
+          <div class="expertise-item">
+            <h3>Quality Guarantee</h3>
+            <p>
+              With comprehensive insurance coverage and decades of experience, we ensure every project meets the highest standards of workmanship and professionalism.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+      <div class="container">
+        <div class="values-content">
+          <h2>Why Choose Arron Bennett Building?</h2>
+          <ul class="values-list">
+            <li><strong>20+ Years Experience:</strong> Two decades of expert craftsmanship on the Roseland Peninsula</li>
+            <li><strong>Fully Insured:</strong> Comprehensive coverage for complete peace of mind</li>
+            <li><strong>Traditional Methods:</strong> Time-honored stone masonry techniques</li>
+            <li><strong>Modern Standards:</strong> Contemporary building regulations and best practices</li>
+            <li><strong>Project Management:</strong> Complete oversight from start to finish</li>
+            <li><strong>Client Focused:</strong> Outstanding reputation built on satisfied customers</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Ready to Start Your Project?</h2>
+        <p>Get in touch today to discuss your building requirements and receive a free, no-obligation quote.</p>
+        <a href="/contact-us" class="cta-button">Contact Us Today</a>
+      </div>
+    </section>
+</BaseLayout>
+
+<style>
+  .breadcrumb-section {
+    background: #f8f9fa;
+    padding: 20px 0;
+    border-bottom: 1px solid #e9ecef;
+  }
+
+  .breadcrumb-section .container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .breadcrumb ol {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    color: #6c757d;
+  }
+
+  .breadcrumb li {
+    margin-right: 8px;
+  }
+
+  .breadcrumb a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
+  .about-content {
+    padding: 80px 0;
+    background: #ffffff; /* White section */
+  }
+
+  .about-content .container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+
+  .content-column h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a2c4d;
+    margin: 0 0 25px 0;
+    line-height: 1.3;
+  }
+
+  .content-column p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666666;
+    margin: 0 0 20px 0;
+  }
+
+  .image-column img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .expertise-section {
+    padding: 80px 0;
+    background: #F0EAD6; /* Eggshell section */
+  }
+
+  .expertise-section .container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .expertise-section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1a2c4d;
+    text-align: center;
+    margin: 0 0 60px 0;
+  }
+
+  .expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
+
+  .expertise-item h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a2c4d;
+    margin: 0 0 15px 0;
+  }
+
+  .expertise-item p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666666;
+    margin: 0;
+  }
+
+  .values-section {
+    padding: 80px 0;
+    background: #ffffff; /* White section */
+  }
+
+  .values-section .container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .values-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1a2c4d;
+    margin: 0 0 40px 0;
+  }
+
+  .values-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .values-list li {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #666666;
+    margin: 0 0 20px 0;
+    padding-left: 30px;
+    position: relative;
+  }
+
+  .values-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #a83820;
+    font-weight: 700;
+    font-size: 22px;
+  }
+
+  .values-list strong {
+    color: #1a2c4d;
+  }
+
+  .cta-section {
+    padding: 80px 0;
+    background: #1a2c4d;
+    text-align: center;
+  }
+
+  .cta-section .container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .cta-section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 20px 0;
+  }
+
+  .cta-section p {
+    font-size: 18px;
+    color: #ffffff;
+    margin: 0 0 30px 0;
+    opacity: 0.9;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 16px 40px;
+    background-color: #a83820;
+    color: #ffffff !important;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
+  }
+
+  .cta-button:hover {
+    background-color: #e06a4e;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(242, 122, 94, 0.3);
+  }
+
+  /* Responsive */
+  @media (max-width: 991px) {
+    .content-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .expertise-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .breadcrumb-section h1 {
+      font-size: 36px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .breadcrumb-section {
+      padding: 30px 0;
+    }
+
+    .breadcrumb-section h1 {
+      font-size: 28px;
+    }
+
+    .about-content,
+    .expertise-section,
+    .values-section,
+    .cta-section {
+      padding: 50px 0;
+    }
+
+    .expertise-section h2,
+    .values-content h2,
+    .cta-section h2 {
+      font-size: 28px;
+    }
+
+    .content-column h2 {
+      font-size: 26px;
+    }
+  }
+</style>

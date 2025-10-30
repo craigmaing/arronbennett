@@ -30,7 +30,7 @@ const {
   fetchpriority = 'auto',
   class: className = '',
   sizes,
-  placeholderColor = '#1a2c4d', // Navy blue as default
+  placeholderColor = '#1A2D4D', // Navy blue as default
   blurAmount = 20
 } = Astro.props;
 
@@ -45,7 +45,7 @@ const isLocalImage = src.startsWith('/images/');
 const getDominantColor = (imagePath: string) => {
   if (imagePath.includes('projects')) return '#2c5282'; // Blue-gray for projects
   if (imagePath.includes('services')) return '#1a365d'; // Darker blue for services
-  if (imagePath.includes('hero')) return '#1a2c4d'; // Navy for heroes
+  if (imagePath.includes('hero')) return '#1A2D4D'; // Navy for heroes
   return placeholderColor;
 };
 
@@ -95,18 +95,7 @@ const dominantColor = getDominantColor(src);
       {fetchpriority}
       {sizes}
       class="progressive-image-main"
-      onload={`
-        const wrapper = document.querySelector('[data-image-id="${imageId}"]');
-        if (wrapper) {
-          wrapper.classList.add('progressive-image-loaded');
-        }
-      `}
-      onerror={`
-        const wrapper = document.querySelector('[data-image-id="${imageId}"]');
-        if (wrapper) {
-          wrapper.classList.add('progressive-image-error');
-        }
-      `}
+      data-image-id={imageId}
     />
   </picture>
 
@@ -243,3 +232,27 @@ const dominantColor = getDominantColor(src);
     }
   }
 </style>
+
+<script define:vars={{ imageId }}>
+  // Handle image load and error events for progressive image loading
+  document.addEventListener('DOMContentLoaded', () => {
+    const img = document.querySelector(`[data-image-id="${imageId}"]`);
+    if (!img) return;
+
+    // Handle successful image load
+    img.addEventListener('load', () => {
+      const wrapper = document.querySelector(`[data-image-id="${imageId}"]`)?.closest('.progressive-image-wrapper');
+      if (wrapper) {
+        wrapper.classList.add('progressive-image-loaded');
+      }
+    });
+
+    // Handle image load error
+    img.addEventListener('error', () => {
+      const wrapper = document.querySelector(`[data-image-id="${imageId}"]`)?.closest('.progressive-image-wrapper');
+      if (wrapper) {
+        wrapper.classList.add('progressive-image-error');
+      }
+    });
+  });
+</script>

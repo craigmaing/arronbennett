@@ -1,0 +1,121 @@
+# Netlify Configuration for Arron Bennett Building Website
+# This file configures build settings, redirects, and forms for Netlify deployment
+
+# Build configuration
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+# Build environment variables
+[build.environment]
+  NODE_VERSION = "18"
+  # Set Astro output to static for optimal performance
+  PUBLIC_ENVIRONMENT = "production"
+
+# Development configuration
+[dev]
+  command = "npm run dev"
+  port = 3000
+  # Auto-publish to Netlify when files change during preview
+  autoLaunch = true
+
+# Context-specific settings for different deployment environments
+[context.production]
+  command = "npm run build"
+  publish = "dist"
+  environment = { NODE_VERSION = "18" }
+
+[context.deploy-preview]
+  command = "npm run build"
+  publish = "dist"
+
+[context.branch-deploy]
+  command = "npm run build"
+  publish = "dist"
+
+# Redirect rules
+# Keep trailing slashes for consistency
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 404
+
+# Security headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Prevent MIME type sniffing
+    X-Content-Type-Options = "nosniff"
+    # Prevent clickjacking
+    X-Frame-Options = "SAMEORIGIN"
+    # Enable XSS filtering in older browsers
+    X-XSS-Protection = "1; mode=block"
+    # Referrer policy for privacy
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    # Permissions policy (formerly Feature Policy)
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# Cache control headers for static assets
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "*.woff*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# HTML cache control - shorter duration for content updates
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+# Form configuration - Netlify Forms with spam protection
+[[forms]]
+  name = "contact"
+  method = "POST"
+  # Enable honeypot spam protection
+  honeypot = "bot-field"
+  # Custom success page redirect
+  action = "/thank-you"
+  # Optional: Enable built-in spam filtering
+  # spam-protection = true
+
+# Edge functions (optional, for advanced customization)
+# [[edge_functions]]
+#   function = "form-handler"
+#   path = "/api/submit-form"
+
+# Functions configuration
+[functions]
+  node_bundler = "esbuild"
+  included_files = ["src/**/*.ts", "src/**/*.js"]
+
+# Analytics and monitoring configuration
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+  [plugins.inputs]
+    output_path = "lighthouse-reports"
+    uploads_dir = "dist"
+
+# Environment-specific configurations
+[env]
+  # Production environment
+  production = { ENVIRONMENT = "production", NODE_ENV = "production" }
+  # Preview environment
+  preview = { ENVIRONMENT = "preview", NODE_ENV = "production" }
+  # Branch deploy environment
+  branch = { ENVIRONMENT = "development", NODE_ENV = "production" }

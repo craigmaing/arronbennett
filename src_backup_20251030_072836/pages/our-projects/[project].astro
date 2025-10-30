@@ -1,0 +1,482 @@
+---
+/**
+ * Project Detail Page - Individual Project Gallery
+ * Dynamic route: /our-projects/[project-id]
+ * Displays full photo gallery with lightbox for each project
+ */
+
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ProjectGalleryLightbox from '../../components/ProjectGalleryLightbox.astro';
+import { Image } from 'astro:assets';
+import { projects } from '../../data/projects';
+
+export function getStaticPaths() {
+  return projects.map((project) => ({
+    params: { project: project.id },
+    props: { project },
+  }));
+}
+
+const { project } = Astro.props;
+
+// Find prev/next projects for navigation
+const currentIndex = projects.findIndex(p => p.id === project.id);
+const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
+const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
+
+const pageTitle = `${project.title} - Arron Bennett Building`;
+const pageDescription = project.description;
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  
+    <!-- Breadcrumbs -->
+    <div class="breadcrumb-section">
+      <div class="container">
+        <nav aria-label="Breadcrumb" class="breadcrumb">
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li>></li>
+            <li><a href="/our-projects">Our Projects</a></li>
+            <li>></li>
+            <li aria-current="page">{project.title}</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Project Header -->
+    <section class="project-header">
+      <div class="container">
+        <div class="project-header-content">
+          <div class="project-category-badge">{project.category}</div>
+          <h1>{project.title}</h1>
+          <div class="project-meta-header">
+            <span class="location">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              {project.location}
+            </span>
+            <span class="duration">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              {project.duration}
+            </span>
+          </div>
+          <p class="project-description-full">{project.description}</p>
+
+          <!-- Project Details -->
+          <div class="project-details-section">
+            <h3>Project Highlights</h3>
+            <ul class="project-details-list">
+              {project.details.map((detail) => (
+                <li>{detail}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Gallery -->
+    <section class="project-gallery-section">
+      <div class="container">
+        <h2>Project Gallery</h2>
+        <p class="gallery-subtitle">Click any image to view in full size ({project.images.length} photos)</p>
+
+        <div class="project-gallery-grid">
+          {project.images.map((image, index) => (
+            <button
+              type="button"
+              class="gallery-image-item"
+              data-index={index}
+              aria-label={`View ${image.alt}`}
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                width={400}
+                height={300}
+                loading="lazy"
+                format="avif"
+                quality={80}
+                alt={image.alt}
+                loading="lazy"
+                class="gallery-thumbnail"
+                placeholderColor="#2c5282"
+                blurAmount={12}
+              />
+            </button>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox Component - JavaScript loads only when gallery enters viewport -->
+    <ProjectGalleryLightbox images={project.images} />
+
+    <!-- Project Navigation -->
+    <section class="project-navigation">
+      <div class="container">
+        <div class="nav-grid">
+          <div class="nav-item prev">
+            {prevProject ? (
+              <a href={`/our-projects/${prevProject.id}`}>
+                <span class="nav-label">Previous Project</span>
+                <span class="nav-title">{prevProject.title}</span>
+              </a>
+            ) : (
+              <div></div>
+            )}
+          </div>
+
+          <div class="nav-item center">
+            <a href="/our-projects" class="back-to-gallery">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+              </svg>
+              Back to All Projects
+            </a>
+          </div>
+
+          <div class="nav-item next">
+            {nextProject ? (
+              <a href={`/our-projects/${nextProject.id}`}>
+                <span class="nav-label">Next Project</span>
+                <span class="nav-title">{nextProject.title}</span>
+              </a>
+            ) : (
+              <div></div>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Like What You See?</h2>
+        <p>Get in touch to discuss your building project requirements</p>
+        <a href="/contact-us" class="cta-button">Contact Us Today</a>
+      </div>
+    </section>
+  
+</BaseLayout>
+
+<style>
+  /* Breadcrumb */
+  .breadcrumb-section {
+    background: #f8f9fa;
+    padding: 30px 0;
+    border-bottom: 1px solid #e9ecef;
+  }
+
+  .container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .breadcrumb ol {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    color: #6c757d;
+    gap: 8px;
+  }
+
+  .breadcrumb a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  .breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
+  /* Project Header */
+  .project-header {
+    padding: 60px 0;
+    background: #ffffff;
+  }
+
+  .project-header-content {
+    max-width: 900px;
+  }
+
+  .project-category-badge {
+    display: inline-block;
+    background: #a83820;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+
+  .project-header h1 {
+    font-size: 42px;
+    font-weight: 700;
+    color: #1a2c4d;
+    margin: 0 0 20px 0;
+    line-height: 1.2;
+  }
+
+  .project-meta-header {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    color: #6c757d;
+  }
+
+  .project-meta-header span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .project-meta-header svg {
+    color: #a83820;
+  }
+
+  .project-description-full {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #666666;
+    margin: 0 0 40px 0;
+  }
+
+  .project-details-section h3 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a2c4d;
+    margin: 0 0 20px 0;
+  }
+
+  .project-details-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .project-details-list li {
+    font-size: 16px;
+    color: #666666;
+    padding-left: 30px;
+    position: relative;
+  }
+
+  .project-details-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #a83820;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  /* Gallery Section */
+  .project-gallery-section {
+    padding: 80px 0;
+    background: #f8f9fa;
+  }
+
+  .project-gallery-section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1a2c4d;
+    margin: 0 0 10px 0;
+    text-align: center;
+  }
+
+  .gallery-subtitle {
+    text-align: center;
+    font-size: 16px;
+    color: #6c757d;
+    margin: 0 0 50px 0;
+  }
+
+  .project-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .gallery-image-item {
+    position: relative;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    background: none;
+    transition: all 0.3s ease;
+  }
+
+  .gallery-image-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .gallery-image-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Project Navigation */
+  .project-navigation {
+    padding: 60px 0;
+    background: #ffffff;
+    border-top: 1px solid #e9ecef;
+  }
+
+  .nav-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .nav-item a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+  }
+
+  .nav-item.prev a {
+    align-items: flex-start;
+  }
+
+  .nav-item.next a {
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  .nav-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #6c757d;
+    margin-bottom: 5px;
+  }
+
+  .nav-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a2c4d;
+  }
+
+  .nav-item a:hover .nav-title {
+    color: #a83820;
+  }
+
+  .back-to-gallery {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: #f8f9fa;
+    color: #1a2c4d;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .back-to-gallery:hover {
+    background: #1a2c4d;
+    color: #ffffff;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    padding: 80px 0;
+    background: #1a2c4d;
+    text-align: center;
+  }
+
+  .cta-section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 15px 0;
+  }
+
+  .cta-section p {
+    font-size: 18px;
+    color: #ffffff;
+    opacity: 0.9;
+    margin: 0 0 30px 0;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 16px 40px;
+    background-color: #a83820;
+    color: #ffffff !important;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+  }
+
+  .cta-button:hover {
+    background-color: #8b2e19;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(168, 56, 32, 0.3);
+  }
+
+  /* Responsive */
+  @media (max-width: 991px) {
+    .project-gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-details-list {
+      grid-template-columns: 1fr;
+    }
+
+    .nav-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .nav-item.prev a,
+    .nav-item.next a {
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .project-header h1 {
+      font-size: 32px;
+    }
+
+    .project-gallery-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

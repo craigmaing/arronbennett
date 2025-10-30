@@ -24,7 +24,7 @@
   --color-coral-200: #fcd1c7;
   --color-coral-300: #fab3a1;
   --color-coral-400: #f7906f;
-  --color-coral-500: #a83820; /* Updated for WCAG AAA (7.2:1 contrast) - was #f27a5e */
+  --color-coral-500: #a83820; /* Updated for WCAG AAA (7.2:1 contrast) - was #A83820 */
   --color-coral-600: #8b2e19; /* Updated hover state - was #e05a3f */
   --color-coral-700: #6d2414; /* Darker shade - was #bc4430 */
   --color-coral-800: #5a1e11; /* Even darker - was #9b3a2b */

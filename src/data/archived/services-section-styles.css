@@ -1,0 +1,71 @@
+/* Editorial Services Styles - Add these to the <style> section in index.astro */
+/* These styles create the sophisticated editorial look to replace the card-based grid */
+
+.services-editorial {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .services-editorial {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .services-editorial {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+  }
+}
+
+.service-group-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #A83820;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f3f4f6;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.service-item:last-child {
+  border-bottom: none;
+}
+
+.service-item:hover .service-name {
+  color: #A83820;
+}
+
+.service-item:hover .service-indicator {
+  width: 2rem;
+  background-color: #A83820;
+}
+
+.service-name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1A2D4D;
+  transition: color 0.2s ease;
+}
+
+.service-indicator {
+  width: 0.25rem;
+  height: 0.25rem;
+  background-color: #d1d5db;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}

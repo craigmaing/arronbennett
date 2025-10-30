@@ -1,0 +1,179 @@
+---
+/**
+ * Footer Component
+ *
+ * Dark navy footer with Quick Links and Accreditations sections
+ * Matches the original Arron Bennett Building Contractors site
+ */
+---
+
+<footer class="bg-[#1a2d4d] text-white" aria-label="Site footer">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <!-- Main Footer Content -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+
+      <!-- Quick Links Section -->
+      <section class="footer-section" aria-labelledby="footer-quick-links">
+        <h3 id="footer-quick-links" class="text-xl font-semibold mb-4 text-white">Quick Links</h3>
+        <ul class="space-y-2">
+          <li>
+            <a
+              href="/privacy-policy"
+              class="text-gray-200 hover:text-white transition-colors duration-200 text-sm"
+              aria-label="Privacy Policy"
+            >
+              Privacy
+            </a>
+          </li>
+          <li>
+            <a
+              href="/terms-and-conditions"
+              class="text-gray-200 hover:text-white transition-colors duration-200 text-sm"
+              aria-label="Terms and Conditions"
+            >
+              Terms of Use
+            </a>
+          </li>
+          <li>
+            <a
+              href="/service-terms"
+              class="text-gray-200 hover:text-white transition-colors duration-200 text-sm"
+              aria-label="Service Terms"
+            >
+              Service Terms
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Accreditations Section -->
+      <section class="footer-section" aria-labelledby="footer-accreditations">
+        <h3 id="footer-accreditations" class="text-xl font-semibold mb-4 text-white">Accreditations</h3>
+        <div class="space-y-1 text-gray-200 text-sm mb-6">
+          <p><span role="img" aria-label="Checkmark">✓</span> Fully Insured</p>
+          <p><span role="img" aria-label="Checkmark">✓</span> 20+ Years Experience</p>
+          <p><span role="img" aria-label="Checkmark">✓</span> Traditional Craftsmanship</p>
+          <p><span role="img" aria-label="Checkmark">✓</span> Quality Guaranteed</p>
+        </div>
+
+        <!-- TrustMark Credential -->
+        <div class="mt-6">
+          <a
+            href="https://www.trustmark.org.uk/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block trustmark-link"
+            aria-label="TrustMark Government Endorsed Standards - Opens in new window"
+          >
+            <img
+              src="/images/trustmark-logo.png"
+              alt="TrustMark Government Endorsed Standards"
+              class="h-16 w-auto brightness-0 invert hover:brightness-100 hover:invert-0 transition-all duration-300"
+              loading="lazy"
+              width="160"
+              height="64"
+            />
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer Bottom - Copyright -->
+    <div class="border-t border-gray-700 pt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-gray-300 text-sm text-center md:text-left">
+          © 2025 Arron Bennett Building Contractors
+        </p>
+
+        <!-- Additional Links (mobile-friendly) -->
+        <nav class="flex gap-4 text-sm" aria-label="Footer navigation">
+          <a
+            href="/privacy-policy"
+            class="text-gray-300 hover:text-white transition-colors duration-200"
+            aria-label="Privacy Policy"
+          >
+            Privacy
+          </a>
+          <a
+            href="/terms-and-conditions"
+            class="text-gray-300 hover:text-white transition-colors duration-200"
+            aria-label="Terms and Conditions"
+          >
+            Terms of Use
+          </a>
+          <a
+            href="/service-terms"
+            class="text-gray-300 hover:text-white transition-colors duration-200"
+            aria-label="Service Terms"
+          >
+            Service Terms
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  /* Smooth hover transitions for links */
+  footer a {
+    position: relative;
+  }
+
+  /* Focus states for all footer links */
+  footer a:focus-visible {
+    outline: 2px solid #F27A5E;
+    outline-offset: 4px;
+    border-radius: 2px;
+  }
+
+  /* Underline effect on hover for main footer links */
+  footer .footer-section a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #F27A5E;
+    transition: width 0.3s ease;
+  }
+
+  footer .footer-section a:hover::after,
+  footer .footer-section a:focus::after {
+    width: 100%;
+  }
+
+  /* Underline effect for bottom navigation links */
+  footer nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #F27A5E;
+    transition: width 0.3s ease;
+  }
+
+  footer nav a:hover::after,
+  footer nav a:focus::after {
+    width: 100%;
+  }
+
+  /* TrustMark logo hover effect */
+  .trustmark-link {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+  .trustmark-link:hover {
+    transform: scale(1.05);
+  }
+
+  .trustmark-link:focus-visible {
+    outline: 2px solid #F27A5E;
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+</style>

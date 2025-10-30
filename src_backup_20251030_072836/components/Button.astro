@@ -1,0 +1,91 @@
+---
+/**
+ * Button Component - Consistent button styling across the site
+ * Variants: primary (coral), secondary (navy), ghost (outlined)
+ * Sizes: sm, md, lg
+ */
+
+interface Props {
+  href?: string;
+  type?: 'button' | 'submit' | 'reset';
+  variant?: 'primary' | 'secondary' | 'ghost';
+  size?: 'sm' | 'md' | 'lg';
+  fullWidth?: boolean;
+  class?: string;
+  ariaLabel?: string;
+}
+
+const {
+  href,
+  type = 'button',
+  variant = 'primary',
+  size = 'md',
+  fullWidth = false,
+  class: className = '',
+  ariaLabel,
+  ...rest
+} = Astro.props;
+
+// Base classes shared by all buttons
+const baseClasses = 'inline-block font-semibold text-center transition-all duration-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-offset-2 no-underline';
+
+// Variant-specific classes
+const variantClasses = {
+  primary: 'bg-coral text-white hover:bg-coral-dark focus-visible:ring-coral-300',
+  secondary: 'bg-navy-900 text-white hover:bg-navy-800 focus-visible:ring-navy-500',
+  ghost: 'bg-transparent border-2 border-current hover:bg-current/10 focus-visible:ring-current',
+};
+
+// Size-specific classes
+const sizeClasses = {
+  sm: 'px-4 py-2 text-sm rounded',
+  md: 'px-6 py-3 text-base rounded-lg',
+  lg: 'px-8 py-4 text-lg rounded-lg',
+};
+
+// Width class
+const widthClass = fullWidth ? 'w-full' : '';
+
+// Combine all classes
+const buttonClasses = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${widthClass} ${className}`.trim();
+
+// Inline styles for coral color (not in Tailwind by default)
+const coralPrimary = '#a83820';
+const coralDark = '#8b2e19';
+const coralHover = '#e06a4e';
+
+const inlineStyle = variant === 'primary'
+  ? `background-color: ${coralPrimary};`
+  : '';
+
+const hoverHandlers = variant === 'primary'
+  ? {
+      onmouseover: `this.style.backgroundColor='${coralHover}'`,
+      onmouseout: `this.style.backgroundColor='${coralPrimary}'`,
+    }
+  : {};
+---
+
+{href ? (
+  <a
+    href={href}
+    class={buttonClasses}
+    style={inlineStyle}
+    aria-label={ariaLabel}
+    {...hoverHandlers}
+    {...rest}
+  >
+    <slot />
+  </a>
+) : (
+  <button
+    type={type}
+    class={buttonClasses}
+    style={inlineStyle}
+    aria-label={ariaLabel}
+    {...hoverHandlers}
+    {...rest}
+  >
+    <slot />
+  </button>
+)}

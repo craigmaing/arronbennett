@@ -1,0 +1,300 @@
+---
+/**
+ * ProjectGalleryLightbox Component
+ * Astro component that loads JavaScript only when visible in viewport
+ * Uses IntersectionObserver to defer loading ~15KB of JavaScript
+ */
+
+export interface Props {
+  images: Array<{
+    src: string;
+    alt: string;
+  }>;
+}
+
+const { images } = Astro.props;
+
+// Generate a unique ID for this instance
+const lightboxId = `lightbox-${Math.random().toString(36).substr(2, 9)}`;
+---
+
+<!-- Lightbox HTML structure -->
+<div id={lightboxId} class="lightbox hidden" role="dialog" aria-modal="true" data-lightbox-container>
+  <button class="close-lightbox" aria-label="Close lightbox">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+      <line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg>
+  </button>
+
+  <button class="prev-image" aria-label="Previous image">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="15 18 9 12 15 6"></polyline>
+    </svg>
+  </button>
+
+  <div class="lightbox-content">
+    <img class="lightbox-image" src="" alt="" />
+    <div class="image-info">
+      <span class="image-counter"></span>
+      <span class="image-alt"></span>
+    </div>
+  </div>
+
+  <button class="next-image" aria-label="Next image">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </button>
+</div>
+
+<!-- Deferred script loader using IntersectionObserver -->
+<div class="lightbox-loader" data-lightbox-id={lightboxId} data-images={JSON.stringify(images)}></div>
+
+<script>
+  // This script sets up the IntersectionObserver for lazy loading
+  const loaders = document.querySelectorAll('.lightbox-loader');
+
+  loaders.forEach((loader) => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Load the lightbox functionality when gallery enters viewport
+          initializeLightbox(loader);
+          observer.unobserve(loader);
+        }
+      });
+    }, {
+      // Load when gallery is 100px from entering viewport
+      rootMargin: '100px'
+    });
+
+    observer.observe(loader);
+  });
+
+  function initializeLightbox(loader) {
+    const lightboxId = loader.getAttribute('data-lightbox-id');
+    const images = JSON.parse(loader.getAttribute('data-images'));
+
+    // Lightbox functionality - only runs when visible
+    let currentImageIndex = 0;
+
+    const lightbox = document.getElementById(lightboxId);
+    const lightboxImage = lightbox.querySelector('.lightbox-image');
+    const imageCounter = lightbox.querySelector('.image-counter');
+    const imageAlt = lightbox.querySelector('.image-alt');
+    const galleryItems = document.querySelectorAll('.gallery-image-item');
+
+    function openLightbox(index) {
+      currentImageIndex = index;
+      updateLightboxImage();
+      lightbox.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+
+      // Announce to screen readers
+      lightbox.setAttribute('aria-label', `Image ${currentImageIndex + 1} of ${images.length}: ${images[currentImageIndex].alt}`);
+    }
+
+    function closeLightbox() {
+      lightbox.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    function updateLightboxImage() {
+      const image = images[currentImageIndex];
+      lightboxImage.src = image.src;
+      lightboxImage.alt = image.alt;
+      imageCounter.textContent = `${currentImageIndex + 1} / ${images.length}`;
+      imageAlt.textContent = image.alt;
+
+      // Update ARIA label
+      lightbox.setAttribute('aria-label', `Image ${currentImageIndex + 1} of ${images.length}: ${image.alt}`);
+    }
+
+    function nextImage() {
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      updateLightboxImage();
+    }
+
+    function prevImage() {
+      currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+      updateLightboxImage();
+    }
+
+    // Attach event listeners to gallery items
+    galleryItems.forEach((item, index) => {
+      // Remove any existing listeners
+      const newItem = item.cloneNode(true);
+      item.parentNode.replaceChild(newItem, item);
+
+      newItem.addEventListener('click', () => openLightbox(index));
+    });
+
+    // Attach lightbox control listeners
+    const closeBtn = lightbox.querySelector('.close-lightbox');
+    const nextBtn = lightbox.querySelector('.next-image');
+    const prevBtn = lightbox.querySelector('.prev-image');
+
+    closeBtn?.addEventListener('click', closeLightbox);
+    nextBtn?.addEventListener('click', nextImage);
+    prevBtn?.addEventListener('click', prevImage);
+
+    // Keyboard navigation
+    const keyHandler = (e) => {
+      if (!lightbox.classList.contains('hidden')) {
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') nextImage();
+        if (e.key === 'ArrowLeft') prevImage();
+      }
+    };
+
+    document.addEventListener('keydown', keyHandler);
+
+    // Click outside to close
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    // Mark as initialized
+    loader.setAttribute('data-initialized', 'true');
+  }
+</script>
+
+<style>
+  /* Lightbox loader (invisible) */
+  .lightbox-loader {
+    display: none;
+  }
+
+  /* Lightbox styles */
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    animation: fadeIn 0.3s ease;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .lightbox.hidden {
+    display: none;
+  }
+
+  .close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 10001;
+    padding: 10px;
+    transition: all 0.3s ease;
+  }
+
+  .close-lightbox:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+
+  .close-lightbox:focus {
+    outline: 2px solid #a83820;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  .prev-image,
+  .next-image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    z-index: 10001;
+  }
+
+  .prev-image {
+    left: 20px;
+  }
+
+  .next-image {
+    right: 20px;
+  }
+
+  .prev-image:hover,
+  .next-image:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .prev-image:focus,
+  .next-image:focus {
+    outline: 2px solid #a83820;
+    outline-offset: 2px;
+  }
+
+  .lightbox-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lightbox-image {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+
+  .image-info {
+    margin-top: 20px;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .image-counter {
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 20px;
+  }
+
+  .image-alt {
+    font-size: 16px;
+  }
+
+  /* Responsive */
+  @media (max-width: 767px) {
+    .prev-image,
+    .next-image {
+      padding: 15px;
+    }
+
+    .prev-image {
+      left: 10px;
+    }
+
+    .next-image {
+      right: 10px;
+    }
+  }
+</style>

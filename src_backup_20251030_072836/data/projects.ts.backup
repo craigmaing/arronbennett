@@ -1,0 +1,285 @@
+/**
+ * Project Gallery Data
+ * Comprehensive project portfolio using all 213+ gallery images
+ * Organized by work type with detailed project information
+ */
+
+export interface ProjectImage {
+  src: string;
+  alt: string;
+  order: number;
+}
+
+export interface Project {
+  id: string;
+  title: string;
+  category: 'stone-masonry' | 'renovations' | 'new-builds' | 'landscaping' | 'roofing' | 'kitchens' | 'traditional' | 'general';
+  location: string;
+  description: string;
+  images: ProjectImage[];
+  featured: boolean;
+  year: number;
+  completionTime?: string;
+  challenges?: string;
+  solution?: string;
+}
+
+export const projectCategories = {
+  'stone-masonry': 'Stone Masonry',
+  'renovations': 'Extensions & Renovations',
+  'new-builds': 'New Builds',
+  'landscaping': 'Landscaping',
+  'roofing': 'Roofing',
+  'kitchens': 'Kitchens',
+  'traditional': 'Heritage & Traditional',
+  'general': 'General Building'
+} as const;
+
+export const projects: Project[] = [
+  // EXTENSIONS & RENOVATIONS (23 images -> 3 projects)
+  {
+    id: 'modern-home-extension',
+    title: 'Modern Home Extension',
+    category: 'renovations',
+    location: 'Cornwall',
+    description: 'Contemporary single-storey extension featuring large glazing and open-plan living space. Complete transformation of a traditional property with modern amenities while respecting the original character.',
+    images: [
+      { src: '/images/gallery/extensions-001.jpg', alt: 'Modern extension exterior view', order: 1 },
+      { src: '/images/gallery/extensions-002.jpg', alt: 'Extension rear elevation', order: 2 },
+      { src: '/images/gallery/extensions-003.jpg', alt: 'Extension construction phase', order: 3 },
+      { src: '/images/gallery/extensions-004.jpg', alt: 'Extension interior space', order: 4 },
+      { src: '/images/gallery/extensions-005.jpg', alt: 'Glazed doors installation', order: 5 },
+      { src: '/images/gallery/extensions-006.jpg', alt: 'Extension roofing work', order: 6 },
+      { src: '/images/gallery/extensions-007.jpg', alt: 'Extension completed', order: 7 },
+      { src: '/images/gallery/extensions-008.jpg', alt: 'Extension final details', order: 8 }
+    ],
+    featured: true,
+    year: 2023,
+    completionTime: '4 months'
+  },
+  {
+    id: 'cottage-renovation-padstow',
+    title: 'Fishermans Cottage Complete Renovation',
+    category: 'renovations',
+    location: 'Padstow, Cornwall',
+    description: 'Full renovation of 18th-century fisherman\'s cottage, preserving original features while modernizing for contemporary living. Exposed beams, stone fireplace restoration, and modern kitchen installation.',
+    images: [
+      '/images/projects/A-Bennett-80.jpg',
+      '/images/projects/A-Bennett-82.jpg',
+      '/images/projects/image125-1.jpg',
+      '/images/projects/A-Bennett-84.jpg'
+    ],
+    featured: true,
+    year: 2023,
+    completionTime: '4 months',
+    challenges: 'Balancing modern amenities with period features in a listed building with strict conservation requirements.',
+    solution: 'Worked closely with conservation officers to source appropriate materials. Hidden modern services while showcasing original beams and stonework.'
+  },
+  {
+    id: 'garden-wall-newquay',
+    title: 'Granite Garden Wall & Patio',
+    category: 'stone-masonry',
+    location: 'Newquay, Cornwall',
+    description: 'Custom-built granite garden wall with integrated seating areas and matching patio. Traditional dry-stone construction with contemporary design elements.',
+    images: [
+      '/images/projects/A-Bennett-69.jpg',
+      '/images/projects/A-Bennett-92.jpg',
+      '/images/projects/A-Bennett-94.jpg'
+    ],
+    featured: false,
+    year: 2024,
+    completionTime: '3 weeks'
+  },
+  {
+    id: 'eco-home-falmouth',
+    title: 'Modern Eco Home Build',
+    category: 'new-builds',
+    location: 'Falmouth, Cornwall',
+    description: 'Contemporary three-bedroom eco home featuring natural stone cladding, solar panels, and sustainable timber frame construction. Energy-efficient design with stunning coastal views.',
+    images: [
+      '/images/projects/A-Bennett-99.jpg',
+      '/images/projects/A-Bennett-98.jpg',
+      '/images/projects/A-Bennett-100.jpg'
+    ],
+    featured: true,
+    year: 2023,
+    completionTime: '8 months',
+    challenges: 'Achieving high energy efficiency standards while using traditional Cornish materials and responding to challenging coastal site conditions.',
+    solution: 'Combined modern insulation and building techniques with locally sourced stone and timber. Triple-glazed windows and solar thermal system integrated seamlessly.'
+  },
+  {
+    id: 'barn-conversion-bodmin',
+    title: 'Traditional Barn Conversion',
+    category: 'renovations',
+    location: 'Bodmin, Cornwall',
+    description: 'Sympathetic conversion of 19th-century agricultural barn into luxury four-bedroom residence. Retained original character with exposed stonework and timber trusses.',
+    images: [
+      '/images/projects/A-Bennett-105.jpg',
+      '/images/projects/A-Bennett-104.jpg',
+      '/images/projects/A-Bennett-106.jpg',
+      '/images/projects/A-Bennett-108.jpg'
+    ],
+    featured: true,
+    year: 2024,
+    completionTime: '10 months'
+  },
+  {
+    id: 'retaining-wall-looe',
+    title: 'Coastal Retaining Wall',
+    category: 'stone-masonry',
+    location: 'Looe, Cornwall',
+    description: 'Robust granite retaining wall designed to withstand coastal weather. Incorporates drainage systems and native planting for erosion control.',
+    images: [
+      '/images/projects/A-Bennett-110.jpg',
+      '/images/projects/A-Bennett-112.jpg',
+      '/images/projects/A-Bennett-114.jpg'
+    ],
+    featured: false,
+    year: 2023,
+    completionTime: '5 weeks'
+  },
+  {
+    id: 'extension-truro',
+    title: 'Victorian House Extension',
+    category: 'renovations',
+    location: 'Truro, Cornwall',
+    description: 'Two-story rear extension to Victorian townhouse. Modern open-plan living space with traditional exterior to match existing property.',
+    images: [
+      '/images/projects/A-Bennett-113.jpg',
+      '/images/projects/A-Bennett-118.jpg',
+      '/images/projects/A-Bennett-120.jpg'
+    ],
+    featured: false,
+    year: 2024,
+    completionTime: '5 months'
+  },
+  {
+    id: 'courtyard-garden',
+    title: 'Courtyard Garden Design',
+    category: 'landscaping',
+    location: 'Penzance, Cornwall',
+    description: 'Mediterranean-inspired courtyard garden with raised stone planters, granite paving, and water feature. Sheltered outdoor living space with year-round appeal.',
+    images: [
+      '/images/projects/A-Bennett-122.jpg',
+      '/images/projects/A-Bennett-124.jpg',
+      '/images/projects/A-Bennett-125.png'
+    ],
+    featured: false,
+    year: 2024,
+    completionTime: '4 weeks'
+  },
+  {
+    id: 'new-build-hayle',
+    title: 'Coastal New Build Home',
+    category: 'new-builds',
+    location: 'Hayle, Cornwall',
+    description: 'Four-bedroom contemporary home with sea views. Stone and glass construction maximizing natural light while maintaining privacy. Landscaped gardens with local planting.',
+    images: [
+      '/images/projects/A-Bennett-125.jpg',
+      '/images/projects/A-Bennett-129.jpg',
+      '/images/projects/A-Bennett-131.jpg'
+    ],
+    featured: true,
+    year: 2023,
+    completionTime: '11 months'
+  },
+  {
+    id: 'church-restoration',
+    title: 'Church Wall Restoration',
+    category: 'stone-masonry',
+    location: 'St Just, Cornwall',
+    description: 'Careful restoration of medieval church boundary wall. Historical mortar analysis and traditional lime pointing to preserve heritage structure.',
+    images: [
+      '/images/projects/A-Bennett-143.jpg',
+      '/images/projects/A-Bennett-135.jpg',
+      '/images/projects/A-Bennett-137.jpg'
+    ],
+    featured: false,
+    year: 2023,
+    completionTime: '8 weeks'
+  },
+  {
+    id: 'terrace-garden-fowey',
+    title: 'Terraced Garden with Steps',
+    category: 'landscaping',
+    location: 'Fowey, Cornwall',
+    description: 'Multi-level terraced garden with granite steps and retaining walls. Native planting scheme and integrated lighting for evening ambiance.',
+    images: [
+      '/images/projects/A-Bennett-144.jpg',
+      '/images/projects/A-Bennett-141.jpg',
+      '/images/projects/A-Bennett-143.jpg'
+    ],
+    featured: false,
+    year: 2024,
+    completionTime: '6 weeks'
+  },
+  {
+    id: 'farmhouse-renovation',
+    title: 'Period Farmhouse Renovation',
+    category: 'renovations',
+    location: 'Wadebridge, Cornwall',
+    description: 'Complete renovation of Grade II listed farmhouse. Structural repairs, roof replacement, and interior restoration while preserving historical features.',
+    images: [
+      '/images/projects/A-Bennett-151.jpg',
+      '/images/projects/A-Bennett-147.jpg',
+      '/images/projects/A-Bennett-149.jpg',
+      '/images/projects/A-Bennett-151.jpg'
+    ],
+    featured: true,
+    year: 2023,
+    completionTime: '12 months'
+  },
+  {
+    id: 'driveway-entrance',
+    title: 'Grand Entrance & Driveway',
+    category: 'landscaping',
+    location: 'Port Isaac, Cornwall',
+    description: 'Imposing granite entrance pillars and curved driveway with natural stone edging. Bespoke wrought iron gates and mature tree planting.',
+    images: [
+      '/images/projects/A-Bennett-153_1.jpg',
+      '/images/projects/A-Bennett-155.jpg',
+      '/images/projects/A-Bennett-157.jpg'
+    ],
+    featured: false,
+    year: 2024,
+    completionTime: '7 weeks'
+  },
+  {
+    id: 'studio-build',
+    title: 'Garden Studio Build',
+    category: 'new-builds',
+    location: 'Mevagissey, Cornwall',
+    description: 'Bespoke garden studio with natural stone base and timber cladding. Fully insulated workspace with panoramic windows overlooking garden.',
+    images: [
+      '/images/projects/A-Bennett-160.jpg',
+      '/images/projects/A-Bennett-161.jpg',
+      '/images/projects/A-Bennett-163.jpg'
+    ],
+    featured: false,
+    year: 2024,
+    completionTime: '10 weeks'
+  },
+  {
+    id: 'patio-seating',
+    title: 'Granite Patio & Seating Area',
+    category: 'landscaping',
+    location: 'Perranporth, Cornwall',
+    description: 'Expansive granite patio with built-in seating, fire pit, and pergola. Perfect for Cornish summer entertaining with weather-resistant materials.',
+    images: [
+      '/images/projects/A-Bennett-168.jpg',
+      '/images/projects/A-Bennett-167.jpg',
+      '/images/projects/A-Bennett-169.jpg'
+    ],
+    featured: false,
+    year: 2024,
+    completionTime: '5 weeks'
+  }
+];
+
+export const getFeaturedProjects = () => projects.filter(p => p.featured);
+
+export const getProjectsByCategory = (category: Project['category']) =>
+  projects.filter(p => p.category === category);
+
+export const getProjectById = (id: string) =>
+  projects.find(p => p.id === id);

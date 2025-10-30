@@ -1,0 +1,16 @@
+---
+/**
+ * WebSite Schema Component
+ * Generates Schema.org WebSite markup with search action
+ */
+import { generateWebSiteSchema } from '../../utils/schema-helpers';
+
+interface Props {
+  siteUrl?: string;
+}
+
+const { siteUrl } = Astro.props;
+const schema = generateWebSiteSchema(siteUrl);
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

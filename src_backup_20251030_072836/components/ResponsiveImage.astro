@@ -1,0 +1,157 @@
+---
+/**
+ * Responsive Image Component with AVIF Support
+ * Provides AVIF, WebP, and JPEG fallbacks for optimal compression
+ * 30-50% better compression than WebP alone
+ */
+import { getImage } from 'astro:assets';
+
+interface Props {
+  src: string | ImageMetadata;
+  alt: string;
+  width: number;
+  height: number;
+  sizes?: string;
+  loading?: 'lazy' | 'eager';
+  fetchpriority?: 'high' | 'low' | 'auto';
+  class?: string;
+  quality?: number;
+}
+
+const {
+  src,
+  alt,
+  width,
+  height,
+  sizes = '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw',
+  loading = 'lazy',
+  fetchpriority = 'auto',
+  class: className,
+  quality = 80
+} = Astro.props;
+
+// Generate optimized images in multiple formats
+const avifImage = await getImage({
+  src,
+  format: 'avif',
+  width,
+  height,
+  quality
+});
+
+const webpImage = await getImage({
+  src,
+  format: 'webp',
+  width,
+  height,
+  quality
+});
+
+const jpegImage = await getImage({
+  src,
+  format: 'jpeg',
+  width,
+  height,
+  quality
+});
+
+// Generate 2x versions for high-DPI displays
+const avifImage2x = await getImage({
+  src,
+  format: 'avif',
+  width: width * 2,
+  height: height * 2,
+  quality: quality - 5 // Slightly lower quality for 2x to save bandwidth
+});
+
+const webpImage2x = await getImage({
+  src,
+  format: 'webp',
+  width: width * 2,
+  height: height * 2,
+  quality: quality - 5
+});
+
+// Validate alt text
+if (!alt || alt.trim() === '') {
+  console.warn(`Missing alt text for image: ${typeof src === 'string' ? src : 'imported image'}`);
+}
+---
+
+<picture>
+  <!-- AVIF format (best compression, newest) -->
+  <source
+    type="image/avif"
+    srcset={`${avifImage.src} 1x, ${avifImage2x.src} 2x`}
+    sizes={sizes}
+  />
+
+  <!-- WebP format (good compression, wider support) -->
+  <source
+    type="image/webp"
+    srcset={`${webpImage.src} 1x, ${webpImage2x.src} 2x`}
+    sizes={sizes}
+  />
+
+  <!-- JPEG fallback (universal support) -->
+  <img
+    src={jpegImage.src}
+    alt={alt}
+    width={width}
+    height={height}
+    loading={loading}
+    fetchpriority={fetchpriority}
+    class={className}
+    decoding="async"
+  />
+</picture>
+
+<style>
+  picture {
+    display: contents;
+  }
+
+  img {
+    /* Prevent layout shift */
+    aspect-ratio: attr(width) / attr(height);
+
+    /* Smooth image loading */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  /* Progressive enhancement: fade in when loaded */
+  img.loaded {
+    opacity: 1;
+  }
+
+  /* For browsers that support native lazy loading */
+  img[loading="lazy"] {
+    content-visibility: auto;
+  }
+</style>
+
+<script>
+  // Progressive enhancement: Add loaded class when images load
+  document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('picture img');
+
+    images.forEach((img) => {
+      // Check if already loaded
+      if (img.complete) {
+        img.classList.add('loaded');
+      } else {
+        // Add event listener for load
+        img.addEventListener('load', () => {
+          img.classList.add('loaded');
+        }, { once: true });
+
+        // Handle error case
+        img.addEventListener('error', () => {
+          console.error(`Failed to load image: ${img.alt}`);
+          img.classList.add('loaded'); // Still show to prevent blank space
+        }, { once: true });
+      }
+    });
+  });
+</script>

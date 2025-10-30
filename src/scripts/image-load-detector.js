@@ -25,7 +25,7 @@ export function initializeImageLoadDetection() {
 
             // Handle error case
             img.addEventListener('error', () => {
-              console.error(`Failed to load image: ${img.alt || img.src}`);
+              // Image failed to load - mark as loaded to prevent blank space
               img.classList.add('loaded', 'error');
               imageObserver.unobserve(img);
             }, { once: true });

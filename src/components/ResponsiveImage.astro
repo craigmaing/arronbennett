@@ -148,8 +148,8 @@ if (!alt || alt.trim() === '') {
 
         // Handle error case
         img.addEventListener('error', () => {
-          console.error(`Failed to load image: ${img.alt}`);
-          img.classList.add('loaded'); // Still show to prevent blank space
+          // Image failed to load - still display to prevent blank space
+          img.classList.add('loaded');
         }, { once: true });
       }
     });
