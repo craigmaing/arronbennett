@@ -1,10 +1,11 @@
 /**
  * Optimized Font Loading Strategy
- * Using font-display: swap to prevent FOIT (Flash of Invisible Text)
- * Fonts are self-hosted for better performance
+ * Using @fontsource/roboto package for automatic font optimization
+ * Fonts are imported in BaseLayout.astro with font-display: swap by default
+ * This prevents FOIT (Flash of Invisible Text) and ensures better performance
  */
 
-/* System font stack for immediate rendering */
+/* System font stack for immediate rendering fallback */
 @font-face {
   font-family: 'System';
   font-style: normal;
@@ -14,49 +15,13 @@
        local('Arial'), local('sans-serif');
 }
 
-/* Roboto Regular - Primary body font */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap; /* Ensures text remains visible during font load */
-  src: local('Roboto Regular'), local('Roboto-Regular'),
-       url('/fonts/roboto-v30-latin-regular.woff2') format('woff2'), /* Chrome 36+, Opera 23+, Firefox 39+ */
-       url('/fonts/roboto-v30-latin-regular.woff') format('woff'); /* Chrome 5+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* Roboto Medium - For emphasis */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: local('Roboto Medium'), local('Roboto-Medium'),
-       url('/fonts/roboto-v30-latin-500.woff2') format('woff2'),
-       url('/fonts/roboto-v30-latin-500.woff') format('woff');
-}
-
-/* Roboto Semi-Bold - For headings and buttons */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: local('Roboto Semi-Bold'), local('Roboto-SemiBold'),
-       url('/fonts/roboto-v30-latin-600.woff2') format('woff2'),
-       url('/fonts/roboto-v30-latin-600.woff') format('woff');
-}
-
-/* Roboto Bold - For primary headings */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: local('Roboto Bold'), local('Roboto-Bold'),
-       url('/fonts/roboto-v30-latin-700.woff2') format('woff2'),
-       url('/fonts/roboto-v30-latin-700.woff') format('woff');
-}
+/*
+ * Roboto font weights are now loaded via @fontsource/roboto in BaseLayout.astro:
+ * - 400 (Regular) - Primary body font
+ * - 500 (Medium) - For emphasis
+ * - 600 (Semi-Bold) - For headings and buttons
+ * - 700 (Bold) - For primary headings
+ */
 
 /* Font loading optimization classes */
 .fonts-loading {

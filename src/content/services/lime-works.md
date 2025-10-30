@@ -25,7 +25,7 @@ seoDescription: "Expert lime works in Cornwall & Devon. 20+ years experience in 
 
 ## Traditional Lime Works & Restoration
 
-Specialist lime work for heritage buildings and traditional new builds. With over 20 years of experience working with lime, we bring authentic traditional skills to conservation projects and period property restoration across Cornwall and Devon.
+Specialist lime work for heritage buildings and traditional new builds. With over 20 years of experience working with lime, we bring authentic traditional skills to conservation projects and period property restoration on the Roseland Peninsula, Cornwall.
 
 ### Our Lime Work Services
 

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OG Image Generator - Arron Bennett Building</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .controls {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .preview {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      margin: 0 0 20px 0;
+      color: #021f59;
+    }
+
+    button {
+      background: #021f59;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    button:hover {
+      background: #032a75;
+    }
+
+    button.secondary {
+      background: #F27A5E;
+    }
+
+    button.secondary:hover {
+      background: #e06849;
+    }
+
+    .info {
+      margin-top: 15px;
+      padding: 12px;
+      background: #f0f9ff;
+      border-left: 4px solid #3b82f6;
+      border-radius: 4px;
+    }
+
+    .success {
+      background: #f0fdf4;
+      border-left-color: #22c55e;
+    }
+
+    canvas {
+      max-width: 100%;
+      height: auto;
+      border: 2px solid #e5e7eb;
+      border-radius: 4px;
+    }
+
+    .stats {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="controls">
+      <h1>OG Image Generator - Arron Bennett Building</h1>
+      <p>Generate a professional 1200x630px Open Graph image for social media sharing.</p>
+
+      <button onclick="generateImage()">Generate Image</button>
+      <button class="secondary" onclick="downloadImage()">Download as JPG</button>
+
+      <div class="info" id="status">
+        Click "Generate Image" to create the OG image. Dimensions: 1200x630px
+      </div>
+    </div>
+
+    <div class="preview">
+      <h2>Preview</h2>
+      <canvas id="ogCanvas" width="1200" height="630"></canvas>
+      <div class="stats" id="stats"></div>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('ogCanvas');
+    const ctx = canvas.getContext('2d');
+    let imageGenerated = false;
+
+    function generateImage() {
+      // Clear canvas
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Create gradient background
+      const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+      gradient.addColorStop(0, '#021f59');
+      gradient.addColorStop(1, '#032a75');
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Add subtle grid pattern
+      ctx.strokeStyle = 'rgba(255, 255, 255, 0.03)';
+      ctx.lineWidth = 1;
+      for (let x = 0; x < canvas.width; x += 40) {
+        for (let y = 0; y < canvas.height; y += 40) {
+          ctx.strokeRect(x, y, 40, 40);
+        }
+      }
+
+      // Accent border at top
+      ctx.fillStyle = '#F27A5E';
+      ctx.fillRect(0, 0, canvas.width, 8);
+
+      // Draw building icon (scaled up)
+      const scale = 2.5;
+      const iconX = 100;
+      const iconY = 180;
+
+      ctx.save();
+      ctx.translate(iconX, iconY);
+      ctx.scale(scale, scale);
+
+      // Building structure
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = 2;
+      ctx.strokeRect(0, 20, 35, 35);
+
+      // Horizontal lines
+      ctx.lineWidth = 1;
+      [27.5, 35, 42.5, 50].forEach(y => {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(35, y);
+        ctx.stroke();
+      });
+
+      // Vertical lines
+      [8.75, 17.5, 26.25].forEach(x => {
+        ctx.beginPath();
+        ctx.moveTo(x, 20);
+        ctx.lineTo(x, 55);
+        ctx.stroke();
+      });
+
+      // Roof
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(0, 20);
+      ctx.lineTo(17.5, 5);
+      ctx.lineTo(35, 20);
+      ctx.stroke();
+
+      ctx.restore();
+
+      // Company name
+      ctx.fillStyle = '#ffffff';
+      ctx.font = '700 72px Arial, Helvetica, sans-serif';
+      ctx.letterSpacing = '2px';
+      ctx.fillText('ARRON BENNETT', 350, 280);
+
+      // Tagline "BUILDING"
+      ctx.fillStyle = '#F27A5E';
+      ctx.font = '400 36px Arial, Helvetica, sans-serif';
+      ctx.letterSpacing = '1px';
+      ctx.fillText('BUILDING', 350, 340);
+
+      // Subtitle
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.85)';
+      ctx.font = '300 28px Arial, Helvetica, sans-serif';
+      ctx.letterSpacing = '0.5px';
+      ctx.fillText('Traditional Builder in Cornwall', 350, 400);
+
+      // Decorative line
+      ctx.strokeStyle = '#F27A5E';
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.moveTo(350, 430);
+      ctx.lineTo(600, 430);
+      ctx.stroke();
+
+      // Small logo reference in bottom right
+      ctx.save();
+      ctx.globalAlpha = 0.4;
+      ctx.translate(1050, 550);
+      ctx.strokeStyle = '#ffffff';
+      ctx.lineWidth = 1.5;
+      ctx.strokeRect(0, 0, 25, 25);
+
+      ctx.lineWidth = 0.5;
+      [6, 12, 18].forEach(pos => {
+        // Horizontal
+        ctx.beginPath();
+        ctx.moveTo(0, pos);
+        ctx.lineTo(25, pos);
+        ctx.stroke();
+
+        // Vertical
+        ctx.beginPath();
+        ctx.moveTo(pos, 0);
+        ctx.lineTo(pos, 25);
+        ctx.stroke();
+      });
+      ctx.restore();
+
+      imageGenerated = true;
+
+      // Update status
+      document.getElementById('status').innerHTML = '<strong>Success!</strong> Image generated at 1200x630px. Click "Download as JPG" to save.';
+      document.getElementById('status').classList.add('success');
+
+      // Show stats
+      const dataURL = canvas.toDataURL('image/jpeg', 0.85);
+      const sizeKB = Math.round((dataURL.length * 3) / 4 / 1024);
+      document.getElementById('stats').innerHTML = `<strong>Dimensions:</strong> 1200 x 630px | <strong>Estimated size:</strong> ${sizeKB}KB (JPG at 85% quality)`;
+    }
+
+    function downloadImage() {
+      if (!imageGenerated) {
+        alert('Please generate the image first!');
+        return;
+      }
+
+      // Convert to JPG with 85% quality
+      canvas.toBlob(function(blob) {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'og-image.jpg';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+
+        document.getElementById('status').innerHTML = '<strong>Downloaded!</strong> Save as "og-image.jpg" and replace the file in your /public directory.';
+      }, 'image/jpeg', 0.85);
+    }
+
+    // Auto-generate on load
+    window.addEventListener('load', generateImage);
+  </script>
+</body>
+</html>

@@ -1,6 +1,7 @@
 # Robots.txt for Arron Bennett Building
 # https://arronbennettbuilding.co.uk
 
+# Global rules for all crawlers
 User-agent: *
 Allow: /
 
@@ -8,23 +9,40 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 Disallow: /.well-known/
+Disallow: /test-avif/
 
-# Allow all images
+# Explicitly allow important directories
 Allow: /images/
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.png$
-Allow: /*.webp$
-Allow: /*.svg$
+Allow: /styles/
+Allow: /_astro/
 
-# Crawl delay for respectful bots
+# Sitemap locations
+Sitemap: https://arronbennettbuilding.co.uk/sitemap-index.xml
+
+# Search Engine Specific Rules
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Yandex
+User-agent: Yandex
+Allow: /
 Crawl-delay: 1
 
-# Sitemap location
-Sitemap: https://arronbennettbuilding.co.uk/sitemap-index.xml
-Sitemap: https://arronbennettbuilding.co.uk/sitemap-0.xml
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
 
-# Block aggressive bots
+# Aggressive Crawlers - Rate Limiting
 User-agent: AhrefsBot
 Crawl-delay: 10
 
@@ -34,17 +52,18 @@ Crawl-delay: 10
 User-agent: DotBot
 Crawl-delay: 10
 
-# Allow Google
-User-agent: Googlebot
-Allow: /
+User-agent: MJ12bot
+Crawl-delay: 10
 
-User-agent: Googlebot-Image
-Allow: /
+# Block Known Bad Bots
+User-agent: MauiBot
+Disallow: /
 
-# Allow Bing
-User-agent: Bingbot
-Allow: /
+User-agent: SiteBot
+Disallow: /
 
-# Allow Yandex
-User-agent: Yandex
-Allow: /
+User-agent: LinkWalker
+Disallow: /
+
+User-agent: ia_archiver
+Disallow: /

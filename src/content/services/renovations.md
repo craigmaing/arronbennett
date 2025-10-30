@@ -51,7 +51,7 @@ Improving thermal performance without compromising character - specialist insula
 
 ### Why Trust Us With Your Renovation?
 
-With over 20 years of experience in Cornwall and Devon, we understand local building styles and planning requirements. Our team includes specialists in:
+With over 20 years of experience on the Roseland Peninsula, we understand local building styles and planning requirements. Our team includes specialists in:
 
 - Traditional stone masonry and lime works
 - Structural engineering and building control

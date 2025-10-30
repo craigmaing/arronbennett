@@ -71,19 +71,31 @@ const organizationSchema = {
   ]
 };
 
-// LocalBusiness Schema (Cornwall-based)
+// LocalBusiness Schema (Cornwall-based) - Enhanced with HomeAndConstructionBusiness type
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
   "@id": `${siteUrl}/#localbusiness`,
   "name": "Arron Bennett Building Contractors",
-  "image": `${siteUrl}/images/logo.png`,
+  "alternateName": "Arron Bennett Building",
+  "description": "Traditional building contractors specializing in stone masonry, heritage restoration, and modern construction methods. Serving the Roseland Peninsula, Cornwall with over 20 years of experience.",
+  "image": [
+    `${siteUrl}/images/logo.png`,
+    `${siteUrl}/images/arron-bennett.jpg`
+  ],
+  "logo": {
+    "@type": "ImageObject",
+    "url": `${siteUrl}/images/logo.png`,
+    "width": 180,
+    "height": 107
+  },
   "url": siteUrl,
   "telephone": "+44-7773-463383",
   "email": "enquiries@arronbennettbuilding.co.uk",
   "address": {
     "@type": "PostalAddress",
     "addressRegion": "Cornwall",
+    "addressLocality": "Roseland Peninsula",
     "addressCountry": "GB"
   },
   "geo": {
@@ -91,27 +103,45 @@ const localBusinessSchema = {
     "latitude": "50.2660",
     "longitude": "-5.0527"
   },
-  "areaServed": [
-    {
-      "@type": "State",
-      "name": "Cornwall"
-    },
-    {
-      "@type": "State",
-      "name": "Devon"
+  "areaServed": {
+    "@type": "Place",
+    "name": "Roseland Peninsula, Cornwall",
+    "containedInPlace": {
+      "@type": "AdministrativeArea",
+      "name": "Cornwall",
+      "containedInPlace": {
+        "@type": "Country",
+        "name": "United Kingdom"
+      }
     }
-  ],
+  },
   "priceRange": "£££",
-  "paymentAccepted": "Cash, Bank Transfer, Check",
+  "paymentAccepted": ["Cash", "Bank Transfer", "Cheque"],
+  "currenciesAccepted": "GBP",
   "openingHours": "Mo-Fr 08:00-18:00, Sa 08:00-14:00",
+  "foundingDate": "2003",
   "founder": {
     "@type": "Person",
     "name": "Arron Bennett",
-    "jobTitle": "Master Builder"
+    "jobTitle": "Master Builder & Stone Mason"
   },
+  "knowsAbout": [
+    "Stone Masonry",
+    "Traditional Building",
+    "Heritage Restoration",
+    "Lime Mortar Work",
+    "Project Management",
+    "Heat Pump Installation",
+    "New Build Construction",
+    "Barn Conversions",
+    "Listed Building Work"
+  ],
+  "slogan": "Quality craftsmanship backed by over 20 years of experience",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5.0",
+    "bestRating": "5",
+    "worstRating": "1",
     "reviewCount": "5"
   },
   "hasOfferCatalog": {
@@ -122,64 +152,117 @@ const localBusinessSchema = {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
+          "serviceType": "Construction",
           "name": "Full Builds",
-          "description": "Complete new construction projects"
+          "description": "Complete new construction projects including new build homes, barn conversions, and bespoke properties using traditional and modern methods",
+          "provider": {
+            "@id": `${siteUrl}/#localbusiness`
+          },
+          "areaServed": "Roseland Peninsula, Cornwall"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
+          "serviceType": "Renovation",
           "name": "Home Renovations",
-          "description": "Residential renovation work"
+          "description": "Full restoration and renovation projects combining traditional methods with new technology, specializing in period properties and listed buildings",
+          "provider": {
+            "@id": `${siteUrl}/#localbusiness`
+          },
+          "areaServed": "Roseland Peninsula, Cornwall"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
+          "serviceType": "Masonry",
           "name": "Stone and Block Masonry",
-          "description": "Traditional craftsmanship and heritage building"
+          "description": "Specialist stone and block masonry including stone cladding, chimneys, boundary walls, retaining walls, Cornish dry stone walling, and granite hedging",
+          "provider": {
+            "@id": `${siteUrl}/#localbusiness`
+          },
+          "areaServed": "Roseland Peninsula, Cornwall"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
+          "serviceType": "Interior Renovation",
           "name": "Kitchen and Bathroom Renovations",
-          "description": "Interior renovation and upgrade services"
+          "description": "Complete kitchen and bathroom renovation projects preserving traditional character while incorporating modern fixtures and fittings",
+          "provider": {
+            "@id": `${siteUrl}/#localbusiness`
+          },
+          "areaServed": "Roseland Peninsula, Cornwall"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
+          "serviceType": "Landscaping",
           "name": "Hard Landscaping",
-          "description": "Outdoor stone and masonry work"
+          "description": "Retaining walls, Cornish dry stone walling, block paving for patios, driveways, and entrances using traditional techniques",
+          "provider": {
+            "@id": `${siteUrl}/#localbusiness`
+          },
+          "areaServed": "Roseland Peninsula, Cornwall"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
+          "serviceType": "Project Management",
           "name": "Project Management",
-          "description": "Full project oversight and coordination"
+          "description": "Full project oversight from material ordering to finishing touches, liaising with clients, contractors, architects, and engineers",
+          "provider": {
+            "@id": `${siteUrl}/#localbusiness`
+          },
+          "areaServed": "Roseland Peninsula, Cornwall"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Ground Source and Air Source Installations",
-          "description": "Renewable energy systems installation"
+          "serviceType": "HVAC Installation",
+          "name": "Ground Source and Air Source Heat Pump Installations",
+          "description": "Energy-efficient, sustainable heating solutions with certified installations and thorough suitability assessments",
+          "provider": {
+            "@id": `${siteUrl}/#localbusiness`
+          },
+          "areaServed": "Roseland Peninsula, Cornwall"
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
+          "serviceType": "Heritage Restoration",
           "name": "Traditional Lime Mortars",
-          "description": "Heritage building restoration techniques"
+          "description": "Lime rendering, plastering, lime putties, and repointing for conservation and new traditional builds with over 20 years of experience",
+          "provider": {
+            "@id": `${siteUrl}/#localbusiness`
+          },
+          "areaServed": "Roseland Peninsula, Cornwall"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "serviceType": "Excavation",
+          "name": "Mini Excavator and Waste Management Services",
+          "description": "Professional site preparation and responsible waste disposal for construction projects",
+          "provider": {
+            "@id": `${siteUrl}/#localbusiness`
+          },
+          "areaServed": "Roseland Peninsula, Cornwall"
         }
       }
     ]

@@ -72,3 +72,383 @@
 [33m[1m13:46:59[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\our-projects\[project].astro.tmp.27044.1761572819502[22m found. Prefix filename with an underscore (`_`) to ignore.
 [33m[1m13:47:25[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.27044.1761572845582[22m found. Prefix filename with an underscore (`_`) to ignore.
 [33m[1m13:47:40[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.27044.1761572860071[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m14:42:57[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\sed5ZN860[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:26:53[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\services.astro.tmp.27044.1761636413687[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:26:54[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\services.astro.tmp.27044.1761636414762[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:27:10[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\services.astro.tmp.27044.1761636430058[22m found. Prefix filename with an underscore (`_`) to ignore.
+[2m08:03:44[22m [34m[watch][39m public/og-image-generator.html
+[33m[1m08:35:02[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.30744.1761640501933[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m08:35:16[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.30744.1761640516018[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m08:35:27[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.30744.1761640527872[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m08:35:47[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\about-us.astro.tmp.30744.1761640547471[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m08:35:54[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\about-us.astro.tmp.30744.1761640554963[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m08:36:27[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\our-projects.astro.tmp.30744.1761640587800[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m08:36:34[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\our-projects.astro.tmp.30744.1761640594562[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m08:36:41[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\our-projects.astro.tmp.30744.1761640601868[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m08:36:50[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\our-projects.astro.tmp.30744.1761640610274[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m08:36:58[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\our-projects.astro.tmp.30744.1761640618841[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m08:37:15[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\our-projects\[project].astro.tmp.30744.1761640635177[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m08:37:22[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\our-projects\[project].astro.tmp.30744.1761640642362[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m08:37:37[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\our-projects\[project].astro.tmp.30744.1761640657604[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m08:37:53[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\our-projects\[project].astro.tmp.30744.1761640673627[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m08:38:10[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\our-projects\[project].astro.tmp.30744.1761640690785[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m08:38:44[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\terms-of-use.astro.tmp.30744.1761640724717[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m08:39:01[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\service-terms.astro.tmp.30744.1761640741159[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m08:39:17[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\privacy-policy.astro.tmp.30744.1761640757024[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:01:52[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.32204.1761652912091[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:02:21[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.32204.1761652941321[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:07:33[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\about-us.astro.tmp.42688.1761653253913[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:15:30[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\services.astro.tmp.42688.1761653730274[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:29:18[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.42688.1761654558208[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:29:30[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.42688.1761654570286[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:29:43[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.42688.1761654583009[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:29:52[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.42688.1761654592629[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:30:04[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.42688.1761654604745[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m14:24:55[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\about-us.astro.tmp.42688.1761661495284[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m14:25:04[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\about-us.astro.tmp.42688.1761661504091[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m14:26:17[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.tmp.42688.1761661577840[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m14:26:26[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.tmp.42688.1761661586552[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m14:26:55[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\sedeT2MGr[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m14:27:51[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\privacy-policy.astro.tmp.42688.1761661671002[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m14:28:58[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\privacy-policy.astro.tmp.42688.1761661738700[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m14:29:22[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\service-terms.astro.tmp.42688.1761661762670[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m14:30:07[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\service-terms.astro.tmp.42688.1761661807265[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m14:30:37[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\terms-of-use.astro.tmp.42688.1761661837261[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m14:31:14[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\terms-of-use.astro.tmp.42688.1761661874389[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:00:48[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\services.astro.tmp.42688.1761721248712[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:12:13[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\services.astro.tmp.42688.1761721933122[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:12:28[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.tmp.42688.1761721948251[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:12:36[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\privacy-policy.astro.tmp.42688.1761721956395[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:12:44[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\terms-of-use.astro.tmp.42688.1761721964550[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:12:51[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\service-terms.astro.tmp.42688.1761721971947[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:15:21[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.tmp.42688.1761722121576[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:15:22[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.tmp.42688.1761722122564[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:15:23[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.tmp.42688.1761722123505[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:15:24[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.tmp.42688.1761722124494[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:15:36[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\services.astro.tmp.42688.1761722136887[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:15:46[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\services.astro.tmp.42688.1761722146147[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:15:53[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.42688.1761722153004[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:16:09[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.42688.1761722169710[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:16:39[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\about-us.astro.tmp.42688.1761722199518[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:16:40[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\about-us.astro.tmp.42688.1761722200582[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:16:41[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\about-us.astro.tmp.42688.1761722201586[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:16:57[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\our-projects.astro.tmp.42688.1761722217121[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:16:58[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\our-projects.astro.tmp.42688.1761722218076[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:16:59[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\our-projects.astro.tmp.42688.1761722219034[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:17:16[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\our-projects.astro.tmp.42688.1761722236871[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:17:31[22m [WARN] [glob-loader][39m No entry type found for project-management.md.tmp.42688.1761722251412
+[2m07:17:31[22m [34m[glob-loader][39m Reloaded data from [32mproject-management.md.tmp.42688.1761722251412[39m
+[2m07:17:31[22m [34m[glob-loader][39m Reloaded data from [32mproject-management.md[39m
+[31m[1m07:17:32[22m [ERROR][39m [31m[UnknownFilesystemError][39m 
+  [1mHint:[22m
+[33m    It can be caused by many things, eg. missing permissions or a file not existing we attempt to read. Check the error cause for more details.[39m
+  [1mError reference:[22m
+    [36m[4mhttps://docs.astro.build/en/reference/errors/unknown-filesystem-error/[24m[39m
+  [1mStack trace:[22m
+[2m    at C:\Users\Fearn\ab1\arron-bennett-astro\node_modules\astro\dist\content\mutable-data-store.js:337:13
+    [...] See full stack trace in the browser, or rerun with --verbose.[22m
+  [1mCaused by:[22m
+[2m  ENOENT: no such file or directory, rename 'C:\Users\Fearn\ab1\arron-bennett-astro\.astro\data-store.json.tmp' -> 'C:\Users\Fearn\ab1\arron-bennett-astro\.astro\data-store.json'
+    at async Object.rename (node:internal/fs/promises:785:10)
+    [...] See full stack trace in the browser, or rerun with --verbose.[22m
+[33m[1m07:17:43[22m [WARN] [glob-loader][39m No entry type found for lime-works.md.tmp.42688.1761722263330
+[2m07:17:43[22m [34m[glob-loader][39m Reloaded data from [32mlime-works.md.tmp.42688.1761722263330[39m
+[2m07:17:43[22m [34m[glob-loader][39m Reloaded data from [32mlime-works.md[39m
+[33m[1m07:20:43[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\services.astro.tmp.42688.1761722443766[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:20:55[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\services.astro.tmp.42688.1761722455716[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:21:07[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\services.astro.tmp.42688.1761722467175[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:21:19[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\services.astro.tmp.42688.1761722479950[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:21:30[22m [WARN] [glob-loader][39m No entry type found for renovations.md.tmp.42688.1761722490851
+[2m07:21:30[22m [34m[glob-loader][39m Reloaded data from [32mrenovations.md.tmp.42688.1761722490851[39m
+[2m07:21:30[22m [34m[glob-loader][39m Reloaded data from [32mrenovations.md[39m
+[31m[1m07:21:31[22m [ERROR][39m [31m[UnknownFilesystemError][39m 
+  [1mHint:[22m
+[33m    It can be caused by many things, eg. missing permissions or a file not existing we attempt to read. Check the error cause for more details.[39m
+  [1mError reference:[22m
+    [36m[4mhttps://docs.astro.build/en/reference/errors/unknown-filesystem-error/[24m[39m
+  [1mStack trace:[22m
+[2m    at C:\Users\Fearn\ab1\arron-bennett-astro\node_modules\astro\dist\content\mutable-data-store.js:337:13
+    [...] See full stack trace in the browser, or rerun with --verbose.[22m
+  [1mCaused by:[22m
+[2m  ENOENT: no such file or directory, rename 'C:\Users\Fearn\ab1\arron-bennett-astro\.astro\data-store.json.tmp' -> 'C:\Users\Fearn\ab1\arron-bennett-astro\.astro\data-store.json'
+    at async Object.rename (node:internal/fs/promises:785:10)
+    [...] See full stack trace in the browser, or rerun with --verbose.[22m
+[33m[1m07:21:42[22m [WARN] [glob-loader][39m No entry type found for heat-pumps.md.tmp.42688.1761722502062
+[2m07:21:42[22m [34m[glob-loader][39m Reloaded data from [32mheat-pumps.md.tmp.42688.1761722502062[39m
+[2m07:21:42[22m [34m[glob-loader][39m Reloaded data from [32mheat-pumps.md[39m
+[33m[1m07:21:52[22m [WARN] [glob-loader][39m No entry type found for full-builds.md.tmp.42688.1761722512742
+[2m07:21:52[22m [34m[glob-loader][39m Reloaded data from [32mfull-builds.md.tmp.42688.1761722512742[39m
+[2m07:21:52[22m [34m[glob-loader][39m Reloaded data from [32mfull-builds.md[39m
+[31m[1m07:21:53[22m [ERROR][39m [31m[UnknownFilesystemError][39m 
+  [1mHint:[22m
+[33m    It can be caused by many things, eg. missing permissions or a file not existing we attempt to read. Check the error cause for more details.[39m
+  [1mError reference:[22m
+    [36m[4mhttps://docs.astro.build/en/reference/errors/unknown-filesystem-error/[24m[39m
+  [1mStack trace:[22m
+[2m    at C:\Users\Fearn\ab1\arron-bennett-astro\node_modules\astro\dist\content\mutable-data-store.js:337:13
+    [...] See full stack trace in the browser, or rerun with --verbose.[22m
+  [1mCaused by:[22m
+[2m  ENOENT: no such file or directory, rename 'C:\Users\Fearn\ab1\arron-bennett-astro\.astro\data-store.json.tmp' -> 'C:\Users\Fearn\ab1\arron-bennett-astro\.astro\data-store.json'
+    at async Object.rename (node:internal/fs/promises:785:10)
+    [...] See full stack trace in the browser, or rerun with --verbose.[22m
+[33m[1m07:22:26[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\our-projects.astro.tmp.42688.1761722546656[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:34:01[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\services.astro.tmp.42688.1761723241559[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:49:59[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.tmp.42688.1761724199199[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:50:00[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.tmp.42688.1761724200183[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:50:01[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.tmp.42688.1761724201232[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:51:29[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.tmp.42688.1761724289522[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m08:13:58[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\404.astro.tmp.42688.1761725638170[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m08:19:57[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\services.astro.tmp.42688.1761725997220[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m08:20:08[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\our-projects.astro.tmp.42688.1761726008136[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m08:21:07[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.42688.1761726067715[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m08:21:23[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.42688.1761726083785[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m08:21:39[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.42688.1761726099774[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m09:24:42[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.22448.1761729882727[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m09:29:58[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.22448.1761730198697[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m09:30:06[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.22448.1761730206686[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m09:30:29[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.22448.1761730229018[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m09:40:04[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.22448.1761730804178[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m10:15:40[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.22448.1761732940583[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m10:29:16[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.22448.1761733756340[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m10:31:16[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.22448.1761733876012[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m10:34:20[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.22448.1761734060207[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m10:48:05[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\about-us.astro.tmp.22448.1761734885226[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m10:48:06[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\about-us.astro.tmp.22448.1761734886379[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m10:48:27[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\services.astro.tmp.22448.1761734907426[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m10:48:28[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\services.astro.tmp.22448.1761734908676[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m10:48:29[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\services.astro.tmp.22448.1761734909632[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m10:48:54[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\our-projects.astro.tmp.22448.1761734934598[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m10:48:55[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\our-projects.astro.tmp.22448.1761734935831[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m10:48:56[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\our-projects.astro.tmp.22448.1761734936824[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m10:49:12[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.tmp.22448.1761734952585[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m10:49:13[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.tmp.22448.1761734953891[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m10:59:47[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\about-us.astro.tmp.22448.1761735587823[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m10:59:57[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\about-us.astro.tmp.22448.1761735597651[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:00:20[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\services.astro.tmp.22448.1761735620408[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:00:39[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\our-projects.astro.tmp.22448.1761735639945[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:01:00[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.tmp.22448.1761735660310[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:12:57[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\about-us.astro.tmp.22448.1761736377132[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:23:16[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.22448.1761736996712[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:23:42[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.22448.1761737022166[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:24:02[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.22448.1761737042515[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:24:17[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.22448.1761737057298[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:24:29[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.22448.1761737069296[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:32:03[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:32:03[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[31m[1m11:32:03[22m [ERROR][39m [31m[UnhandledRejection][39m Astro detected an unhandled rejection. Here's the stack trace:
+Error: ENOENT: no such file or directory, stat 'C:\Users\Fearn\ab1\arron-bennett-astro\src\pages\sedPFogJg'
+    at Object.statSync (node:fs:1720:25)
+    at walk (file:///C:/Users/Fearn/ab1/arron-bennett-astro/node_modules/astro/dist/core/routing/manifest/create.js:78:24)
+    at createFileBasedRoutes (file:///C:/Users/Fearn/ab1/arron-bennett-astro/node_modules/astro/dist/core/routing/manifest/create.js:174:5)
+    at createRoutesList (file:///C:/Users/Fearn/ab1/arron-bennett-astro/node_modules/astro/dist/core/routing/manifest/create.js:308:27)
+    at rebuildManifest (file:///C:/Users/Fearn/ab1/arron-bennett-astro/node_modules/astro/dist/vite-plugin-astro-server/plugin.js:73:30)
+    at FSWatcher.emit (node:events:519:35)
+    at FSWatcher.emitWithAll (file:///C:/Users/Fearn/ab1/arron-bennett-astro/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:23789:8)
+    at FSWatcher._emit (file:///C:/Users/Fearn/ab1/arron-bennett-astro/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:23881:8)
+    at NodeFsHandler._handleFile (file:///C:/Users/Fearn/ab1/arron-bennett-astro/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:22466:14)
+    at NodeFsHandler._addToNodeFs (file:///C:/Users/Fearn/ab1/arron-bennett-astro/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:22703:21)
+  [1mHint:[22m
+[33m    Make sure your promises all have an `await` or a `.catch()` handler.[39m
+  [1mError reference:[22m
+    [36m[4mhttps://docs.astro.build/en/reference/errors/unhandled-rejection/[24m[39m
+  [1mStack trace:[22m
+[2m    at Object.statSync (node:fs:1720:25)
+    [...] See full stack trace in the browser, or rerun with --verbose.[22m
+[33m[1m11:32:03[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:32:14[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:32:14[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\sedXofIrW[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:32:14[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:32:24[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:32:24[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\sedrYxdrG[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:32:24[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:32:35[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[31m[1m11:32:35[22m [ERROR][39m [31m[UnhandledRejection][39m Astro detected an unhandled rejection. Here's the stack trace:
+Error: ENOENT: no such file or directory, stat 'C:\Users\Fearn\ab1\arron-bennett-astro\src\pages\sedxEWFOB'
+    at Object.statSync (node:fs:1720:25)
+    at walk (file:///C:/Users/Fearn/ab1/arron-bennett-astro/node_modules/astro/dist/core/routing/manifest/create.js:78:24)
+    at createFileBasedRoutes (file:///C:/Users/Fearn/ab1/arron-bennett-astro/node_modules/astro/dist/core/routing/manifest/create.js:174:5)
+    at createRoutesList (file:///C:/Users/Fearn/ab1/arron-bennett-astro/node_modules/astro/dist/core/routing/manifest/create.js:308:27)
+    at rebuildManifest (file:///C:/Users/Fearn/ab1/arron-bennett-astro/node_modules/astro/dist/vite-plugin-astro-server/plugin.js:73:30)
+    at FSWatcher.emit (node:events:519:35)
+    at FSWatcher.emitWithAll (file:///C:/Users/Fearn/ab1/arron-bennett-astro/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:23789:8)
+    at FSWatcher._emit (file:///C:/Users/Fearn/ab1/arron-bennett-astro/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:23881:8)
+    at NodeFsHandler._handleFile (file:///C:/Users/Fearn/ab1/arron-bennett-astro/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:22466:14)
+    at NodeFsHandler._addToNodeFs (file:///C:/Users/Fearn/ab1/arron-bennett-astro/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:22703:21)
+  [1mHint:[22m
+[33m    Make sure your promises all have an `await` or a `.catch()` handler.[39m
+  [1mError reference:[22m
+    [36m[4mhttps://docs.astro.build/en/reference/errors/unhandled-rejection/[24m[39m
+  [1mStack trace:[22m
+[2m    at Object.statSync (node:fs:1720:25)
+    [...] See full stack trace in the browser, or rerun with --verbose.[22m
+[33m[1m11:32:35[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:33:49[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:35:59[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:52:27[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:56:54[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:57:23[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:57:23[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:57:34[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:57:34[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:57:46[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:57:46[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:58:07[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:58:08[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:58:18[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m11:58:18[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:09:11[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:18:39[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:18:39[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.22448.1761740319819[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:18:40[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:27:15[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:27:15[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:27:26[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:27:26[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:27:26[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.22448.1761740846768[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:27:26[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:27:26[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:27:46[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:27:46[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:27:46[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.22448.1761740866806[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:27:47[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:27:47[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:32:11[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:32:11[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:32:11[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.22448.1761741131848[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:32:12[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:32:12[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:32:13[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:32:13[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:32:13[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.22448.1761741133136[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:32:13[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:32:13[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:32:33[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\about-us.astro.tmp.22448.1761741153705[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:32:33[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:32:33[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:32:33[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:32:33[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:33:54[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:33:54[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:33:54[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\our-projects.astro.tmp.22448.1761741234558[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:33:54[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:33:54[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:34:12[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:34:12[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:34:12[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\our-projects\[project].astro.tmp.22448.1761741252130[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:34:12[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:34:12[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:42:35[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:42:35[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:42:35[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:42:35[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:42:35[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:42:35[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:48:15[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:48:15[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:49:01[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:49:01[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:49:20[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:49:20[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:49:32[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:49:32[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:49:32[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:49:33[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:49:33[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:49:33[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:49:33[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\sedX8dUIO[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:49:33[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:49:33[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:49:33[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:49:33[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\sedC8T8hm[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:49:33[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:49:33[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:49:33[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:49:33[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:49:33[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:49:33[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:49:45[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:49:45[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:49:45[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:49:45[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\sedOTrQW6[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:49:45[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:49:45[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:49:45[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:50:21[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:50:21[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:50:21[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:50:21[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:50:21[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:50:21[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:50:21[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:50:21[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:50:21[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\sedCED3ZF[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:50:21[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:50:21[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:50:21[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:50:21[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:50:21[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\sedC5IeGn[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:50:21[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:50:21[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:50:21[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:50:21[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:50:21[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:50:21[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:50:21[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:50:21[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:52:28[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:52:28[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:52:28[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:52:28[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:53:02[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:53:02[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:53:02[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:53:02[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:26[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:26[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:26[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:26[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:26[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-trustmark[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:26[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:26[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:26[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:26[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:26[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-trustmark[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:37[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:37[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:37[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:37[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:37[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-trustmark[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:37[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\sedag2jMn[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:37[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:37[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:37[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:37[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:37[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-trustmark[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:47[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:47[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:47[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:47[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:47[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-trustmark[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:47[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.temp[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:58[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:58[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:58[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:58[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:58[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-trustmark[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:58[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.temp[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:58[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\sedVhcWVj[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:58[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:58[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:58[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:58[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:58[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-trustmark[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:58[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:58[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:58[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:58[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:57:58[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-trustmark[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:59:35[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\contact-us.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:59:35[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:59:35[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-eggshell[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:59:35[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-fix[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m12:59:35[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.backup-trustmark[22m found. Prefix filename with an underscore (`_`) to ignore.

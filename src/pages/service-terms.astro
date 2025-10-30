@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = "Building Service Terms - Arron Bennett Building Contractors";
-const pageDescription = "Terms and conditions for engaging Arron Bennett Building Contractors for building and construction projects. Read our service terms before starting your project.";
+const pageDescription = "Building Service Terms & Conditions for Arron Bennett Building Contractors. Payment terms, warranties, project timelines, and service agreements for construction work.";
 
 const schema = {
   "@context": "https://schema.org",
@@ -13,8 +13,7 @@ const schema = {
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription} schema={schema}>
-  <main id="main-content" class="min-h-screen">
-
+  <div class="min-h-screen">
     <section class="hero bg-gradient-to-br from-blue-600 to-blue-800 text-white py-20 px-4">
       <div class="max-w-4xl mx-auto text-center">
         <h1 class="text-4xl md:text-5xl font-bold mb-6">
@@ -299,14 +298,13 @@ const schema = {
         </p>
         <a
           href="/contact-us"
-          class="inline-block bg-blue-600 text-white font-semibold px-8 py-4 rounded-lg hover:bg-blue-700 transition-colors duration-200"
+          class="inline-block bg-navy-900 text-white font-semibold px-8 py-4 rounded-lg hover:bg-navy-800 transition-colors duration-200"
         >
           Contact Us Today
         </a>
       </div>
     </section>
-
-  </main>
+  </div>
 </BaseLayout>
 
 <style>

@@ -174,4 +174,4 @@ After installation, we provide:
 - System optimization
 - Grant claim support
 
-Make the switch to sustainable heating with confidence. Our team brings together building expertise and renewable technology knowledge for installations that work perfectly in Cornwall and Devon's climate.
+Make the switch to sustainable heating with confidence. Our team brings together building expertise and renewable technology knowledge for installations that work perfectly on the Roseland Peninsula's climate.

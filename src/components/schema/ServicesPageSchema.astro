@@ -1,0 +1,55 @@
+---
+/**
+ * Services Page Schema Component
+ * Generates comprehensive schema for services page including:
+ * - WebPage schema
+ * - BreadcrumbList
+ * - Multiple Service schemas
+ */
+import { services } from '../../data/services';
+import { companyInfo } from '../../data/company-info';
+import {
+  generateWebPageSchema,
+  generateBreadcrumbSchema,
+  generateServiceSchema,
+  createSchemaGraph
+} from '../../utils/schema-helpers';
+
+interface Props {
+  siteUrl?: string;
+  pageUrl: string;
+  pageTitle: string;
+  pageDescription: string;
+}
+
+const { siteUrl = companyInfo.url, pageUrl, pageTitle, pageDescription } = Astro.props;
+
+// Generate individual schemas
+const webPageSchema = generateWebPageSchema({
+  title: pageTitle,
+  description: pageDescription,
+  url: pageUrl
+}, siteUrl);
+
+const breadcrumbSchema = generateBreadcrumbSchema([
+  { name: 'Home', url: '/' },
+  { name: 'Services', url: pageUrl }
+], siteUrl);
+
+const serviceSchemas = services.map(service =>
+  generateServiceSchema({
+    name: service.title,
+    description: service.description,
+    features: service.features
+  }, siteUrl)
+);
+
+// Combine all schemas into a single @graph
+const schema = createSchemaGraph(
+  webPageSchema,
+  breadcrumbSchema,
+  ...serviceSchemas
+);
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

@@ -1,0 +1,21 @@
+---
+/**
+ * Base Schema Component
+ * Generates foundational schema markup for all pages
+ * Includes Organization and WebSite schemas
+ */
+import OrganizationSchema from './OrganizationSchema.astro';
+import WebSiteSchema from './WebSiteSchema.astro';
+
+interface Props {
+  siteUrl?: string;
+}
+
+const { siteUrl } = Astro.props;
+---
+
+<!-- Core Organization Schema -->
+<OrganizationSchema siteUrl={siteUrl} />
+
+<!-- WebSite Schema -->
+<WebSiteSchema siteUrl={siteUrl} />

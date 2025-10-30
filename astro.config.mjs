@@ -10,12 +10,19 @@ export default defineConfig({
 
   integrations: [
     sitemap({
-      filter: (page) => !page.includes('/admin/'),
+      filter: (page) =>
+        !page.includes('/admin/') &&
+        !page.includes('/test-avif/'),
       changefreq: 'weekly',
       priority: 0.7,
       lastmod: new Date()
     })
   ],
+
+  redirects: {
+    '/about': '/about-us',
+    '/our-services': '/services'
+  },
 
   image: {
     service: {

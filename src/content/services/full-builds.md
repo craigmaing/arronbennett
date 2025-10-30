@@ -48,6 +48,6 @@ Specialist work on listed buildings and conservation areas, maintaining architec
 
 ### Why Choose Us for Your Full Build?
 
-With extensive experience in both traditional and contemporary construction, we understand the unique challenges of building in Cornwall and Devon. Our team works seamlessly with architects, engineers, and building control to ensure your project runs smoothly from concept to completion.
+With extensive experience in both traditional and contemporary construction, we understand the unique challenges of building on the Roseland Peninsula. Our team works seamlessly with architects, engineers, and building control to ensure your project runs smoothly from concept to completion.
 
 **Quality Guaranteed** - Every project backed by full insurance and 20+ years of proven craftsmanship.

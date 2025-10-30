@@ -17,9 +17,9 @@
 /// <reference types="astro/client" />
 import type { ImageMetadata } from 'astro';
 
-// Import all project feature images (used on /our-projects cards)
+// Import all project images (including subdirectories for organized project folders)
 const projectImages = import.meta.glob<{ default: ImageMetadata }>(
-  '/src/assets/images/projects/*.{jpg,jpeg,png,webp}',
+  '/src/assets/images/projects/**/*.{jpg,jpeg,png,webp}',
   { eager: true }
 );
 
@@ -30,8 +30,8 @@ const galleryImages = import.meta.glob<{ default: ImageMetadata }>(
 );
 
 /**
- * Get a project feature image by filename
- * @param filename - Image filename (e.g., 'A-Bennett-72.jpg')
+ * Get a project feature image by filename or path
+ * @param filename - Image filename or path (e.g., 'A-Bennett-72.jpg' or 'new-house-landscaping-feock/A-Bennett-104.jpg')
  * @returns ImageMetadata object for Astro Image component
  * @throws Error if image not found
  */

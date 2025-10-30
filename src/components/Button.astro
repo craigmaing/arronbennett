@@ -1,111 +1,91 @@
 ---
 /**
- * Button Component
- *
- * A flexible, accessible button component with multiple variants and sizes.
- * Supports both button and anchor tag rendering.
- *
- * @component
- * @example
- * <Button variant="primary" size="lg">Click me</Button>
- * <Button variant="secondary" href="/contact">Contact Us</Button>
- * <Button variant="ghost" disabled>Disabled</Button>
+ * Button Component - Consistent button styling across the site
+ * Variants: primary (coral), secondary (navy), ghost (outlined)
+ * Sizes: sm, md, lg
  */
 
-import type { ButtonProps } from '../types/components';
-
-interface Props extends ButtonProps {}
+interface Props {
+  href?: string;
+  type?: 'button' | 'submit' | 'reset';
+  variant?: 'primary' | 'secondary' | 'ghost';
+  size?: 'sm' | 'md' | 'lg';
+  fullWidth?: boolean;
+  class?: string;
+  ariaLabel?: string;
+}
 
 const {
-  variant = 'primary',
-  size = 'md',
   href,
   type = 'button',
-  disabled = false,
+  variant = 'primary',
+  size = 'md',
   fullWidth = false,
-  ariaLabel,
   class: className = '',
+  ariaLabel,
+  ...rest
 } = Astro.props;
 
-// Determine if we should render as a link or button
-const Tag = href ? 'a' : 'button';
+// Base classes shared by all buttons
+const baseClasses = 'inline-block font-semibold text-center transition-all duration-200 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-offset-2 no-underline';
 
-// Base styles (mobile-first)
-const baseStyles = `
-  inline-flex items-center justify-center gap-2
-  font-medium rounded-lg
-  transition-all duration-200 ease-in-out
-  focus:outline-none focus:ring-2 focus:ring-offset-2
-  disabled:opacity-50 disabled:cursor-not-allowed disabled:pointer-events-none
-  ${fullWidth ? 'w-full' : ''}
-`;
-
-// Variant styles based on design system
-const variantStyles = {
-  primary: `
-    bg-navy-900 text-white
-    hover:bg-navy-800 active:bg-navy-950
-    focus:ring-navy-500
-    shadow-sm hover:shadow-md
-  `,
-  secondary: `
-    bg-coral-500 text-white
-    hover:bg-coral-600 active:bg-coral-700
-    focus:ring-coral-400
-    shadow-sm hover:shadow-md
-  `,
-  ghost: `
-    bg-transparent text-navy-900 border-2 border-navy-900
-    hover:bg-navy-50 active:bg-navy-100
-    focus:ring-navy-500
-  `,
+// Variant-specific classes
+const variantClasses = {
+  primary: 'bg-coral text-white hover:bg-coral-dark focus-visible:ring-coral-300',
+  secondary: 'bg-navy-900 text-white hover:bg-navy-800 focus-visible:ring-navy-500',
+  ghost: 'bg-transparent border-2 border-current hover:bg-current/10 focus-visible:ring-current',
 };
 
-// Size styles
-const sizeStyles = {
-  sm: 'px-4 py-2 text-sm',
-  md: 'px-6 py-3 text-base',
-  lg: 'px-8 py-4 text-lg',
+// Size-specific classes
+const sizeClasses = {
+  sm: 'px-4 py-2 text-sm rounded',
+  md: 'px-6 py-3 text-base rounded-lg',
+  lg: 'px-8 py-4 text-lg rounded-lg',
 };
 
-const computedClass = `
-  ${baseStyles}
-  ${variantStyles[variant]}
-  ${sizeStyles[size]}
-  ${className}
-`.trim().replace(/\s+/g, ' ');
+// Width class
+const widthClass = fullWidth ? 'w-full' : '';
 
-// Props for the rendered element
-const elementProps = {
-  class: computedClass,
-  'aria-label': ariaLabel,
-  ...(Tag === 'button' && { type, disabled }),
-  ...(Tag === 'a' && { href, role: 'button' }),
-};
+// Combine all classes
+const buttonClasses = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${widthClass} ${className}`.trim();
+
+// Inline styles for coral color (not in Tailwind by default)
+const coralPrimary = '#a83820';
+const coralDark = '#8b2e19';
+const coralHover = '#e06a4e';
+
+const inlineStyle = variant === 'primary'
+  ? `background-color: ${coralPrimary};`
+  : '';
+
+const hoverHandlers = variant === 'primary'
+  ? {
+      onmouseover: `this.style.backgroundColor='${coralHover}'`,
+      onmouseout: `this.style.backgroundColor='${coralPrimary}'`,
+    }
+  : {};
 ---
 
-<Tag {...elementProps}>
-  <slot />
-</Tag>
-
-<style>
-  /* Ensure consistent button rendering across browsers */
-  button,
-  a[role="button"] {
-    text-decoration: none;
-    cursor: pointer;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  /* Smooth transitions for all interactive states */
-  button,
-  a[role="button"] {
-    transform: translateY(0);
-  }
-
-  button:active:not(:disabled),
-  a[role="button"]:active {
-    transform: translateY(1px);
-  }
-</style>
+{href ? (
+  <a
+    href={href}
+    class={buttonClasses}
+    style={inlineStyle}
+    aria-label={ariaLabel}
+    {...hoverHandlers}
+    {...rest}
+  >
+    <slot />
+  </a>
+) : (
+  <button
+    type={type}
+    class={buttonClasses}
+    style={inlineStyle}
+    aria-label={ariaLabel}
+    {...hoverHandlers}
+    {...rest}
+  >
+    <slot />
+  </button>
+)}

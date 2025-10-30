@@ -3,13 +3,16 @@
  * Complete list of all building services offered by Arron Bennett Building
  */
 
+import type { ImageMetadata } from 'astro';
+import { getProjectImage } from './imageRegistry';
+
 export interface Service {
   id: string;
   title: string;
   slug: string;
   description: string;
   icon?: string;
-  image?: string;
+  image?: ImageMetadata;
   features: string[];
   category: 'building' | 'masonry' | 'renovation' | 'specialist';
   featured: boolean;
@@ -21,7 +24,7 @@ export const services: Service[] = [
     title: 'Full Builds',
     slug: 'full-builds',
     description: 'Bespoke properties using traditional and modern methods. From new builds to barn conversions, we work closely with architects and building control to bring your vision to life.',
-    image: '/images/services/full-builds.jpg',
+    image: getProjectImage('new-house-landscaping-feock/A-Bennett-104.jpg'),
     features: [
       'New build homes',
       'Barn conversions',
@@ -38,7 +41,7 @@ export const services: Service[] = [
     title: 'Home Renovations',
     slug: 'renovations',
     description: 'Full restoration and renovation projects combining traditional methods with new technology. We\'re sympathetic to existing buildings while bringing them into the modern age.',
-    image: '/images/services/renovations.jpg',
+    image: getProjectImage('cottage-refurbishment-penryn/image951.jpg'),
     features: [
       'Full property restoration',
       'Period property expertise',
@@ -55,7 +58,7 @@ export const services: Service[] = [
     title: 'Bathroom and Kitchen Renovations',
     slug: 'kitchen-bathroom-renovations',
     description: 'Full renovation projects that preserve traditional character while incorporating modern touches and new technology. Transform your living spaces with quality craftsmanship.',
-    image: '/images/services/kitchen-bathroom.jpg',
+    image: getProjectImage('barn-conversion-kitchen-roseland/A-Bennett-125.jpg'),
     features: [
       'Complete kitchen refits',
       'Luxury bathroom installations',
@@ -72,7 +75,7 @@ export const services: Service[] = [
     title: 'Hard Landscaping',
     slug: 'hard-landscaping',
     description: 'Retaining walls, Cornish dry stone walling, block paving for patios, driveways, and entrances. Expert restoration and new landscaping schemes using traditional techniques.',
-    image: '/images/services/hard-landscaping.jpg',
+    image: getProjectImage('new-house-landscaping-feock/A-Bennett-120.jpg'),
     features: [
       'Retaining walls',
       'Cornish dry stone walling',
@@ -89,7 +92,7 @@ export const services: Service[] = [
     title: 'Mini Excavator and Waste Away Services',
     slug: 'excavation-waste-services',
     description: 'Professional site preparation for construction using industry standard mini excavators. Responsible waste disposal and efficient site management.',
-    image: '/images/services/excavation.jpg',
+    image: getProjectImage('new-house-landscaping-feock/A-Bennett-105.jpg'),
     features: [
       'Site preparation',
       'Groundworks',
@@ -106,7 +109,7 @@ export const services: Service[] = [
     title: 'Stone and Block Masonry',
     slug: 'stone-block-masonry',
     description: 'Specialist stone and block masonry including stone cladding, chimneys, boundary walls, retaining walls, Cornish dry stone walling, and granite hedging.',
-    image: '/images/services/stone-masonry.jpg',
+    image: getProjectImage('cottage-refurbishment-stjust/A-Bennett-176.jpg'),
     features: [
       'Stone cladding',
       'Chimney construction',
@@ -123,7 +126,7 @@ export const services: Service[] = [
     title: 'Project Management',
     slug: 'project-management',
     description: 'Full project oversight from material ordering to finishing touches. Liaison with clients, contractors, architects, and engineers, keeping you informed throughout.',
-    image: '/images/services/project-management.jpg',
+    image: getProjectImage('timber-frame-house-tregony/Bennett1.jpg'),
     features: [
       'Complete project oversight',
       'Material procurement',
@@ -140,7 +143,7 @@ export const services: Service[] = [
     title: 'Ground Source and Air Source Installations',
     slug: 'heat-pump-installations',
     description: 'Energy-efficient, sustainable heating solutions. Our certified team has extensive knowledge and conducts thorough suitability assessments for your property.',
-    image: '/images/services/heat-pumps.jpg',
+    image: getProjectImage('complete-timber-build-roseland/A-Bennett-30.jpg'),
     features: [
       'Ground source heat pumps',
       'Air source heat pumps',
@@ -157,7 +160,7 @@ export const services: Service[] = [
     title: 'Traditional Lime Mortars',
     slug: 'lime-works',
     description: 'Lime rendering, plastering, lime putties, and repointing for conservation and new traditional builds. Over 20 years of experience working with lime.',
-    image: '/images/services/lime-works.jpg',
+    image: getProjectImage('cottage-refurbishment-stjust/A-Bennett-181.jpg'),
     features: [
       'Lime rendering',
       'Lime plastering',

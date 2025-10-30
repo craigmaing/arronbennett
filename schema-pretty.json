@@ -1,0 +1,319 @@
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://arronbennettbuilding.co.uk/#organization",
+    "name": "Arron Bennett Building Contractors",
+    "url": "https://arronbennettbuilding.co.uk",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://arronbennettbuilding.co.uk/images/logo.png",
+      "width": 180,
+      "height": 107
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+44-7773-463383",
+      "contactType": "customer service",
+      "email": "enquiries@arronbennettbuilding.co.uk",
+      "areaServed": "GB",
+      "availableLanguage": "English"
+    },
+    "sameAs": []
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": [
+      "LocalBusiness",
+      "HomeAndConstructionBusiness"
+    ],
+    "@id": "https://arronbennettbuilding.co.uk/#localbusiness",
+    "name": "Arron Bennett Building Contractors",
+    "alternateName": "Arron Bennett Building",
+    "description": "Traditional building contractors specializing in stone masonry, heritage restoration, and modern construction methods. Serving Cornwall and Devon with over 20 years of experience.",
+    "image": [
+      "https://arronbennettbuilding.co.uk/images/logo.png",
+      "https://arronbennettbuilding.co.uk/images/arron-bennett.jpg"
+    ],
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://arronbennettbuilding.co.uk/images/logo.png",
+      "width": 180,
+      "height": 107
+    },
+    "url": "https://arronbennettbuilding.co.uk",
+    "telephone": "+44-7773-463383",
+    "email": "enquiries@arronbennettbuilding.co.uk",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Cornwall",
+      "addressLocality": "Roseland Peninsula",
+      "addressCountry": "GB"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "50.2660",
+      "longitude": "-5.0527"
+    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Falmouth",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Cornwall"
+        }
+      },
+      {
+        "@type": "City",
+        "name": "Truro",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Cornwall"
+        }
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Cornwall",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "United Kingdom"
+        }
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Devon",
+        "containedInPlace": {
+          "@type": "Country",
+          "name": "United Kingdom"
+        }
+      },
+      {
+        "@type": "Place",
+        "name": "Roseland Peninsula"
+      }
+    ],
+    "priceRange": "£££",
+    "paymentAccepted": [
+      "Cash",
+      "Bank Transfer",
+      "Cheque"
+    ],
+    "currenciesAccepted": "GBP",
+    "openingHours": "Mo-Fr 08:00-18:00, Sa 08:00-14:00",
+    "foundingDate": "2003",
+    "founder": {
+      "@type": "Person",
+      "name": "Arron Bennett",
+      "jobTitle": "Master Builder & Stone Mason"
+    },
+    "knowsAbout": [
+      "Stone Masonry",
+      "Traditional Building",
+      "Heritage Restoration",
+      "Lime Mortar Work",
+      "Project Management",
+      "Heat Pump Installation",
+      "New Build Construction",
+      "Barn Conversions",
+      "Listed Building Work"
+    ],
+    "slogan": "Quality craftsmanship backed by over 20 years of experience",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "bestRating": "5",
+      "worstRating": "1",
+      "reviewCount": "5"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Building Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "serviceType": "Construction",
+            "name": "Full Builds",
+            "description": "Complete new construction projects including new build homes, barn conversions, and bespoke properties using traditional and modern methods",
+            "provider": {
+              "@id": "https://arronbennettbuilding.co.uk/#localbusiness"
+            },
+            "areaServed": [
+              "Cornwall",
+              "Devon"
+            ]
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "serviceType": "Renovation",
+            "name": "Home Renovations",
+            "description": "Full restoration and renovation projects combining traditional methods with new technology, specializing in period properties and listed buildings",
+            "provider": {
+              "@id": "https://arronbennettbuilding.co.uk/#localbusiness"
+            },
+            "areaServed": [
+              "Cornwall",
+              "Devon"
+            ]
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "serviceType": "Masonry",
+            "name": "Stone and Block Masonry",
+            "description": "Specialist stone and block masonry including stone cladding, chimneys, boundary walls, retaining walls, Cornish dry stone walling, and granite hedging",
+            "provider": {
+              "@id": "https://arronbennettbuilding.co.uk/#localbusiness"
+            },
+            "areaServed": [
+              "Cornwall",
+              "Devon"
+            ]
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "serviceType": "Interior Renovation",
+            "name": "Kitchen and Bathroom Renovations",
+            "description": "Complete kitchen and bathroom renovation projects preserving traditional character while incorporating modern fixtures and fittings",
+            "provider": {
+              "@id": "https://arronbennettbuilding.co.uk/#localbusiness"
+            },
+            "areaServed": [
+              "Cornwall",
+              "Devon"
+            ]
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "serviceType": "Landscaping",
+            "name": "Hard Landscaping",
+            "description": "Retaining walls, Cornish dry stone walling, block paving for patios, driveways, and entrances using traditional techniques",
+            "provider": {
+              "@id": "https://arronbennettbuilding.co.uk/#localbusiness"
+            },
+            "areaServed": [
+              "Cornwall",
+              "Devon"
+            ]
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "serviceType": "Project Management",
+            "name": "Project Management",
+            "description": "Full project oversight from material ordering to finishing touches, liaising with clients, contractors, architects, and engineers",
+            "provider": {
+              "@id": "https://arronbennettbuilding.co.uk/#localbusiness"
+            },
+            "areaServed": [
+              "Cornwall",
+              "Devon"
+            ]
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "serviceType": "HVAC Installation",
+            "name": "Ground Source and Air Source Heat Pump Installations",
+            "description": "Energy-efficient, sustainable heating solutions with certified installations and thorough suitability assessments",
+            "provider": {
+              "@id": "https://arronbennettbuilding.co.uk/#localbusiness"
+            },
+            "areaServed": [
+              "Cornwall",
+              "Devon"
+            ]
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "serviceType": "Heritage Restoration",
+            "name": "Traditional Lime Mortars",
+            "description": "Lime rendering, plastering, lime putties, and repointing for conservation and new traditional builds with over 20 years of experience",
+            "provider": {
+              "@id": "https://arronbennettbuilding.co.uk/#localbusiness"
+            },
+            "areaServed": [
+              "Cornwall",
+              "Devon"
+            ]
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "serviceType": "Excavation",
+            "name": "Mini Excavator and Waste Management Services",
+            "description": "Professional site preparation and responsible waste disposal for construction projects",
+            "provider": {
+              "@id": "https://arronbennettbuilding.co.uk/#localbusiness"
+            },
+            "areaServed": [
+              "Cornwall",
+              "Devon"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://arronbennettbuilding.co.uk/#person",
+    "name": "Arron Bennett",
+    "jobTitle": "Master Builder & Building Contractor",
+    "description": "Traditional builder with 20+ years of experience specializing in stone masonry, heritage restoration, and modern construction methods in Cornwall",
+    "url": "https://arronbennettbuilding.co.uk",
+    "image": "https://arronbennettbuilding.co.uk/images/arron-bennett.jpg",
+    "telephone": "+44-7773-463383",
+    "email": "enquiries@arronbennettbuilding.co.uk",
+    "worksFor": {
+      "@id": "https://arronbennettbuilding.co.uk/#organization"
+    },
+    "knowsAbout": [
+      "Stone Masonry",
+      "Traditional Building Methods",
+      "Heritage Restoration",
+      "Project Management",
+      "Renewable Energy Installation",
+      "Lime Mortar Techniques"
+    ],
+    "areaServed": {
+      "@type": "State",
+      "name": "Cornwall"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://arronbennettbuilding.co.uk"
+      }
+    ]
+  }
+]

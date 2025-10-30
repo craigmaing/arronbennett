@@ -129,7 +129,7 @@ Project management works seamlessly with our other services - whether we're buil
 
 ### Experience That Counts
 
-With 20+ years in construction across Cornwall and Devon:
+With 20+ years in construction on the Roseland Peninsula:
 
 - Deep understanding of local planning and regulations
 - Established relationships with quality trades

@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+nul
+public/images/projects/nul
+src/assets/images/projects/nul
