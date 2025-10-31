@@ -24,7 +24,7 @@ const currentIndex = projects.findIndex(p => p.id === project.id);
 const prevProject = currentIndex > 0 ? projects[currentIndex - 1] : null;
 const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
 
-const pageTitle = `${project.title} - Arron Bennett Building`;
+const pageTitle = `${project.title} - Arron Bennett Building Contractors ltd`;
 const pageDescription = project.description;
 ---
 
@@ -49,7 +49,6 @@ const pageDescription = project.description;
     <section class="project-header">
       <div class="container">
         <div class="project-header-content">
-          <div class="project-category-badge">{project.category}</div>
           <h1>{project.title}</h1>
           <div class="project-meta-header">
             <span class="location">
@@ -58,13 +57,6 @@ const pageDescription = project.description;
                 <circle cx="12" cy="10" r="3"></circle>
               </svg>
               {project.location}
-            </span>
-            <span class="duration">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
-              {project.duration}
             </span>
           </div>
           <p class="project-description-full">{project.description}</p>

@@ -13,7 +13,7 @@ import { getProjectImage } from '../data/imageRegistry';
 // import ProgressiveImage from '../components/ProgressiveImage.astro';
 
 // SEO metadata
-const pageTitle = 'Our Projects – Cornwall Building Portfolio | Arron Bennett Building - Cornwall';
+const pageTitle = 'Our Projects – Cornwall Building Portfolio | Arron Bennett Building Contractors ltd - Cornwall';
 const pageDescription = 'View our portfolio of completed building projects on the Roseland Peninsula including new builds, renovations, stone masonry, and hard landscaping work.';
 ---
 
@@ -79,7 +79,6 @@ const pageDescription = 'View our portfolio of completed building projects on th
                     format="avif"
                     quality={80}
                   />
-                  <div class="project-category">{project.category}</div>
                 </div>
                 <div class="project-content">
                   <h3>{project.title}</h3>
@@ -97,16 +96,6 @@ const pageDescription = 'View our portfolio of completed building projects on th
                       <li>{detail}</li>
                     ))}
                   </ul>
-
-                  <div class="project-meta">
-                    <span class="project-duration">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polyline points="12 6 12 12 16 14"></polyline>
-                      </svg>
-                      {project.duration}
-                    </span>
-                  </div>
 
                   <!-- View Project CTA -->
                   <div class="view-project-cta">

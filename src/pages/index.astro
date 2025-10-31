@@ -391,25 +391,6 @@ const testimonials = testimonialsData.map(t => ({
             <p class="text-sm text-gray-600">Guaranteed</p>
           </article>
 
-          <!-- Badge 5: TrustMark Certified -->
-          <article class="flex flex-col items-center justify-center bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100">
-            <a
-              href="https://www.trustmark.org.uk/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex items-center justify-center w-full h-full"
-              aria-label="TrustMark Government Endorsed Standards - Opens in new window"
-            >
-              <img
-                src="/images/trustmark-logo.png"
-                alt="TrustMark Logo"
-                class="w-full h-full object-contain"
-                loading="lazy"
-                width="144"
-                height="144"
-              />
-            </a>
-          </article>
         </div>
       </div>
     </section>
@@ -617,7 +598,7 @@ const testimonials = testimonialsData.map(t => ({
   }
 </style>
 
-<script>
+<script is:inline>
   // Testimonials toggle functionality
   document.addEventListener('DOMContentLoaded', () => {
     const toggleButton = document.getElementById('feedback-toggle');

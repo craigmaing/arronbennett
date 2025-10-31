@@ -6,8 +6,8 @@
 
 export const companyInfo = {
   // Basic Information
-  name: 'Arron Bennett Building Contractors',
-  legalName: 'Arron Bennett Building Contractors',
+  name: 'Arron Bennett Building Contractors ltd',
+  legalName: 'Arron Bennett Building Contractors ltd',
   alternateName: 'Arron Bennett Building',
   foundingDate: '2004', // Approximate based on "20+ years experience"
 
@@ -71,8 +71,7 @@ export const companyInfo = {
 
   // Certifications & Memberships
   certifications: [
-    'Fully Insured',
-    'TrustMark Certified'
+    'Fully Insured'
   ],
 
   // Opening Hours (typical construction hours)
@@ -111,7 +110,6 @@ export const companyInfo = {
   trustIndicators: {
     fullyInsured: true,
     yearsExperience: 20,
-    trustMarkCertified: true,
     qualityGuaranteed: true,
     traditionalCraftsmanship: true
   }

@@ -32,7 +32,6 @@ export interface Project {
   description: string;     // Exact description from original site
   image: ImageMetadata;    // Featured image for card
   details: string[];       // Key project features
-  duration: string;        // Project timeline
   location: string;        // Exact location from original site
   images: ProjectImage[];  // Gallery images for detail page
 }
@@ -42,19 +41,18 @@ export const projects: Project[] = [
   // Agent 5 Confidence: HIGH | Images: 4 | Original Title: "New house + landscaping, Feock Pen Pol"
   {
     id: 'new-house-landscaping-feock',
-    title: 'New house + landscaping, Feock Pen Pol',
-    category: 'New Build',
-    description: 'Complete turnkey new build managed from groundworks through to final landscaping and handover. This Georgian-inspired family home features cream rendered walls with traditional proportions, set in a stunning rural hillside location. The interior showcases a signature curved stone feature wall combining traditional Cornish masonry with contemporary design.',
+    title: 'Hardlandscaping project St Mawes',
+    category: 'Refurbishment',
+    description: 'Comprehensive hardlandscaping project for a traditional cottage featuring traditional Cornish dry stone walling and reclaimed granite cobbled driveway. This prestigious St Mawes property showcases expert craftsmanship in natural stonework, combining time-honoured techniques with premium materials to create stunning outdoor living spaces that complement the coastal landscape.',
     image: getProjectImage('new-house-landscaping-feock/A-Bennett-104.jpg'),
     details: [
-      'Complete new build construction',
-      'Georgian-style symmetrical design',
-      'Curved interior stone feature wall',
-      'Full landscaping package with gravel driveways',
-      'Block paving and stone boundary walls'
+      'Traditional Cornish dry stone walling',
+      'Reclaimed granite cobbled driveway',
+      'Expert natural stonework craftsmanship',
+      'Premium materials and time-honoured techniques',
+      'Coastal landscape integration'
     ],
-    duration: '12-14 months',
-    location: 'Feock, Roseland Peninsula',
+    location: 'Messack, St Mawes',
     images: [
       {
         src: getProjectImage('new-house-landscaping-feock/A-Bennett-104.jpg'),
@@ -70,32 +68,25 @@ export const projects: Project[] = [
         src: getProjectImage('new-house-landscaping-feock/A-Bennett-120.jpg'),
         alt: 'Rear elevation with established gardens and hillside setting',
         order: 3
-      },
-      {
-        src: getProjectImage('new-house-landscaping-feock/A-Bennett-101.jpg'),
-        alt: 'Interior curved stone feature wall with exposed masonry',
-        order: 4
       }
     ]
   },
 
-  // PROJECT 2: Cottage refurbishment - Penryn
+  // PROJECT 2: Cottage refurbishment - St Just in Roseland
   // Agent 5 Confidence: HIGH | Images: 4 | Original Title: "Cottage refurbishment, Penryn"
   {
     id: 'cottage-refurbishment-penryn',
-    title: 'Cottage refurbishment, Penryn',
+    title: 'Cottage refurbishment, St Just in Roseland',
     category: 'Refurbishment',
-    description: 'Complete renovation of traditional cottage with white rendered exterior and comprehensive interior modernisation. Features a bespoke grey shaker kitchen with slate worktops, traditional sash windows, and open-plan family living space combining modern comfort with period charm.',
+    description: 'Complete renovation of traditional cottage with white rendered exterior and comprehensive interior modernisation. Features a bespoke grey shaker kitchen with slate worktops and open-plan family living space combining modern comfort with period charm.',
     image: getProjectImage('cottage-refurbishment-penryn/image951.jpg'),
     details: [
       'Full property refurbishment',
       'White rendered exterior with grey slate roof',
       'Grey shaker kitchen with slate worktops',
-      'Open-plan kitchen diner with wood burning stove',
-      'Modern bay window and traditional sash windows'
+      'Open-plan kitchen diner with wood burning stove'
     ],
-    duration: '5-6 months',
-    location: 'Penryn',
+    location: 'St Just in Roseland',
     images: [
       {
         src: getProjectImage('cottage-refurbishment-penryn/image951.jpg'),
@@ -126,22 +117,20 @@ export const projects: Project[] = [
     id: 'barn-conversion-kitchen-roseland',
     title: 'Kitchen + en-suite refurbishment, Roseland Peninsula',
     category: 'Refurbishment',
-    description: 'High-end barn conversion interior featuring a stunning exposed brick barrel vaulted ceiling - a signature architectural piece combining rustic character with contemporary luxury. Natural stone pillars, exposed oak ceiling beams, and bespoke kitchen create a sophisticated open-plan living space.',
+    description: 'High-end barn conversion interior featuring a stunning vaulted ceiling with solar velux windows - a signature architectural piece combining rustic character with contemporary luxury. Natural lime mortar to existing stonework and bespoke kitchen create a sophisticated open-plan living space.',
     image: getProjectImage('barn-conversion-kitchen-roseland/A-Bennett-125.jpg'),
     details: [
-      'Exposed brick barrel vaulted ceiling',
-      'Natural stone structural pillars',
-      'Exposed oak A-frame ceiling trusses',
-      'Bespoke white and oak kitchen units',
-      'Copper pendant lighting',
+      'Vaulted ceiling with solar velux windows',
+      'Natural lime mortar to existing stonework',
+      'Bespoke kitchen design with white quartz worktops',
+      'Ground source under floor heating',
       'High-end modern finish with rustic elements'
     ],
-    duration: '8-10 weeks',
     location: 'Roseland Peninsula',
     images: [
       {
         src: getProjectImage('barn-conversion-kitchen-roseland/A-Bennett-125.jpg'),
-        alt: 'Spectacular barrel vaulted brick ceiling with oak beams',
+        alt: 'Spectacular vaulted ceiling with solar velux windows and oak beams',
         order: 1
       },
       {
@@ -162,23 +151,23 @@ export const projects: Project[] = [
     ]
   },
 
-  // PROJECT 4: Cottage refurbishment - St Just
+  // PROJECT 4: Cottage refurbishment - Penryn
   // Agent 5 Confidence: MEDIUM-HIGH | Images: 4 | Original Title: "Cottage refurb, St Just in Roseland"
   {
     id: 'cottage-refurbishment-stjust',
-    title: 'Cottage refurbishment, St Just in Roseland',
+    title: 'Cottage refurbishment, Penryn',
     category: 'Refurbishment',
-    description: 'Traditional stone cottage interior conversion showcasing exposed natural stone walls and vaulted ceilings. High-end restoration combining traditional building materials with modern design, featuring stone staircase with metal balustrade and exposed structural beams.',
+    description: 'Traditional stone cottage interior conversion showcasing exposed natural stone walls. High-end restoration combining traditional building materials with modern design, featuring bespoke metal balustrade and exposed structural beams.',
     image: getProjectImage('cottage-refurbishment-stjust/A-Bennett-181.jpg'),
     details: [
       'Exposed natural stone interior walls',
-      'Vaulted ceiling with exposed beams',
-      'Stone staircase with black metal balustrade',
+      'Exposed structural beams',
+      'Bespoke metal balustrade',
+      'Retrofit underfloor heating',
       'Stone structural columns retained',
       'Traditional cottage sympathetic conversion'
     ],
-    duration: '6-8 months',
-    location: 'St Just in Roseland',
+    location: 'Penryn',
     images: [
       {
         src: getProjectImage('cottage-refurbishment-stjust/A-Bennett-181.jpg'),
@@ -194,11 +183,6 @@ export const projects: Project[] = [
         src: getProjectImage('cottage-refurbishment-stjust/A-Bennett-170.jpg'),
         alt: 'Open-plan living area with exposed stone',
         order: 3
-      },
-      {
-        src: getProjectImage('cottage-refurbishment-stjust/image754.jpg'),
-        alt: 'Stone staircase with metal balustrade detail',
-        order: 4
       }
     ]
   },
@@ -209,22 +193,30 @@ export const projects: Project[] = [
     id: 'complete-timber-build-roseland',
     title: 'Complete timber frame build, Roseland Peninsula',
     category: 'New Build',
-    description: 'Coastal property development featuring dark timber barn with grey slate roof and white painted main building with sustainable solar panel installation. Spectacular coastal location with sea views and cliff backdrop, combining modern environmental features with traditional agricultural building aesthetics.',
+    description: 'Coastal property development featuring dark timber barn with grey slate roof and white painted main building. Spectacular coastal location with sea views and cliff backdrop, combining modern design with traditional agricultural building aesthetics.',
     image: getProjectImage('complete-timber-build-roseland/A-Bennett-30.jpg'),
     details: [
       'Dark timber cladding barn building',
-      'Solar panel installation for sustainability',
       'Coastal location with sea views',
       'Modern agricultural conversion aesthetic',
-      'Grey slate roof with white painted walls'
+      'Natural slate roof with stone cladding'
     ],
-    duration: '10-12 months',
     location: 'Roseland Peninsula',
     images: [
       {
         src: getProjectImage('complete-timber-build-roseland/A-Bennett-30.jpg'),
-        alt: 'Coastal property aerial view showing timber barn and solar panels',
+        alt: 'Coastal property aerial view showing timber barn',
         order: 1
+      },
+      {
+        src: getProjectImage('A-Bennett-28.jpg'),
+        alt: 'Coastal timber build with natural slate roof',
+        order: 2
+      },
+      {
+        src: getProjectImage('new-house-landscaping-feock/A-Bennett-101.jpg'),
+        alt: 'Interior curved stone feature wall with exposed masonry',
+        order: 3
       }
     ]
   },
@@ -235,16 +227,15 @@ export const projects: Project[] = [
     id: 'timber-frame-house-tregony',
     title: 'Timber frame house, Tregony',
     category: 'New Build',
-    description: 'Contemporary new build combining traditional stone with cream rendered upper sections. Modern glazed entrance and traditional building materials create a balanced design. The property features brown and orange natural stone with cream painted render, demonstrating sympathetic use of local materials.',
+    description: 'Contemporary new build combining traditional stone with timberframe. Modern glazed entrance and traditional building materials create a balanced design. The property features brown and orange natural stone with cream painted render, demonstrating sympathetic use of local materials.',
     image: getProjectImage('timber-frame-house-tregony/Bennett1.jpg'),
     details: [
       'Stone and render mixed construction',
-      'Modern glazed entrance feature',
-      'Traditional natural stone lower sections',
-      'Cream rendered upper sections',
+      'Aluminium bifolds and windows',
+      'Traditional natural stone front elevation',
+      'Rendered finish to other elevations',
       'Contemporary design with traditional materials'
     ],
-    duration: '11-13 months',
     location: 'Tregony',
     images: [
       {
