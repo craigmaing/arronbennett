@@ -12,7 +12,11 @@
  * - Fixed header height for consistency
  * - Better navigation spacing at all breakpoints
  * - Added smooth transitions throughout
+ * - Optimized logo with Astro Image component for AVIF/WebP conversion
  */
+
+import { Image } from 'astro:assets';
+import logoImage from '../assets/images/logo.png';
 
 interface Props {
   class?: string;
@@ -38,12 +42,16 @@ const phoneNumber = '07773 463383';
         <!-- Logo Section -->
         <div class="branding">
           <a href="/" class="branding-logo" aria-label="Arron Bennett Building Contractors home">
-            <img
-              src="/logo.png"
+            <Image
+              src={logoImage}
               alt="Arron Bennett Building Contractors"
               class="logo-image"
-              width="180"
-              height="107"
+              width={180}
+              height={107}
+              loading="eager"
+              format="avif"
+              quality={90}
+              densities={[1, 2]}
             />
           </a>
         </div>
