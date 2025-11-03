@@ -40,7 +40,7 @@ export const projects: Project[] = [
   // PROJECT 1: New house + landscaping - Feock (FLAGSHIP)
   // Agent 5 Confidence: HIGH | Images: 4 | Original Title: "New house + landscaping, Feock Pen Pol"
   {
-    id: 'new-house-landscaping-feock',
+    id: 'hardlandscaping-st-mawes',
     title: 'Hardlandscaping project St Mawes',
     category: 'Refurbishment',
     description: 'Comprehensive hardlandscaping project for a traditional cottage featuring traditional Cornish dry stone walling and reclaimed granite cobbled driveway. This prestigious St Mawes property showcases expert craftsmanship in natural stonework, combining time-honoured techniques with premium materials to create stunning outdoor living spaces that complement the coastal landscape.',
@@ -75,7 +75,7 @@ export const projects: Project[] = [
   // PROJECT 2: Cottage refurbishment - St Just in Roseland
   // Agent 5 Confidence: HIGH | Images: 4 | Original Title: "Cottage refurbishment, Penryn"
   {
-    id: 'cottage-refurbishment-penryn',
+    id: 'cottage-refurbishment-st-just',
     title: 'Cottage refurbishment, St Just in Roseland',
     category: 'Refurbishment',
     description: 'Complete renovation of traditional cottage with white rendered exterior and comprehensive interior modernisation. Features a bespoke grey shaker kitchen with slate worktops and open-plan family living space combining modern comfort with period charm.',
@@ -114,7 +114,7 @@ export const projects: Project[] = [
   // PROJECT 3: Kitchen + en-suite - Roseland (SIGNATURE PIECE)
   // Agent 5 Confidence: MEDIUM | Images: 4 | Original Title: "Kitchen + en-suite refurbishment, Roseland Peninsula"
   {
-    id: 'barn-conversion-kitchen-roseland',
+    id: 'kitchen-ensuite-roseland',
     title: 'Kitchen + en-suite refurbishment, Roseland Peninsula',
     category: 'Refurbishment',
     description: 'High-end barn conversion interior featuring a stunning vaulted ceiling with solar velux windows - a signature architectural piece combining rustic character with contemporary luxury. Natural lime mortar to existing stonework and bespoke kitchen create a sophisticated open-plan living space.',
@@ -154,7 +154,7 @@ export const projects: Project[] = [
   // PROJECT 4: Cottage refurbishment - Penryn
   // Agent 5 Confidence: MEDIUM-HIGH | Images: 4 | Original Title: "Cottage refurb, St Just in Roseland"
   {
-    id: 'cottage-refurbishment-stjust',
+    id: 'cottage-refurbishment-penryn',
     title: 'Cottage refurbishment, Penryn',
     category: 'Refurbishment',
     description: 'Traditional stone cottage interior conversion showcasing exposed natural stone walls. High-end restoration combining traditional building materials with modern design, featuring bespoke metal balustrade and exposed structural beams.',
