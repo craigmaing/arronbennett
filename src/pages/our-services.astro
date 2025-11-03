@@ -1,7 +1,7 @@
 ---
 /**
  * Services Page - Arron Bennett Building Contractors
- * URL: /services
+ * URL: /our-services
  */
 
 import BaseLayout from '../layouts/BaseLayout.astro';
@@ -20,7 +20,7 @@ const sortedServices = services.sort((a, b) => {
 // Page metadata
 const pageTitle = "Our Services | Expert Building Services in Cornwall & Devon";
 const pageDescription = "Comprehensive construction services from traditional stone masonry to modern renewable heating systems. Quality craftsmanship backed by over 20 years of experience.";
-const canonicalURL = new URL('/services', Astro.site);
+const canonicalURL = new URL('/our-services', Astro.site);
 ---
 
 <BaseLayout
@@ -158,7 +158,7 @@ const canonicalURL = new URL('/services', Astro.site);
 
   <!-- Comprehensive Schema.org Structured Data -->
   <ServicesPageSchema
-    pageUrl="/services"
+    pageUrl="/our-services"
     pageTitle={pageTitle}
     pageDescription={pageDescription}
     siteUrl={Astro.site?.toString()}
