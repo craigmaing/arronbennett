@@ -29,6 +29,12 @@ const galleryImages = import.meta.glob<{ default: ImageMetadata }>(
   { eager: true }
 );
 
+// Import all service images (optimized service page images)
+const serviceImages = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/images/services/*.{jpg,jpeg,png,webp}',
+  { eager: true }
+);
+
 /**
  * Get a project feature image by filename or path
  * @param filename - Image filename or path (e.g., 'A-Bennett-72.jpg' or 'new-house-landscaping-feock/A-Bennett-104.jpg')
@@ -64,6 +70,23 @@ export function getGalleryImage(filename: string): ImageMetadata {
 }
 
 /**
+ * Get a service image by filename
+ * @param filename - Image filename (e.g., 'full-builds.jpg')
+ * @returns ImageMetadata object for Astro Image component
+ * @throws Error if image not found
+ */
+export function getServiceImage(filename: string): ImageMetadata {
+  const path = `/src/assets/images/services/${filename}`;
+  const image = serviceImages[path];
+
+  if (!image) {
+    throw new Error(`Service image not found: ${filename} (path: ${path})`);
+  }
+
+  return image.default;
+}
+
+/**
  * Get all available project image filenames
  * Useful for debugging and inventory
  */
@@ -83,8 +106,9 @@ export function listGalleryImages(): string[] {
 export const IMAGE_COUNTS = {
   projects: Object.keys(projectImages).length,
   gallery: Object.keys(galleryImages).length,
-  total: Object.keys(projectImages).length + Object.keys(galleryImages).length
+  services: Object.keys(serviceImages).length,
+  total: Object.keys(projectImages).length + Object.keys(galleryImages).length + Object.keys(serviceImages).length
 };
 
 // Log image counts at build time
-console.log(`[Image Registry] Loaded ${IMAGE_COUNTS.projects} project images, ${IMAGE_COUNTS.gallery} gallery images (${IMAGE_COUNTS.total} total)`);
+console.log(`[Image Registry] Loaded ${IMAGE_COUNTS.projects} project images, ${IMAGE_COUNTS.gallery} gallery images, ${IMAGE_COUNTS.services} service images (${IMAGE_COUNTS.total} total)`);

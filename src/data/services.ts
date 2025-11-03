@@ -4,7 +4,7 @@
  */
 
 import type { ImageMetadata } from 'astro';
-import { getProjectImage } from './imageRegistry';
+import { getProjectImage, getServiceImage } from './imageRegistry';
 
 export interface Service {
   id: string;
@@ -24,7 +24,7 @@ export const services: Service[] = [
     title: 'Full Builds',
     slug: 'full-builds',
     description: 'Bespoke properties using traditional and modern methods. From new builds to barn conversions, we work closely with architects and building control to bring your vision to life.',
-    image: getProjectImage('new-house-landscaping-feock/A-Bennett-104.jpg'),
+    image: getServiceImage('full-builds.jpg'),
     features: [
       'New build homes',
       'Barn conversions',
@@ -41,7 +41,7 @@ export const services: Service[] = [
     title: 'Home Renovations',
     slug: 'renovations',
     description: 'Full restoration and renovation projects combining traditional methods with new technology. We\'re sympathetic to existing buildings while bringing them into the modern age.',
-    image: getProjectImage('cottage-refurbishment-penryn/image951.jpg'),
+    image: getServiceImage('renovations.jpg'),
     features: [
       'Full property restoration',
       'Period property expertise',
@@ -92,7 +92,7 @@ export const services: Service[] = [
     title: 'Mini Excavator and Waste Away Services',
     slug: 'excavation-waste-services',
     description: 'Professional site preparation for construction using industry standard mini excavators. Responsible waste disposal and efficient site management.',
-    image: getProjectImage('new-house-landscaping-feock/A-Bennett-105.jpg'),
+    image: getServiceImage('excavator-waste.jpg'),
     features: [
       'Site preparation',
       'Groundworks',
@@ -109,7 +109,7 @@ export const services: Service[] = [
     title: 'Stone and Block Masonry',
     slug: 'stone-block-masonry',
     description: 'Specialist stone and block masonry including stone cladding, chimneys, boundary walls, retaining walls, Cornish dry stone walling, and granite hedging.',
-    image: getProjectImage('cottage-refurbishment-stjust/A-Bennett-176.jpg'),
+    image: getServiceImage('stone-masonry.jpg'),
     features: [
       'Stone cladding',
       'Chimney construction',
@@ -126,7 +126,7 @@ export const services: Service[] = [
     title: 'Project Management',
     slug: 'project-management',
     description: 'Full project oversight from material ordering to finishing touches. Liaison with clients, contractors, architects, and engineers, keeping you informed throughout.',
-    image: getProjectImage('timber-frame-house-tregony/Bennett1.jpg'),
+    image: getServiceImage('project-management.jpg'),
     features: [
       'Complete project oversight',
       'Material procurement',
@@ -143,7 +143,7 @@ export const services: Service[] = [
     title: 'Ground Source and Air Source Installations',
     slug: 'heat-pump-installations',
     description: 'Energy-efficient, sustainable heating solutions. Our certified team has extensive knowledge and conducts thorough suitability assessments for your property.',
-    image: getProjectImage('complete-timber-build-roseland/A-Bennett-30.jpg'),
+    image: getServiceImage('heat-pumps.jpg'),
     features: [
       'Ground source heat pumps',
       'Air source heat pumps',
@@ -160,7 +160,7 @@ export const services: Service[] = [
     title: 'Traditional Lime Mortars',
     slug: 'lime-works',
     description: 'Lime rendering, plastering, lime putties, and repointing for conservation and new traditional builds. Over 20 years of experience working with lime.',
-    image: getProjectImage('cottage-refurbishment-stjust/A-Bennett-181.jpg'),
+    image: getServiceImage('lime-works.jpg'),
     features: [
       'Lime rendering',
       'Lime plastering',
