@@ -1,0 +1,2 @@
+        <Button href="tel:07773463383" variant="ghost" size="lg" class="min-w-[200px] !border-white !text-white hover:!bg-white hover:!text-coral-500">Call 07773 463383</Button>
+        <Button href="/contact-us" variant="secondary" size="lg" class="min-w-[200px]">Send Enquiry</Button>

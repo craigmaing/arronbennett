@@ -1,0 +1,8 @@
+            <Button
+              href="/contact-us"
+              variant="ghost"
+              size="lg"
+              class="min-w-[200px] !bg-white !text-coral-500 hover:!bg-gray-50 !border-0"
+            >
+              Get in Touch
+            </Button>

@@ -1,0 +1,161 @@
+
+> arron-bennett-astro@0.0.1 build
+> astro build
+
+[2m15:07:20[22m [34m[vite][39m Re-optimizing dependencies because vite config has changed
+[2m15:07:20[22m [34m[content][39m Syncing content
+[2m15:07:20[22m [34m[content][39m Astro config changed
+[2m15:07:20[22m [34m[content][39m Clearing content store
+[33m[1m15:07:20[22m [WARN] [glob-loader][39m No files found matching "**/*.md,!**/_*/**/*.md,!**/_*.md" in directory "src\content\projects"
+[2m15:07:20[22m [34m[content][39m Synced content
+[2m15:07:20[22m [34m[types][39m Generated [2m837ms[22m
+[2m15:07:20[22m [34m[build][39m output: [34m"static"[39m
+[2m15:07:20[22m [34m[build][39m mode: [34m"static"[39m
+[2m15:07:20[22m [34m[build][39m directory: [34mC:\Users\Fearn\ab1\arron-bennett-astro\dist\[39m
+[2m15:07:20[22m [34m[build][39m Collecting build info...
+[2m15:07:20[22m [34m[build][39m [32m✓ Completed in 857ms.[39m
+[2m15:07:21[22m [34m[build][39m Building static entrypoints...
+[33m[1m15:07:23[22m [WARN] [vite][39m [33m"matchHostname", "matchPathname", "matchPort" and "matchProtocol" are imported from external module "@astrojs/internal-helpers/remote" but never used in "node_modules/astro/dist/assets/utils/remotePattern.js" and "node_modules/astro/dist/assets/services/service.js".[39m
+[33m[1m15:07:25[22m [WARN] [vite][39m [33m[esbuild css minify]
+▲ [WARNING] "file" is not a known CSS property [unsupported-css-property]
+
+    <stdin>:365:30818:
+      365 │ ...-select:none}.\[file\:line\]{file:line}.\[path\:X\]{path:X}.\[...
+          │                                 ~~~~
+          ╵                                 flex
+
+  Did you mean "flex" instead?
+
+[39m
+[2m15:07:26[22m [34m[vite][39m [32m✓ built in 4.89s[39m
+[2m15:07:26[22m [34m[build][39m [32m✓ Completed in 4.93s.[39m
+
+[42m[30m building client (vite) [39m[49m
+[2m15:07:26[22m [34m[vite][39m transforming...
+[2m15:07:26[22m [34m[vite][39m [32m✓[39m 17 modules transformed.
+[2m15:07:26[22m [34m[vite][39m rendering chunks...
+[2m15:07:26[22m [34m[vite][39m computing gzip size...
+[2m15:07:26[22m [34m[vite][39m [2mdist/[22m[36m_astro/page.CLJIuoFF.js                                               [39m[1m[2m 0.05 kB[22m[1m[22m[2m │ gzip: 0.07 kB[22m
+[2m15:07:26[22m [34m[vite][39m [2mdist/[22m[36m_astro/index.-YfrXG5n.js                                              [39m[1m[2m 2.63 kB[22m[1m[22m[2m │ gzip: 1.18 kB[22m
+[2m15:07:26[22m [34m[vite][39m [2mdist/[22m[36m_astro/ClientRouter.astro_astro_type_script_index_0_lang.BJp4heDg.js  [39m[1m[2m13.05 kB[22m[1m[22m[2m │ gzip: 4.51 kB[22m
+[2m15:07:26[22m [34m[vite][39m [32m✓ built in 105ms[39m
+
+[42m[30m generating static routes [39m[49m
+[2m15:07:26[22m [32m▶[39m src/pages/404.astro
+[2m15:07:26[22m   [34m└─[39m [2m/404.html[22m [2m(+70ms)[22m 
+[Image Registry] Loaded 84 project images, 213 gallery images, 7 service images (304 total)
+[2m15:07:26[22m [32m▶[39m src/pages/about-us.astro
+[2m15:07:26[22m   [34m└─[39m [2m/about-us/index.html[22m [2m(+56ms)[22m 
+[2m15:07:26[22m [32m▶[39m src/pages/contact-us.astro
+[2m15:07:26[22m   [34m└─[39m [2m/contact-us/index.html[22m [2m(+63ms)[22m 
+[2m15:07:26[22m [32m▶[39m src/pages/our-projects/[project].astro
+[2m15:07:26[22m   [34m├─[39m [2m/our-projects/hardlandscaping-st-mawes/index.html[22m [2m(+64ms)[22m 
+[2m15:07:26[22m   [34m├─[39m [2m/our-projects/cottage-refurbishment-st-just/index.html[22m [2m(+66ms)[22m 
+[2m15:07:26[22m   [34m├─[39m [2m/our-projects/kitchen-ensuite-roseland/index.html[22m [2m(+73ms)[22m 
+[2m15:07:26[22m   [34m├─[39m [2m/our-projects/cottage-refurbishment-penryn/index.html[22m [2m(+63ms)[22m 
+[2m15:07:26[22m   [34m├─[39m [2m/our-projects/complete-timber-build-roseland/index.html[22m [2m(+67ms)[22m 
+[2m15:07:26[22m   [34m└─[39m [2m/our-projects/timber-frame-house-tregony/index.html[22m [2m(+4ms)[22m 
+[2m15:07:26[22m [32m▶[39m src/pages/our-projects.astro
+[2m15:07:26[22m   [34m└─[39m [2m/our-projects/index.html[22m [2m(+4ms)[22m 
+[2m15:07:26[22m [32m▶[39m src/pages/our-services.astro
+[2m15:07:26[22m   [34m└─[39m [2m/our-services/index.html[22m [2m(+4ms)[22m 
+[2m15:07:26[22m [32m▶[39m src/pages/privacy-policy.astro
+[2m15:07:26[22m   [34m└─[39m [2m/privacy-policy/index.html[22m [2m(+2ms)[22m 
+[2m15:07:26[22m [32m▶[39m src/pages/service-terms.astro
+[2m15:07:26[22m   [34m└─[39m [2m/service-terms/index.html[22m [2m(+2ms)[22m 
+[2m15:07:26[22m [32m▶[39m src/pages/terms-and-conditions.astro
+[2m15:07:26[22m   [34m└─[39m [2m/terms-and-conditions/index.html[22m [2m(+2ms)[22m 
+[2m15:07:26[22m [32m▶[39m src/pages/terms-of-use.astro
+[2m15:07:26[22m   [34m└─[39m [2m/terms-of-use/index.html[22m [2m(+2ms)[22m 
+[2m15:07:26[22m [32m▶[39m src/pages/thank-you.astro
+[2m15:07:26[22m   [34m└─[39m [2m/thank-you/index.html[22m [2m(+3ms)[22m 
+[2m15:07:26[22m [32m▶[39m src/pages/index.astro
+[2m15:07:26[22m   [34m└─[39m [2m/index.html[22m [2m(+4ms)[22m 
+[2m15:07:26[22m [32m▶[39m /about
+[2m15:07:26[22m   [34m└─[39m [2m/about/index.html[22m [2m(+2ms)[22m 
+[2m15:07:26[22m [32m✓ Completed in 621ms.
+[39m
+[42m[30m generating optimized images [39m[49m
+[2m15:07:26[22m   [32m▶[39m /_astro/roofing-008.BZ0ril3E_2bjyzH.avif [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(1/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-143.CklO8Hft_Z1mVLG1.avif [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(2/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/masonry-006.B8RVa-vf_nqdxp.avif [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(3/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-169.D3trUJfM_2pXpde.avif [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(4/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/masonry-007.mZ2sj1n8_Z2r0cLw.avif [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(5/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/masonry-022.CpVC47rU_Z1J1AHa.avif [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(6/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/image311.C4JNzjVi_2qXGz.avif [2m(reused cache entry)[22m [2m(+6ms)[22m [2m(7/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/image951.Bu2CwFyl_Z1qBVaR.avif [2m(reused cache entry)[22m [2m(+6ms)[22m [2m(8/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/image85.BNcdovED_Z1VeuH0.avif [2m(reused cache entry)[22m [2m(+6ms)[22m [2m(9/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/image214.ChAbiy3O_1xTDYo.avif [2m(reused cache entry)[22m [2m(+6ms)[22m [2m(10/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-125.DRumQGuN_Z1Da78v.avif [2m(reused cache entry)[22m [2m(+7ms)[22m [2m(11/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-126.Dg178-vS_y1oce.avif [2m(reused cache entry)[22m [2m(+7ms)[22m [2m(12/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-122.4XLg_5zI_Z1W8sEn.avif [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(13/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/general-001.D-hrnYC5_2wHSnu.avif [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(14/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-124.5LDtLttB_Z2hz5Ek.avif [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(15/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-176.aX4dy-uP_1dYF3H.avif [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(16/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-170.DKC9emlj_kLxcU.avif [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(17/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-28.3roy8o9r_Z1JnVGU.avif [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(18/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-30.CCNSDBQb_Z2lYE14.avif [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(19/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-143.CklO8Hft_Z2mn4ar.avif [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(20/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/roofing-008.BZ0ril3E_ZiyI4e.avif [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(21/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-169.D3trUJfM_Z1cPl7k.avif [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(22/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/masonry-006.B8RVa-vf_Z1sOoXx.avif [2m(reused cache entry)[22m [2m(+10ms)[22m [2m(23/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/masonry-005.2Qqiwc_6_Z2qiScn.avif [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(24/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/masonry-022.CpVC47rU_Z9Dgv3.avif [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(25/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/Bennett1.DydqoMqg_Tgbn.avif [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(26/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/image951.Bu2CwFyl_Z1Qnf8O.avif [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(27/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-310.DBLnJzxm_ZzHY77.avif [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(28/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-2.DpEXY_hM_13Mcqv.avif [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(29/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-125.DRumQGuN_jwFQd.avif [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(30/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/general-001.D-hrnYC5_FsfQx.avif [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(31/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/full-builds.BIM9lJ27_ZkW2MM.avif [2m(reused cache entry)[22m [2m(+87ms)[22m [2m(32/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/renovations.Cq9xBcy9_Z1qtPyC.avif [2m(reused cache entry)[22m [2m(+86ms)[22m [2m(33/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/stone-masonry.St9uMBSx_ZuLrxs.avif [2m(reused cache entry)[22m [2m(+86ms)[22m [2m(34/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/heat-pumps.Bj4vvdRZ_rAXIj.avif [2m(reused cache entry)[22m [2m(+87ms)[22m [2m(35/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/excavator-waste.BqjT7esh_ZjxalE.avif [2m(reused cache entry)[22m [2m(+84ms)[22m [2m(36/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-30.CCNSDBQb_ZohQ1l.avif [2m(reused cache entry)[22m [2m(+85ms)[22m [2m(37/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-143.CklO8Hft_BBdHr.avif [2m(reused cache entry)[22m [2m(+84ms)[22m [2m(38/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-169.D3trUJfM_2tPPHU.avif [2m(reused cache entry)[22m [2m(+84ms)[22m [2m(39/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/roofing-008.BZ0ril3E_Z193ipy.avif [2m(reused cache entry)[22m [2m(+85ms)[22m [2m(40/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/masonry-006.B8RVa-vf_Z2dQwLY.avif [2m(reused cache entry)[22m [2m(+86ms)[22m [2m(41/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/roofing-012.CyBnhgsV_uaXzC.avif [2m(reused cache entry)[22m [2m(+87ms)[22m [2m(42/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/project-management.CYFCwnpQ_1ppHcO.avif [2m(reused cache entry)[22m [2m(+91ms)[22m [2m(43/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/Bennett1.DydqoMqg_1x4ORB.avif [2m(reused cache entry)[22m [2m(+88ms)[22m [2m(44/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/lime-works.Di8zdpdx_ZOKUwz.avif [2m(reused cache entry)[22m [2m(+91ms)[22m [2m(45/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-310.DBLnJzxm_1Mety6.avif [2m(reused cache entry)[22m [2m(+90ms)[22m [2m(46/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/masonry-015.lTb1NeGh_1ak5L0.avif [2m(reused cache entry)[22m [2m(+90ms)[22m [2m(47/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-125.DRumQGuN_1n40Lj.avif [2m(reused cache entry)[22m [2m(+89ms)[22m [2m(48/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-143.CklO8Hft_Z16xDi1.avif [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(49/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/masonry-006.B8RVa-vf_11N7td.avif [2m(reused cache entry)[22m [2m(+9ms)[22m [2m(50/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/roofing-012.CyBnhgsV_1Nz87H.avif [2m(reused cache entry)[22m [2m(+8ms)[22m [2m(51/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/roofing-008.BZ0ril3E_24A8pI.avif [2m(reused cache entry)[22m [2m(+11ms)[22m [2m(52/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/Bennett1.DydqoMqg_1fu94s.avif [2m(reused cache entry)[22m [2m(+7ms)[22m [2m(53/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-310.DBLnJzxm_Z1LXF4U.avif [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(54/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/masonry-015.lTb1NeGh_Z1X2mCH.avif [2m(reused cache entry)[22m [2m(+6ms)[22m [2m(55/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/masonry-006.B8RVa-vf_21XPGd.avif [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(56/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/roofing-012.CyBnhgsV_1loOyq.avif [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(57/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/roofing-008.BZ0ril3E_Z1Y8QgS.avif [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(58/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-169.D3trUJfM_ZCrShL.avif [2m(reused cache entry)[22m [2m(+16ms)[22m [2m(59/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/Bennett1.DydqoMqg_Znwi1h.avif [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(60/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-310.DBLnJzxm_ZYHUAJ.avif [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(61/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/roofing-012.CyBnhgsV_LqaGI.avif [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(62/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/masonry-015.lTb1NeGh_31m3J.avif [2m(reused cache entry)[22m [2m(+6ms)[22m [2m(63/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/masonry-006.B8RVa-vf_URn6j.avif [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(64/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/roofing-008.BZ0ril3E_Bq7hp.avif [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(65/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/Bennett1.DydqoMqg_Z19mfYJ.avif [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(66/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-169.D3trUJfM_1tRwUA.avif [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(67/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/masonry-015.lTb1NeGh_ZUwtgK.avif [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(68/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/roofing-012.CyBnhgsV_jvfQK.avif [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(69/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-310.DBLnJzxm_FPXQQ.avif [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(70/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/masonry-006.B8RVa-vf_1YvILx.avif [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(71/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/Bennett1.DydqoMqg_2jsRh.avif [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(72/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-169.D3trUJfM_R1tb.avif [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(73/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-310.DBLnJzxm_Z8kOsj.avif [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(74/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/roofing-012.CyBnhgsV_Zgs73S.avif [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(75/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/A-Bennett-310.DBLnJzxm_TGd3X.avif [2m(reused cache entry)[22m [2m(+2ms)[22m [2m(76/78)[22m
+[2m15:07:26[22m   [32m▶[39m /_astro/logo.BLFs_W0G_Z2gurBE.avif [2m(before: 16kB, after: 4kB)[22m [2m(+154ms)[22m [2m(77/78)[22m
+[2m15:07:27[22m   [32m▶[39m /_astro/logo.BLFs_W0G_Z2cx6cE.avif [2m(before: 16kB, after: 9kB)[22m [2m(+44ms)[22m [2m(78/78)[22m
+[2m15:07:27[22m [32m✓ Completed in 199ms.
+[39m
+[2m15:07:27[22m [34m[@astrojs/sitemap][39m `sitemap-index.xml` created at `dist`
+[2m15:07:27[22m [34m[build][39m 17 page(s) built in [1m6.99s[22m
+[2m15:07:27[22m [34m[build][39m [1mComplete![22m

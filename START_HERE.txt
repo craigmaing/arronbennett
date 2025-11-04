@@ -1,0 +1,93 @@
+================================================================================
+               CUSTOM DOMAIN SETUP FOR ARRONBENNETTBUILDING.CO.UK
+                        START HERE - READ THIS FIRST
+================================================================================
+
+Welcome! This folder contains complete documentation for setting up your
+custom domain on Netlify.
+
+================================================================================
+QUICK START - DO THESE 3 THINGS:
+================================================================================
+
+1. READ:  DOMAIN_SETUP_README.md
+   (5 minutes - overview of everything)
+
+2. FOLLOW: SETUP_CHECKLIST.md
+   (Print it or keep it open, check off as you go)
+
+3. IF PROBLEMS: TROUBLESHOOTING_GUIDE.md
+   (Solutions to common issues)
+
+================================================================================
+ALL DOCUMENTATION FILES:
+================================================================================
+
+START_HERE.txt                    <- You are reading this now
+DOMAIN_SETUP_README.md            <- Main entry point, read first
+DOMAIN_SETUP_SUMMARY.md           <- Quick overview and 5-step guide
+SETUP_CHECKLIST.md                <- Step-by-step checklist to follow
+DNS_QUICK_REFERENCE.txt           <- DNS records to copy/paste
+DOMAIN_SETUP_INSTRUCTIONS.md      <- Detailed instructions
+DOMAIN_SETUP_WORKFLOW.md          <- Visual diagrams and flowcharts
+TROUBLESHOOTING_GUIDE.md          <- Problem solving guide
+
+================================================================================
+SUPER QUICK SUMMARY:
+================================================================================
+
+CURRENT:   https://arronbennett.netlify.app
+GOAL:      https://arronbennettbuilding.co.uk
+
+WHAT TO DO:
+1. Add domain in Netlify
+2. Add these DNS records in Ionos:
+   - A record: @ -> 75.2.60.5
+   - CNAME: www -> arronbennett.netlify.app
+3. Wait 1-4 hours for DNS to propagate
+4. Netlify verifies and issues SSL certificate (automatic)
+5. Test your site
+
+TIME NEEDED: 2-5 hours (mostly waiting for DNS)
+
+================================================================================
+IMPORTANT URLS:
+================================================================================
+
+Netlify Admin:  https://app.netlify.com/projects/arronbennett
+Ionos Login:    https://www.ionos.co.uk/
+DNS Checker:    https://www.whatsmydns.net/
+
+================================================================================
+SITE INFORMATION:
+================================================================================
+
+Site Name:      arronbennett
+Site ID:        bfd6ff64-30b9-4892-8f88-2423810b5ea5
+Current URL:    arronbennett.netlify.app
+Custom Domain:  arronbennettbuilding.co.uk (to be configured)
+DNS Provider:   Ionos
+
+================================================================================
+NEED HELP?
+================================================================================
+
+1. Check TROUBLESHOOTING_GUIDE.md for your issue
+2. All files are cross-referenced
+3. Everything is explained in detail
+4. Step-by-step instructions provided
+
+================================================================================
+NEXT STEP:
+================================================================================
+
+Open and read: DOMAIN_SETUP_README.md
+
+This will give you a complete overview and guide you through the process.
+
+Good luck!
+
+================================================================================
+Created: 2025-11-04
+Location: C:\Users\Fearn\ab1\arron-bennett-astro\
+================================================================================

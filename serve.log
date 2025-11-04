@@ -1,0 +1,185 @@
+ INFO  Accepting connections at http://localhost:3000
+ HTTP  04/11/2025 10:56:16 ::1 HEAD /services
+ HTTP  04/11/2025 10:56:16 ::1 Returned 200 in 12 ms
+ HTTP  04/11/2025 10:56:29 ::1 GET /services
+ HTTP  04/11/2025 10:56:29 ::1 Returned 200 in 3 ms
+ HTTP  04/11/2025 10:56:29 ::1 GET /_astro/ClientRouter.astro_astro_type_script_index_0_lang.BJp4heDg.js
+ HTTP  04/11/2025 10:56:29 ::1 GET /_astro/about-us.DFGR3YlS.css
+ HTTP  04/11/2025 10:56:29 ::1 Returned 200 in 3 ms
+ HTTP  04/11/2025 10:56:29 ::1 Returned 200 in 3 ms
+ HTTP  04/11/2025 10:56:29 ::1 GET /_astro/services.IZqn1L4U.css
+ HTTP  04/11/2025 10:56:29 ::1 GET /_astro/page.CLJIuoFF.js
+ HTTP  04/11/2025 10:56:29 ::1 GET /_astro/logo.BLFs_W0G_Z2cx6cE.avif
+ HTTP  04/11/2025 10:56:29 ::1 GET /_astro/roofing-012.CyBnhgsV_1loOyq.avif
+ HTTP  04/11/2025 10:56:29 ::1 GET /styles/main.css
+ HTTP  04/11/2025 10:56:29 ::1 Returned 200 in 4 ms
+ HTTP  04/11/2025 10:56:29 ::1 Returned 200 in 4 ms
+ HTTP  04/11/2025 10:56:29 ::1 Returned 200 in 4 ms
+ HTTP  04/11/2025 10:56:29 ::1 Returned 200 in 4 ms
+ HTTP  04/11/2025 10:56:29 ::1 Returned 200 in 4 ms
+ HTTP  04/11/2025 10:56:29 ::1 GET /_astro/index.-YfrXG5n.js
+ HTTP  04/11/2025 10:56:29 ::1 Returned 200 in 2 ms
+ HTTP  04/11/2025 10:56:29 ::1 GET /_astro/A-Bennett-125.DRumQGuN_1n40Lj.avif
+ HTTP  04/11/2025 10:56:29 ::1 GET /_astro/full-builds.DFK3YJoo_1CHYBn.avif
+ HTTP  04/11/2025 10:56:29 ::1 GET /_astro/roboto-symbols-700-normal.rJi6RjIy.woff2
+ HTTP  04/11/2025 10:56:29 ::1 Returned 200 in 3 ms
+ HTTP  04/11/2025 10:56:29 ::1 Returned 200 in 3 ms
+ HTTP  04/11/2025 10:56:29 ::1 Returned 200 in 4 ms
+ HTTP  04/11/2025 10:56:29 ::1 GET /favicon.png
+ HTTP  04/11/2025 10:56:29 ::1 Returned 200 in 2 ms
+ HTTP  04/11/2025 10:56:29 ::1 GET /favicon.png
+ HTTP  04/11/2025 10:56:29 ::1 Returned 304 in 1 ms
+ HTTP  04/11/2025 10:56:31 ::1 GET /
+ HTTP  04/11/2025 10:56:31 ::1 Returned 200 in 2 ms
+ HTTP  04/11/2025 10:56:33 ::1 GET /_astro/about-us.DFGR3YlS.css
+ HTTP  04/11/2025 10:56:33 ::1 GET /_astro/services.IZqn1L4U.css
+ HTTP  04/11/2025 10:56:33 ::1 Returned 304 in 1 ms
+ HTTP  04/11/2025 10:56:33 ::1 Returned 304 in 1 ms
+ HTTP  04/11/2025 10:56:34 ::1 GET /_astro/heat-pumps.CJvgPJgU_ZQrmoe.avif
+ HTTP  04/11/2025 10:56:34 ::1 GET /_astro/renovations.Cst03Gf1_ZJ6XwP.avif
+ HTTP  04/11/2025 10:56:34 ::1 GET /_astro/stone-masonry.DeKC9AZj_1TpEIR.avif
+ HTTP  04/11/2025 10:56:34 ::1 GET /_astro/masonry-022.CpVC47rU_Z9Dgv3.avif
+ HTTP  04/11/2025 10:56:34 ::1 Returned 200 in 2 ms
+ HTTP  04/11/2025 10:56:34 ::1 Returned 200 in 2 ms
+ HTTP  04/11/2025 10:56:34 ::1 Returned 200 in 2 ms
+ HTTP  04/11/2025 10:56:34 ::1 Returned 200 in 2 ms
+ HTTP  04/11/2025 10:56:34 ::1 GET /contact-us
+ HTTP  04/11/2025 10:56:34 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:56:35 ::1 GET /_astro/roofing-012.CyBnhgsV_1Nz87H.avif
+ HTTP  04/11/2025 10:56:35 ::1 Returned 200 in 2 ms
+ HTTP  04/11/2025 10:57:10 ::1 GET /services
+ HTTP  04/11/2025 10:57:10 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:57:10 ::1 GET /_astro/ClientRouter.astro_astro_type_script_index_0_lang.BJp4heDg.js
+ HTTP  04/11/2025 10:57:10 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:57:10 ::1 GET /_astro/about-us.DFGR3YlS.css
+ HTTP  04/11/2025 10:57:10 ::1 GET /_astro/services.IZqn1L4U.css
+ HTTP  04/11/2025 10:57:10 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:57:10 ::1 GET /_astro/page.CLJIuoFF.js
+ HTTP  04/11/2025 10:57:10 ::1 GET /_astro/logo.BLFs_W0G_Z2gurBE.avif
+ HTTP  04/11/2025 10:57:10 ::1 GET /_astro/roofing-012.CyBnhgsV_Zgs73S.avif
+ HTTP  04/11/2025 10:57:10 ::1 Returned 200 in 2 ms
+ HTTP  04/11/2025 10:57:10 ::1 Returned 200 in 2 ms
+ HTTP  04/11/2025 10:57:10 ::1 Returned 200 in 2 ms
+ HTTP  04/11/2025 10:57:10 ::1 GET /styles/main.css
+ HTTP  04/11/2025 10:57:10 ::1 Returned 200 in 7 ms
+ HTTP  04/11/2025 10:57:10 ::1 Returned 200 in 5 ms
+ HTTP  04/11/2025 10:57:10 ::1 GET /_astro/index.-YfrXG5n.js
+ HTTP  04/11/2025 10:57:10 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:57:10 ::1 GET /_astro/A-Bennett-125.DRumQGuN_1n40Lj.avif
+ HTTP  04/11/2025 10:57:10 ::1 GET /_astro/full-builds.DFK3YJoo_1CHYBn.avif
+ HTTP  04/11/2025 10:57:10 ::1 GET /_astro/heat-pumps.CJvgPJgU_ZQrmoe.avif
+ HTTP  04/11/2025 10:57:10 ::1 GET /_astro/renovations.Cst03Gf1_ZJ6XwP.avif
+ HTTP  04/11/2025 10:57:10 ::1 GET /_astro/stone-masonry.DeKC9AZj_1TpEIR.avif
+ HTTP  04/11/2025 10:57:10 ::1 GET /_astro/masonry-022.CpVC47rU_Z9Dgv3.avif
+ HTTP  04/11/2025 10:57:10 ::1 Returned 200 in 2 ms
+ HTTP  04/11/2025 10:57:10 ::1 Returned 200 in 2 ms
+ HTTP  04/11/2025 10:57:10 ::1 Returned 200 in 2 ms
+ HTTP  04/11/2025 10:57:10 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:57:10 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:57:10 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:57:10 ::1 GET /_astro/roboto-latin-600-normal.aFTKHmff.woff2
+ HTTP  04/11/2025 10:57:10 ::1 GET /_astro/roboto-symbols-700-normal.rJi6RjIy.woff2
+ HTTP  04/11/2025 10:57:10 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:57:10 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:57:10 ::1 GET /favicon.png
+ HTTP  04/11/2025 10:57:10 ::1 Returned 200 in 0 ms
+ HTTP  04/11/2025 10:57:10 ::1 GET /favicon.png
+ HTTP  04/11/2025 10:57:10 ::1 Returned 304 in 1 ms
+ HTTP  04/11/2025 10:57:10 ::1 GET /
+ HTTP  04/11/2025 10:57:10 ::1 Returned 200 in 2 ms
+ HTTP  04/11/2025 10:57:10 ::1 GET /about-us
+ HTTP  04/11/2025 10:57:10 ::1 Returned 200 in 2 ms
+ HTTP  04/11/2025 10:57:10 ::1 GET /our-projects
+ HTTP  04/11/2025 10:57:10 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:57:10 ::1 GET /contact-us
+ HTTP  04/11/2025 10:57:10 ::1 Returned 200 in 0 ms
+ HTTP  04/11/2025 10:57:12 ::1 GET /_astro/about-us.DFGR3YlS.css
+ HTTP  04/11/2025 10:57:12 ::1 GET /_astro/services.IZqn1L4U.css
+ HTTP  04/11/2025 10:57:12 ::1 Returned 304 in 1 ms
+ HTTP  04/11/2025 10:57:12 ::1 Returned 304 in 1 ms
+ HTTP  04/11/2025 10:57:13 ::1 GET /_astro/excavator-waste.DJGyZmFL_Z2u5OlJ.avif
+ HTTP  04/11/2025 10:57:13 ::1 GET /_astro/project-management.DWdcy5aw_2rBB6C.avif
+ HTTP  04/11/2025 10:57:13 ::1 GET /_astro/lime-works.CXCQoqdu_11G19s.avif
+ HTTP  04/11/2025 10:57:13 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:57:13 ::1 Returned 200 in 2 ms
+ HTTP  04/11/2025 10:57:13 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:57:40 ::1 GET /
+ HTTP  04/11/2025 10:57:40 ::1 Returned 200 in 2 ms
+ HTTP  04/11/2025 10:57:40 ::1 GET /_astro/ClientRouter.astro_astro_type_script_index_0_lang.BJp4heDg.js
+ HTTP  04/11/2025 10:57:40 ::1 GET /_astro/about-us.DFGR3YlS.css
+ HTTP  04/11/2025 10:57:40 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:57:40 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:57:40 ::1 GET /_astro/page.CLJIuoFF.js
+ HTTP  04/11/2025 10:57:40 ::1 GET /_astro/masonry-006.B8RVa-vf_21XPGd.avif
+ HTTP  04/11/2025 10:57:40 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:57:40 ::1 GET /_astro/logo.BLFs_W0G_Z2cx6cE.avif
+ HTTP  04/11/2025 10:57:40 ::1 GET /styles/main.css
+ HTTP  04/11/2025 10:57:40 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:57:40 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:57:40 ::1 Returned 200 in 4 ms
+ HTTP  04/11/2025 10:57:40 ::1 GET /_astro/index.-YfrXG5n.js
+ HTTP  04/11/2025 10:57:40 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:57:40 ::1 GET /_astro/roboto-latin-700-normal.CXeAXeti.woff2
+ HTTP  04/11/2025 10:57:40 ::1 Returned 200 in 2 ms
+ HTTP  04/11/2025 10:57:40 ::1 GET /favicon.png
+ HTTP  04/11/2025 10:57:40 ::1 Returned 200 in 0 ms
+ HTTP  04/11/2025 10:57:40 ::1 GET /favicon.png
+ HTTP  04/11/2025 10:57:40 ::1 Returned 304 in 1 ms
+ HTTP  04/11/2025 10:57:41 ::1 GET /contact-us
+ HTTP  04/11/2025 10:57:41 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:57:43 ::1 GET /_astro/about-us.DFGR3YlS.css
+ HTTP  04/11/2025 10:57:43 ::1 Returned 304 in 0 ms
+ HTTP  04/11/2025 10:57:44 ::1 GET /_astro/Bennett1.DydqoMqg_Z19mfYJ.avif
+ HTTP  04/11/2025 10:57:44 ::1 GET /_astro/masonry-015.lTb1NeGh_31m3J.avif
+ HTTP  04/11/2025 10:57:44 ::1 Returned 200 in 2 ms
+ HTTP  04/11/2025 10:57:44 ::1 Returned 200 in 2 ms
+ HTTP  04/11/2025 10:57:44 ::1 GET /services
+ HTTP  04/11/2025 10:57:44 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:57:45 ::1 GET /_astro/Bennett1.DydqoMqg_2jsRh.avif
+ HTTP  04/11/2025 10:57:45 ::1 GET /_astro/masonry-015.lTb1NeGh_ZUwtgK.avif
+ HTTP  04/11/2025 10:57:45 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:57:45 ::1 Returned 200 in 8 ms
+ HTTP  04/11/2025 10:57:45 ::1 GET /_astro/masonry-006.B8RVa-vf_11N7td.avif
+ HTTP  04/11/2025 10:57:45 ::1 GET /_astro/Bennett1.DydqoMqg_Z19mfYJ.avif
+ HTTP  04/11/2025 10:57:45 ::1 GET /_astro/masonry-015.lTb1NeGh_31m3J.avif
+ HTTP  04/11/2025 10:57:45 ::1 Returned 304 in 0 ms
+ HTTP  04/11/2025 10:57:45 ::1 Returned 304 in 1 ms
+ HTTP  04/11/2025 10:57:45 ::1 Returned 200 in 2 ms
+ HTTP  04/11/2025 10:58:05 ::1 GET /
+ HTTP  04/11/2025 10:58:05 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:58:05 ::1 GET /_astro/ClientRouter.astro_astro_type_script_index_0_lang.BJp4heDg.js
+ HTTP  04/11/2025 10:58:05 ::1 Returned 200 in 0 ms
+ HTTP  04/11/2025 10:58:05 ::1 GET /_astro/about-us.DFGR3YlS.css
+ HTTP  04/11/2025 10:58:05 ::1 GET /_astro/page.CLJIuoFF.js
+ HTTP  04/11/2025 10:58:05 ::1 GET /_astro/masonry-006.B8RVa-vf_Z2dQwLY.avif
+ HTTP  04/11/2025 10:58:05 ::1 GET /_astro/logo.BLFs_W0G_Z2gurBE.avif
+ HTTP  04/11/2025 10:58:05 ::1 GET /styles/main.css
+ HTTP  04/11/2025 10:58:05 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:58:05 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:58:05 ::1 Returned 200 in 0 ms
+ HTTP  04/11/2025 10:58:05 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:58:05 ::1 Returned 200 in 3 ms
+ HTTP  04/11/2025 10:58:05 ::1 GET /_astro/index.-YfrXG5n.js
+ HTTP  04/11/2025 10:58:05 ::1 Returned 200 in 0 ms
+ HTTP  04/11/2025 10:58:05 ::1 GET /_astro/Bennett1.DydqoMqg_Znwi1h.avif
+ HTTP  04/11/2025 10:58:05 ::1 GET /_astro/masonry-015.lTb1NeGh_Z1X2mCH.avif
+ HTTP  04/11/2025 10:58:05 ::1 GET /_astro/roboto-latin-600-normal.aFTKHmff.woff2
+ HTTP  04/11/2025 10:58:05 ::1 GET /_astro/roboto-latin-700-normal.CXeAXeti.woff2
+ HTTP  04/11/2025 10:58:05 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:58:05 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:58:05 ::1 Returned 200 in 3 ms
+ HTTP  04/11/2025 10:58:05 ::1 Returned 200 in 2 ms
+ HTTP  04/11/2025 10:58:05 ::1 GET /favicon.png
+ HTTP  04/11/2025 10:58:05 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:58:05 ::1 GET /favicon.png
+ HTTP  04/11/2025 10:58:05 ::1 Returned 304 in 0 ms
+ HTTP  04/11/2025 10:58:05 ::1 GET /about-us
+ HTTP  04/11/2025 10:58:05 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:58:05 ::1 GET /services
+ HTTP  04/11/2025 10:58:05 ::1 Returned 200 in 0 ms
+ HTTP  04/11/2025 10:58:05 ::1 GET /our-projects
+ HTTP  04/11/2025 10:58:05 ::1 Returned 200 in 0 ms
+ HTTP  04/11/2025 10:58:05 ::1 GET /contact-us
+ HTTP  04/11/2025 10:58:05 ::1 Returned 200 in 1 ms
+ HTTP  04/11/2025 10:58:07 ::1 GET /_astro/about-us.DFGR3YlS.css
+ HTTP  04/11/2025 10:58:07 ::1 Returned 304 in 0 ms

@@ -1,0 +1,9 @@
+{
+  "astro": {
+    "current": "5.15.1",
+    "wanted": "5.15.3",
+    "latest": "5.15.3",
+    "dependent": "arron-bennett-astro",
+    "location": "C:\\Users\\Fearn\\ab1\\arron-bennett-astro\\node_modules\\astro"
+  }
+}

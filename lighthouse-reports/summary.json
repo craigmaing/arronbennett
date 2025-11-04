@@ -1,0 +1,351 @@
+{
+  "timestamp": "2025-11-03T15:51:17.279Z",
+  "baseUrl": "http://localhost:4321",
+  "pages": {
+    "homepage": {
+      "url": "http://localhost:4321/",
+      "desktop": {
+        "performanceScore": 96,
+        "fcp": 1058.0322973236027,
+        "lcp": 1098.0322973236025,
+        "cls": 0.006139255168428897,
+        "tbt": 0,
+        "tti": 1098.0322973236025,
+        "speedIndex": 1058.0322973236027,
+        "totalByteWeight": 3243895,
+        "opportunities": [
+          {
+            "id": "unminified-css",
+            "title": "Minify CSS",
+            "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/).",
+            "score": 0.5,
+            "savings": 0
+          },
+          {
+            "id": "unminified-javascript",
+            "title": "Minify JavaScript",
+            "description": "Minifying JavaScript files can reduce payload sizes and script parse time. [Learn how to minify JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unminified-javascript/).",
+            "score": 0,
+            "savings": 260
+          },
+          {
+            "id": "unused-javascript",
+            "title": "Reduce unused JavaScript",
+            "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+            "score": 0,
+            "savings": 40
+          }
+        ]
+      },
+      "mobile": {
+        "performanceScore": 67,
+        "fcp": 3479.1306781006356,
+        "lcp": 11845.653390503174,
+        "cls": 0,
+        "tbt": 65,
+        "tti": 11845.653390503174,
+        "speedIndex": 3479.1306781006356,
+        "totalByteWeight": 2619750,
+        "opportunities": [
+          {
+            "id": "unminified-css",
+            "title": "Minify CSS",
+            "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/).",
+            "score": 0.5,
+            "savings": 0
+          },
+          {
+            "id": "unminified-javascript",
+            "title": "Minify JavaScript",
+            "description": "Minifying JavaScript files can reduce payload sizes and script parse time. [Learn how to minify JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unminified-javascript/).",
+            "score": 0,
+            "savings": 6360
+          },
+          {
+            "id": "unused-javascript",
+            "title": "Reduce unused JavaScript",
+            "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+            "score": 0,
+            "savings": 150
+          }
+        ]
+      }
+    },
+    "services": {
+      "url": "http://localhost:4321/services",
+      "desktop": {
+        "performanceScore": 100,
+        "fcp": 665.0422877661827,
+        "lcp": 665.0422877661827,
+        "cls": 0.006139255168428897,
+        "tbt": 0,
+        "tti": 665.0422877661827,
+        "speedIndex": 665.0422877661827,
+        "totalByteWeight": 3277687,
+        "opportunities": [
+          {
+            "id": "unminified-css",
+            "title": "Minify CSS",
+            "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/).",
+            "score": 0.5,
+            "savings": 0
+          },
+          {
+            "id": "unminified-javascript",
+            "title": "Minify JavaScript",
+            "description": "Minifying JavaScript files can reduce payload sizes and script parse time. [Learn how to minify JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unminified-javascript/).",
+            "score": 0,
+            "savings": 200
+          },
+          {
+            "id": "unused-javascript",
+            "title": "Reduce unused JavaScript",
+            "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+            "score": 0.5,
+            "savings": 0
+          }
+        ]
+      },
+      "mobile": {
+        "performanceScore": 65,
+        "fcp": 4144.870317634543,
+        "lcp": 15183.703176345438,
+        "cls": 0,
+        "tbt": 88,
+        "tti": 15191.20317634544,
+        "speedIndex": 4144.870317634543,
+        "totalByteWeight": 2647800,
+        "opportunities": [
+          {
+            "id": "unminified-css",
+            "title": "Minify CSS",
+            "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/).",
+            "score": 0.5,
+            "savings": 0
+          },
+          {
+            "id": "unminified-javascript",
+            "title": "Minify JavaScript",
+            "description": "Minifying JavaScript files can reduce payload sizes and script parse time. [Learn how to minify JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unminified-javascript/).",
+            "score": 0,
+            "savings": 8120
+          },
+          {
+            "id": "unused-javascript",
+            "title": "Reduce unused JavaScript",
+            "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+            "score": 0,
+            "savings": 0
+          }
+        ]
+      }
+    },
+    "projects": {
+      "url": "http://localhost:4321/our-projects",
+      "desktop": {
+        "performanceScore": 97,
+        "fcp": 969.6141,
+        "lcp": 969.6141,
+        "cls": 0.006139255168428897,
+        "tbt": 0,
+        "tti": 969.6141,
+        "speedIndex": 969.6141,
+        "totalByteWeight": 3413258,
+        "opportunities": [
+          {
+            "id": "unminified-css",
+            "title": "Minify CSS",
+            "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/).",
+            "score": 0.5,
+            "savings": 0
+          },
+          {
+            "id": "unminified-javascript",
+            "title": "Minify JavaScript",
+            "description": "Minifying JavaScript files can reduce payload sizes and script parse time. [Learn how to minify JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unminified-javascript/).",
+            "score": 0,
+            "savings": 240
+          },
+          {
+            "id": "unused-javascript",
+            "title": "Reduce unused JavaScript",
+            "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+            "score": 0.5,
+            "savings": 0
+          }
+        ]
+      },
+      "mobile": {
+        "performanceScore": 62,
+        "fcp": 4879.0010231584965,
+        "lcp": 11533.00306947549,
+        "cls": 0,
+        "tbt": 114,
+        "tti": 11533.00306947549,
+        "speedIndex": 4879.0010231584965,
+        "totalByteWeight": 2694661,
+        "opportunities": [
+          {
+            "id": "unminified-css",
+            "title": "Minify CSS",
+            "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/).",
+            "score": 0.5,
+            "savings": 0
+          },
+          {
+            "id": "unminified-javascript",
+            "title": "Minify JavaScript",
+            "description": "Minifying JavaScript files can reduce payload sizes and script parse time. [Learn how to minify JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unminified-javascript/).",
+            "score": 0,
+            "savings": 6460
+          },
+          {
+            "id": "unused-javascript",
+            "title": "Reduce unused JavaScript",
+            "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+            "score": 0,
+            "savings": 150
+          }
+        ]
+      }
+    },
+    "contact": {
+      "url": "http://localhost:4321/contact-us",
+      "desktop": {
+        "performanceScore": 81,
+        "fcp": 985.434136716222,
+        "lcp": 3147.0584355203314,
+        "cls": 0.006139255168428897,
+        "tbt": 0,
+        "tti": 3147.058435520332,
+        "speedIndex": 985.434136716222,
+        "totalByteWeight": 3148630,
+        "opportunities": [
+          {
+            "id": "unminified-css",
+            "title": "Minify CSS",
+            "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/).",
+            "score": 0.5,
+            "savings": 0
+          },
+          {
+            "id": "unminified-javascript",
+            "title": "Minify JavaScript",
+            "description": "Minifying JavaScript files can reduce payload sizes and script parse time. [Learn how to minify JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unminified-javascript/).",
+            "score": 0,
+            "savings": 1310
+          },
+          {
+            "id": "unused-javascript",
+            "title": "Reduce unused JavaScript",
+            "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+            "score": 0.5,
+            "savings": 0
+          }
+        ]
+      },
+      "mobile": {
+        "performanceScore": 60,
+        "fcp": 5117.194955014595,
+        "lcp": 12527.267892035032,
+        "cls": 0,
+        "tbt": 157,
+        "tti": 12527.267892035034,
+        "speedIndex": 5117.194955014595,
+        "totalByteWeight": 2613825,
+        "opportunities": [
+          {
+            "id": "unminified-css",
+            "title": "Minify CSS",
+            "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/).",
+            "score": 0.5,
+            "savings": 0
+          },
+          {
+            "id": "unminified-javascript",
+            "title": "Minify JavaScript",
+            "description": "Minifying JavaScript files can reduce payload sizes and script parse time. [Learn how to minify JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unminified-javascript/).",
+            "score": 0,
+            "savings": 7160
+          },
+          {
+            "id": "unused-javascript",
+            "title": "Reduce unused JavaScript",
+            "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+            "score": 0,
+            "savings": 150
+          }
+        ]
+      }
+    },
+    "about": {
+      "url": "http://localhost:4321/about-us",
+      "desktop": {
+        "performanceScore": 82,
+        "fcp": 1007.9072652911264,
+        "lcp": 2883.72179587338,
+        "cls": 0.006139255168428897,
+        "tbt": 0,
+        "tti": 2883.72179587338,
+        "speedIndex": 1007.9072652911264,
+        "totalByteWeight": 3205001,
+        "opportunities": [
+          {
+            "id": "unminified-css",
+            "title": "Minify CSS",
+            "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/).",
+            "score": 0.5,
+            "savings": 0
+          },
+          {
+            "id": "unminified-javascript",
+            "title": "Minify JavaScript",
+            "description": "Minifying JavaScript files can reduce payload sizes and script parse time. [Learn how to minify JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unminified-javascript/).",
+            "score": 0,
+            "savings": 1290
+          },
+          {
+            "id": "unused-javascript",
+            "title": "Reduce unused JavaScript",
+            "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+            "score": 0,
+            "savings": 50
+          }
+        ]
+      },
+      "mobile": {
+        "performanceScore": 60,
+        "fcp": 4524.245089333756,
+        "lcp": 13122.73526800127,
+        "cls": 0,
+        "tbt": 204.99999999999818,
+        "tti": 13122.73526800127,
+        "speedIndex": 4524.245089333756,
+        "totalByteWeight": 2627134,
+        "opportunities": [
+          {
+            "id": "unminified-css",
+            "title": "Minify CSS",
+            "description": "Minifying CSS files can reduce network payload sizes. [Learn how to minify CSS](https://developer.chrome.com/docs/lighthouse/performance/unminified-css/).",
+            "score": 0.5,
+            "savings": 0
+          },
+          {
+            "id": "unminified-javascript",
+            "title": "Minify JavaScript",
+            "description": "Minifying JavaScript files can reduce payload sizes and script parse time. [Learn how to minify JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unminified-javascript/).",
+            "score": 0,
+            "savings": 7880
+          },
+          {
+            "id": "unused-javascript",
+            "title": "Reduce unused JavaScript",
+            "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+            "score": 0,
+            "savings": 150
+          }
+        ]
+      }
+    }
+  }
+}

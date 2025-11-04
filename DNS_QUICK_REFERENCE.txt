@@ -1,0 +1,46 @@
+================================================================================
+QUICK DNS REFERENCE - arronbennettbuilding.co.uk
+================================================================================
+
+IONOS DNS RECORDS TO ADD:
+================================================================================
+
+Record 1: A Record (Apex Domain)
+---------------------------------
+Type:       A
+Host:       @ (or blank, or "arronbennettbuilding.co.uk")
+Points to:  75.2.60.5
+TTL:        3600
+
+Record 2: CNAME Record (WWW)
+---------------------------------
+Type:       CNAME
+Host:       www
+Points to:  arronbennett.netlify.app
+TTL:        3600
+
+================================================================================
+NETLIFY SETUP:
+================================================================================
+
+1. Go to: https://app.netlify.com/projects/arronbennett
+2. Click "Domain management"
+3. Add domain: arronbennettbuilding.co.uk
+4. Add alias: www.arronbennettbuilding.co.uk
+
+================================================================================
+VERIFICATION:
+================================================================================
+
+After 1-4 hours, test these URLs:
+- http://arronbennettbuilding.co.uk
+- https://arronbennettbuilding.co.uk
+- http://www.arronbennettbuilding.co.uk
+- https://www.arronbennettbuilding.co.uk
+
+All should work and redirect to HTTPS.
+
+Check DNS: https://www.whatsmydns.net/
+Check SSL: https://www.ssllabs.com/ssltest/
+
+================================================================================

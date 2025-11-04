@@ -25,3 +25,6 @@ pnpm-debug.log*
 nul
 public/images/projects/nul
 src/assets/images/projects/nul
+
+# Local Netlify folder
+.netlify

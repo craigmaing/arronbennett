@@ -1,0 +1,436 @@
+
+> arron-bennett-astro@0.0.1 dev
+> astro dev
+
+[2m06:46:52[22m [34m[types][39m Generated [2m6ms[22m
+[2m06:47:02[22m [34m[content][39m Syncing content
+[33m[1m06:47:02[22m [WARN] [glob-loader][39m No files found matching "**/*.md,!**/_*/**/*.md,!**/_*.md" in directory "src\content\projects"
+[2m06:47:02[22m [34m[content][39m Synced content
+[2m06:47:02[22m [34m[vite][39m Re-optimizing dependencies because vite config has changed
+
+[42m[1m astro [22m[49m [32mv5.15.1[39m [2mready in[22m 11502 [2mms[22m
+
+[2m┃[22m Local    [36mhttp://localhost:4321/[39m
+[2m┃[22m Network  [2muse --host to expose[22m
+
+[2m06:47:02[22m [32mwatching for file changes...[39m
+[Image Registry] Loaded 84 project images, 213 gallery images, 7 service images (304 total)
+[2m06:47:18[22m [34m[200][39m / [2m1110ms[22m
+[2m06:47:24[22m [34m[200][39m / [2m8ms[22m
+[2m06:47:54[22m [34m[200][39m / [2m274ms[22m
+[2m06:47:56[22m [34m[200][39m /_image [2m501ms[22m
+[2m06:47:56[22m [34m[200][39m /about-us [2m13ms[22m
+[2m06:47:56[22m [34m[200][39m /services [2m13ms[22m
+[2m06:47:56[22m [34m[200][39m /our-projects [2m9ms[22m
+[2m06:47:56[22m [34m[200][39m /contact-us [2m12ms[22m
+[2m06:49:20[22m [34m[200][39m /contact-us [2m7ms[22m
+[2m06:49:20[22m [34m[200][39m /_image [2m51ms[22m
+[2m06:49:20[22m [34m[200][39m /_image [2m168ms[22m
+[2m06:49:20[22m [34m[200][39m / [2m6ms[22m
+[2m06:49:50[22m [34m[200][39m /_image [2m307ms[22m
+[2m06:49:50[22m [34m[200][39m / [2m10ms[22m
+[2m06:49:51[22m [34m[200][39m /_image [2m193ms[22m
+[2m06:49:51[22m [34m[200][39m /_image [2m271ms[22m
+[2m06:49:51[22m [34m[200][39m /_image [2m273ms[22m
+[2m06:49:51[22m [34m[200][39m /contact-us [2m8ms[22m
+[2m06:50:01[22m [34m[200][39m /_image [2m287ms[22m
+[2m06:50:01[22m [34m[200][39m /about-us [2m10ms[22m
+[2m06:50:01[22m [34m[200][39m /services [2m17ms[22m
+[2m06:50:01[22m [34m[200][39m /_image [2m428ms[22m
+[2m06:50:02[22m [34m[200][39m /our-projects [2m12ms[22m
+[2m06:50:02[22m [34m[200][39m /_image [2m568ms[22m
+[2m06:54:08[22m [34m[200][39m / [2m20ms[22m
+[2m06:54:09[22m [34m[200][39m /about-us [2m20ms[22m
+[2m06:54:09[22m [34m[200][39m /services [2m15ms[22m
+[2m06:54:09[22m [34m[200][39m /our-projects [2m9ms[22m
+[2m06:54:09[22m [34m[200][39m /contact-us [2m21ms[22m
+[2m06:54:46[22m [34m[200][39m /contact-us [2m7ms[22m
+[2m06:54:47[22m [34m[200][39m / [2m11ms[22m
+[2m06:54:57[22m [34m[200][39m /about-us [2m7ms[22m
+[2m06:54:57[22m [34m[200][39m /services [2m10ms[22m
+[2m06:54:57[22m [34m[200][39m /our-projects [2m13ms[22m
+[2m06:54:58[22m [34m[200][39m / [2m6ms[22m
+[2m06:54:58[22m [34m[200][39m /about-us [2m10ms[22m
+[2m06:54:58[22m [34m[200][39m /services [2m9ms[22m
+[2m06:54:59[22m [34m[200][39m /our-projects [2m9ms[22m
+[2m06:54:59[22m [34m[200][39m /contact-us [2m8ms[22m
+[Image Registry] Loaded 84 project images, 213 gallery images, 7 service images (304 total)
+[2m07:32:35[22m [34m[200][39m / [2m60ms[22m
+[Image Registry] Loaded 84 project images, 213 gallery images, 7 service images (304 total)
+[2m07:32:36[22m [34m[200][39m / [2m30ms[22m
+[Image Registry] Loaded 84 project images, 213 gallery images, 7 service images (304 total)
+[2m07:32:36[22m [34m[200][39m / [2m59ms[22m
+[2m07:32:36[22m [34m[200][39m /about-us [2m13ms[22m
+[Image Registry] Loaded 84 project images, 213 gallery images, 7 service images (304 total)
+[2m07:32:36[22m [34m[200][39m /about-us [2m45ms[22m
+[2m07:32:36[22m [34m[200][39m / [2m54ms[22m
+[2m07:32:37[22m [34m[200][39m /services [2m44ms[22m
+[2m07:32:37[22m [34m[200][39m /about-us [2m9ms[22m
+[Image Registry] Loaded 84 project images, 213 gallery images, 7 service images (304 total)
+[2m07:32:37[22m [34m[200][39m /services [2m11ms[22m
+[2m07:32:37[22m [34m[200][39m / [2m9ms[22m
+[2m07:32:37[22m [34m[200][39m /our-projects [2m12ms[22m
+[2m07:32:38[22m [34m[200][39m /about-us [2m10ms[22m
+[2m07:32:38[22m [34m[200][39m /services [2m14ms[22m
+[Image Registry] Loaded 84 project images, 213 gallery images, 7 service images (304 total)
+[2m07:32:38[22m [34m[200][39m / [2m25ms[22m
+[2m07:32:38[22m [34m[200][39m /our-projects [2m40ms[22m
+[2m07:32:38[22m [34m[200][39m /about-us [2m13ms[22m
+[2m07:32:38[22m [34m[200][39m /services [2m12ms[22m
+[2m07:32:38[22m [34m[200][39m /our-projects [2m8ms[22m
+[2m07:32:38[22m [34m[200][39m /contact-us [2m11ms[22m
+[33m[1m07:43:26[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\services.astro.tmp.32608.1762242206531[22m found. Prefix filename with an underscore (`_`) to ignore.
+[33m[1m07:46:17[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\404.astro.tmp.32608.1762242377304[22m found. Prefix filename with an underscore (`_`) to ignore.
+[2m07:46:17[22m [34m[watch][39m src/pages/404.astro
+[2m07:46:17[22m [34m[watch][39m src/pages/404.astro
+[33m[1m07:46:18[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\about-us.astro.tmp.32608.1762242378085[22m found. Prefix filename with an underscore (`_`) to ignore.
+[2m07:46:18[22m [34m[watch][39m src/pages/about-us.astro
+[33m[1m07:46:18[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\our-projects.astro.tmp.32608.1762242378921[22m found. Prefix filename with an underscore (`_`) to ignore.
+[2m07:46:18[22m [34m[watch][39m src/pages/our-projects.astro
+[33m[1m07:46:19[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\services.astro.tmp.32608.1762242379667[22m found. Prefix filename with an underscore (`_`) to ignore.
+[2m07:46:19[22m [34m[watch][39m src/pages/services.astro
+[33m[1m07:46:20[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\service-terms.astro.tmp.32608.1762242380523[22m found. Prefix filename with an underscore (`_`) to ignore.
+[2m07:46:20[22m [34m[watch][39m src/pages/service-terms.astro
+[2m07:46:20[22m [34m[watch][39m src/pages/service-terms.astro
+[31m[1m07:49:14[22m [ERROR][39m [31m[UnhandledRejection][39m Astro detected an unhandled rejection. Here's the stack trace:
+Error: ENOENT: no such file or directory, stat 'C:\Users\Fearn\ab1\arron-bennett-astro\src\pages\services.astro.tmp.32608.1762242554143'
+    at Object.statSync (node:fs:1720:25)
+    at walk (file:///C:/Users/Fearn/ab1/arron-bennett-astro/node_modules/astro/dist/core/routing/manifest/create.js:78:24)
+    at createFileBasedRoutes (file:///C:/Users/Fearn/ab1/arron-bennett-astro/node_modules/astro/dist/core/routing/manifest/create.js:174:5)
+    at createRoutesList (file:///C:/Users/Fearn/ab1/arron-bennett-astro/node_modules/astro/dist/core/routing/manifest/create.js:308:27)
+    at rebuildManifest (file:///C:/Users/Fearn/ab1/arron-bennett-astro/node_modules/astro/dist/vite-plugin-astro-server/plugin.js:73:30)
+    at FSWatcher.emit (node:events:519:35)
+    at FSWatcher.emitWithAll (file:///C:/Users/Fearn/ab1/arron-bennett-astro/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:23789:8)
+    at FSWatcher._emit (file:///C:/Users/Fearn/ab1/arron-bennett-astro/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:23881:8)
+    at NodeFsHandler._handleFile (file:///C:/Users/Fearn/ab1/arron-bennett-astro/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:22466:14)
+    at NodeFsHandler._addToNodeFs (file:///C:/Users/Fearn/ab1/arron-bennett-astro/node_modules/vite/dist/node/chunks/dep-D4NMHUTW.js:22703:21)
+  [1mHint:[22m
+[33m    Make sure your promises all have an `await` or a `.catch()` handler.[39m
+  [1mError reference:[22m
+    [36m[4mhttps://docs.astro.build/en/reference/errors/unhandled-rejection/[24m[39m
+  [1mStack trace:[22m
+[2m    at Object.statSync (node:fs:1720:25)
+    [...] See full stack trace in the browser, or rerun with --verbose.[22m
+[2m07:49:14[22m [34m[watch][39m src/pages/services.astro
+[33m[1m07:49:14[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\about-us.astro.tmp.32608.1762242554969[22m found. Prefix filename with an underscore (`_`) to ignore.
+[2m07:49:14[22m [34m[watch][39m src/pages/about-us.astro
+[33m[1m07:49:15[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\our-projects.astro.tmp.32608.1762242555798[22m found. Prefix filename with an underscore (`_`) to ignore.
+[2m07:49:15[22m [34m[watch][39m src/pages/our-projects.astro
+[33m[1m07:49:16[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\404.astro.tmp.32608.1762242556640[22m found. Prefix filename with an underscore (`_`) to ignore.
+[2m07:49:16[22m [34m[watch][39m src/pages/404.astro
+[2m07:49:16[22m [34m[watch][39m src/pages/404.astro
+[33m[1m07:49:17[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\service-terms.astro.tmp.32608.1762242557361[22m found. Prefix filename with an underscore (`_`) to ignore.
+[2m07:49:17[22m [34m[watch][39m src/pages/service-terms.astro
+[2m07:49:17[22m [34m[watch][39m src/pages/service-terms.astro
+[2m07:52:42[22m [34m[watch][39m AUDIT-REPORT-1-PERFORMANCE-OLD.md
+[2m07:52:42[22m [34m[watch][39m AUDIT-REPORT-1-PERFORMANCE-OLD.md
+[2m07:52:42[22m [34m[watch][39m create-placeholders.md
+[2m07:52:42[22m [34m[watch][39m create-placeholders.md
+[2m07:52:42[22m [34m[watch][39m src/components/Header-ORIGINAL-BACKUP.astro
+[2m07:52:42[22m [34m[watch][39m src/components/Header-ORIGINAL-BACKUP.astro
+[2m07:52:42[22m [34m[watch][39m src/components/_backups/Footer.astro.backup
+[2m07:52:42[22m [34m[watch][39m src/components/_backups/Footer.astro.backup
+[2m07:52:42[22m [34m[watch][39m src/components/_backups/Footer.astro.backup-20251029-133915
+[2m07:52:42[22m [34m[watch][39m src/components/_backups/Footer.astro.backup-20251029-133915
+[2m07:52:42[22m [34m[watch][39m src/data/projects.ts.backup
+[2m07:52:42[22m [34m[watch][39m src/data/projects.ts.backup
+[2m07:52:42[22m [34m[watch][39m src/layouts/_backups/BaseLayout.astro.backup
+[2m07:52:42[22m [34m[watch][39m src/layouts/_backups/BaseLayout.astro.backup
+[2m07:52:42[22m [34m[watch][39m src/layouts/_backups/BaseLayout.astro.pre-lcp-optimization
+[2m07:52:42[22m [34m[watch][39m src/layouts/_backups/BaseLayout.astro.pre-lcp-optimization
+[2m07:52:42[22m [34m[watch][39m src/data/projects.ts.old
+[2m07:52:42[22m [34m[watch][39m src/data/projects.ts.old
+[2m07:52:42[22m [34m[watch][39m src/pages/_backups/contact-us.astro.backup-eggshell
+[2m07:52:42[22m [34m[watch][39m src/pages/_backups/contact-us.astro.backup-eggshell
+[2m07:52:42[22m [34m[watch][39m src/pages/_backups/index.astro.backup
+[2m07:52:42[22m [34m[watch][39m src/pages/_backups/index.astro.backup
+[2m07:52:42[22m [34m[watch][39m src/pages/_backups/index.astro.backup-20251029-133908
+[2m07:52:42[22m [34m[watch][39m src/pages/_backups/index.astro.backup-20251029-133908
+[2m07:52:42[22m [34m[watch][39m src/pages/_backups/index.astro.backup-eggshell
+[2m07:52:42[22m [34m[watch][39m src/pages/_backups/index.astro.backup-eggshell
+[2m07:52:42[22m [34m[watch][39m src/pages/_backups/index.astro.backup-fix
+[2m07:52:42[22m [34m[watch][39m src/pages/_backups/index.astro.backup-fix
+[2m07:52:42[22m [34m[watch][39m src/pages/_backups/index.astro.backup-trustmark
+[2m07:52:42[22m [34m[watch][39m src/pages/_backups/index.astro.backup-trustmark
+[2m07:52:42[22m [34m[watch][39m src/styles/global.css.backup
+[2m07:52:42[22m [34m[watch][39m src/styles/global.css.backup
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/assets/images/projects/README.md
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/assets/images/projects/README.md
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/AboutHero.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/AboutHero.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/Accreditations.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/Accreditations.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/Button.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/Button.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/Card.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/Card.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/ContactCard.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/ContactCard.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/ContactForm.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/ContactForm.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/examples.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/examples.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/Footer.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/Footer.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/Footer.astro.backup
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/Footer.astro.backup
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/Footer.astro.backup-20251029-133915
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/Footer.astro.backup-20251029-133915
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/GalleryImage.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/GalleryImage.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/Header-IMPROVED.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/Header-IMPROVED.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/Header-Optimized.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/Header-Optimized.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/Header-ORIGINAL-BACKUP.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/Header-ORIGINAL-BACKUP.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/Header.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/Header.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/Hero.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/Hero.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/HeroImage.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/HeroImage.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/ImageServiceCard.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/ImageServiceCard.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/index.ts
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/index.ts
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/MobileMenuIsland.tsx
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/MobileMenuIsland.tsx
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/OptimizedImage.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/OptimizedImage.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/ProgressiveImage.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/ProgressiveImage.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/ProjectCard.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/ProjectCard.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/ProjectGalleryLightbox.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/ProjectGalleryLightbox.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/ProjectLightbox.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/ProjectLightbox.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/README.md
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/README.md
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/ResponsiveImage.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/ResponsiveImage.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/SEO.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/SEO.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/ServiceCard.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/ServiceCard.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/TestimonialCard.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/TestimonialCard.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/schema/BaseSchema.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/schema/BaseSchema.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/schema/BreadcrumbSchema.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/schema/BreadcrumbSchema.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/schema/LocalBusinessWithReviews.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/schema/LocalBusinessWithReviews.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/schema/OrganizationSchema.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/schema/OrganizationSchema.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/schema/ServicesPageSchema.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/schema/ServicesPageSchema.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/schema/WebSiteSchema.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/components/schema/WebSiteSchema.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/content/config.ts
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/content/config.ts
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/content/services/excavator-waste.md
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/content/services/excavator-waste.md
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/content/services/full-builds.md
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/content/services/full-builds.md
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/content/services/hard-landscaping.md
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/content/services/hard-landscaping.md
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/content/services/heat-pumps.md
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/content/services/heat-pumps.md
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/content/services/house-extensions.md
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/content/services/house-extensions.md
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/content/services/lime-works.md
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/content/services/lime-works.md
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/content/services/kitchen-bathroom.md
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/content/services/kitchen-bathroom.md
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/content/services/project-management.md
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/content/services/project-management.md
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/content/services/renovations.md
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/content/services/renovations.md
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/content/services/stone-masonry.md
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/content/services/stone-masonry.md
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/content/testimonials/john-smith.md
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/content/testimonials/john-smith.md
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/data/company-info.ts
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/data/company-info.ts
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/data/imageRegistry.ts
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/data/imageRegistry.ts
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/data/projects-gallery.ts
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/data/projects-gallery.ts
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/data/projects.ts
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/data/projects.ts
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/data/projects.ts.backup
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/data/projects.ts.backup
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/data/projects.ts.old
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/data/projects.ts.old
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/data/services.ts
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/data/services.ts
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/data/testimonials.ts
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/data/testimonials.ts
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/layouts/BaseLayout-Optimized.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/layouts/BaseLayout-Optimized.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/404.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/404.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/layouts/BaseLayout.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/layouts/BaseLayout.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/layouts/BaseLayout.astro.backup
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/layouts/BaseLayout.astro.backup
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/layouts/BaseLayout.astro.pre-lcp-optimization
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/layouts/BaseLayout.astro.pre-lcp-optimization
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/about-us.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/about-us.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/contact-us.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/contact-us.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/contact-us.astro.backup-eggshell
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/contact-us.astro.backup-eggshell
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/index.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/index.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/index.astro.backup
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/index.astro.backup
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/index.astro.backup-20251029-133908
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/index.astro.backup-20251029-133908
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/index.astro.backup-eggshell
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/index.astro.backup-eggshell
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/index.astro.backup-fix
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/index.astro.backup-fix
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/index.astro.backup-trustmark
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/index.astro.backup-trustmark
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/our-projects.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/our-projects.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/privacy-policy.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/privacy-policy.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/service-terms.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/service-terms.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/services.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/services.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/terms-and-conditions.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/terms-and-conditions.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/terms-of-use.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/pages/terms-of-use.astro
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/scripts/image-load-detector.js
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/scripts/image-load-detector.js
+[2m07:52:43[22m [34m[watch][39m /src/layouts/BaseLayout.astro?astro&type=style&index=0&lang.css
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/styles/fonts.css
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/scripts/mobile-menu.js
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/scripts/mobile-menu.js
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/types/components.ts
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/types/components.ts
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/utils/schema-helpers.ts
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/utils/schema-helpers.ts
+[2m07:52:43[22m [34m[watch][39m /src/layouts/BaseLayout.astro?astro&type=style&index=0&lang.css
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/styles/global.css
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/styles/global.css.backup
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/styles/global.css.backup
+[2m07:52:43[22m [34m[watch][39m /src/layouts/BaseLayout.astro?astro&type=style&index=0&lang.css
+[2m07:52:43[22m [34m[watch][39m src_backup_20251030_072836/styles/legacy.css
+[2m07:52:53[22m [34m[watch][39m src_backup_20251030_072836/pages/our-projects/[project].astro
+[2m07:52:53[22m [34m[watch][39m src_backup_20251030_072836/pages/our-projects/[project].astro
+[2m07:56:46[22m Configuration file updated. Restarting...
+[2m07:56:46[22m [34m[watch][39m package.json
+[2m07:56:46[22m [34m[watch][39m package.json
+[2m07:56:47[22m [34m[vite][39m Re-optimizing dependencies because lockfile has changed
+[2m07:56:48[22m [34m[content][39m Syncing content
+[33m[1m07:56:48[22m [WARN] [glob-loader][39m No files found matching "**/*.md,!**/_*/**/*.md,!**/_*.md" in directory "src\content\projects"
+[2m07:56:48[22m [34m[content][39m Synced content
+[2m07:56:48[22m [34m[types][39m Generated [2m2.37s[22m
+[2m07:56:48[22m [34m[vite][39m Port 4321 is in use, trying another one...
+[2m07:56:48[22m [34m[vite][39m Port 4322 is in use, trying another one...
+[2m07:59:34[22m Configuration file updated. Restarting...
+[2m07:59:37[22m [34m[vite][39m Re-optimizing dependencies because vite config has changed
+[2m07:59:38[22m [34m[content][39m Syncing content
+[2m07:59:38[22m [34m[content][39m Astro config changed
+[2m07:59:38[22m [34m[content][39m Clearing content store
+[33m[1m07:59:38[22m [WARN] [glob-loader][39m No files found matching "**/*.md,!**/_*/**/*.md,!**/_*.md" in directory "src\content\projects"
+[2m07:59:38[22m [34m[content][39m Synced content
+[2m07:59:38[22m [34m[types][39m Generated [2m4.06s[22m
+[2m07:59:38[22m [34m[vite][39m Port 4321 is in use, trying another one...
+[2m07:59:38[22m [34m[vite][39m Port 4322 is in use, trying another one...
+[Image Registry] Loaded 84 project images, 213 gallery images, 7 service images (304 total)
+[2m08:01:09[22m [34m[200][39m / [2m772ms[22m
+[2m08:01:10[22m [34m[200][39m /_image [2m419ms[22m
+[2m08:01:10[22m [34m[200][39m /_image [2m442ms[22m
+[2m08:01:10[22m [34m[200][39m /_image [2m558ms[22m
+[2m08:01:10[22m [34m[200][39m /_image [2m578ms[22m
+[2m08:01:11[22m [34m[200][39m /about-us [2m8ms[22m
+[2m08:01:11[22m [34m[200][39m /services [2m10ms[22m
+[2m08:01:11[22m [34m[200][39m /our-projects [2m15ms[22m
+[2m08:01:11[22m [34m[200][39m /contact-us [2m20ms[22m
+[2m08:01:12[22m [34m[200][39m /_image [2m707ms[22m
+[2m08:01:12[22m [34m[200][39m /_image [2m414ms[22m
+[2m08:01:12[22m [34m[200][39m /_image [2m812ms[22m
+[2m08:01:12[22m [34m[200][39m /_image [2m939ms[22m
+[2m08:01:12[22m [34m[200][39m /_image [2m871ms[22m
+[2m08:01:12[22m [34m[200][39m /_image [2m587ms[22m
+[2m08:01:12[22m [34m[200][39m /_image [2m876ms[22m
+[2m08:01:13[22m [34m[200][39m /_image [2m678ms[22m
+[2m08:01:13[22m [34m[200][39m /_image [2m912ms[22m
+[2m08:01:13[22m [34m[200][39m /_image [2m174ms[22m
+[2m08:01:13[22m [34m[200][39m /_image [2m241ms[22m
+[2m08:01:13[22m [34m[200][39m /_image [2m240ms[22m
+[2m08:01:14[22m [34m[200][39m /_image [2m299ms[22m
+[2m08:01:14[22m [34m[200][39m /_image [2m347ms[22m
+[2m08:01:14[22m [34m[200][39m /_image [2m399ms[22m
+[2m08:01:14[22m [34m[200][39m / [2m12ms[22m
+[2m08:01:14[22m [34m[200][39m /_image [2m468ms[22m
+[2m08:01:14[22m [34m[200][39m /_image [2m322ms[22m
+[2m08:01:14[22m [34m[200][39m /_image [2m322ms[22m
+[2m08:01:14[22m [34m[200][39m /_image [2m511ms[22m
+[2m08:01:14[22m [34m[200][39m /_image [2m344ms[22m
+[2m08:01:15[22m [34m[200][39m /about-us [2m6ms[22m
+[2m08:01:15[22m [34m[200][39m / [2m6ms[22m
+[2m08:01:16[22m [34m[200][39m /services [2m8ms[22m
+[2m08:01:17[22m [34m[200][39m /our-projects [2m10ms[22m
+[2m08:01:18[22m [34m[200][39m /contact-us [2m5ms[22m
+[2m08:01:20[22m [34m[200][39m / [2m9ms[22m
+[33m[1m08:02:50[22m [WARN][39m Unsupported file type [1mC:\Users\Fearn\ab1\arron-bennett-astro\src\pages\index.astro.tmp.32608.1762243369985[22m found. Prefix filename with an underscore (`_`) to ignore.
+[2m08:02:50[22m [34m[watch][39m src/pages/index.astro
+[2m08:02:50[22m [34m[200][39m / [2m212ms[22m
+[2m08:02:51[22m [34m[200][39m /about-us [2m13ms[22m
+[2m08:02:51[22m [34m[200][39m /services [2m10ms[22m
+[2m08:02:51[22m [34m[200][39m /our-projects [2m8ms[22m
+[2m08:02:51[22m [34m[200][39m /contact-us [2m8ms[22m
+[2m08:02:54[22m [34m[200][39m /_image [2m353ms[22m
+[2m08:02:54[22m [34m[200][39m /_image [2m360ms[22m
+[2m08:02:54[22m [34m[200][39m /_image [2m201ms[22m
+[2m08:02:54[22m [34m[200][39m /_image [2m339ms[22m
+[2m08:02:54[22m [34m[200][39m /_image [2m378ms[22m
+[2m08:05:56[22m [34m[200][39m / [2m10ms[22m
+[2m08:05:57[22m [34m[200][39m /_image [2m357ms[22m
+[2m08:05:57[22m [34m[200][39m /_image [2m520ms[22m
+[2m08:05:57[22m [34m[200][39m /_image [2m525ms[22m
+[2m08:06:15[22m [34m[200][39m /_image [2m227ms[22m
+[2m08:06:15[22m [34m[200][39m /_image [2m235ms[22m
+[2m08:06:15[22m [34m[200][39m /_image [2m313ms[22m
+[2m08:07:15[22m [34m[200][39m /_image [2m182ms[22m
+[2m08:07:15[22m [34m[200][39m /_image [2m265ms[22m
+[2m08:07:29[22m [34m[200][39m /_image [2m222ms[22m
+[2m08:07:48[22m [34m[200][39m /_image [2m387ms[22m
+[2m08:08:03[22m [34m[200][39m /services [2m11ms[22m
+[2m08:08:04[22m [34m[200][39m /_image [2m63ms[22m
+[2m08:08:04[22m [34m[200][39m /_image [2m420ms[22m
+[2m08:08:32[22m [34m[200][39m /contact-us [2m7ms[22m
+[2m08:08:32[22m [34m[200][39m /_image [2m163ms[22m
+[2m08:09:17[22m [34m[200][39m /about-us [2m17ms[22m
+[2m08:09:17[22m [34m[200][39m / [2m28ms[22m
+[2m08:09:18[22m [34m[200][39m /services [2m26ms[22m
+[2m08:09:18[22m [34m[200][39m /our-projects [2m27ms[22m
+[2m08:09:18[22m [34m[200][39m /contact-us [2m23ms[22m
+[2m08:09:18[22m [34m[200][39m /_image [2m1137ms[22m
+[2m08:09:18[22m [34m[200][39m /_image [2m1228ms[22m
+[2m08:09:20[22m [34m[200][39m /_image [2m425ms[22m
+[2m08:09:20[22m [34m[200][39m /_image [2m531ms[22m
+[2m08:09:34[22m [34m[200][39m /our-projects [2m9ms[22m
+[2m08:09:34[22m [34m[200][39m /_image [2m205ms[22m
+[2m08:09:35[22m [34m[200][39m / [2m16ms[22m
+[2m08:09:35[22m [34m[200][39m /_image [2m365ms[22m
+[2m08:12:17[22m [34m[watch][39m AUDIT-REPORT-6-MOBILE-BROWSER.md
+[2m08:12:17[22m [34m[watch][39m AUDIT-REPORT-6-MOBILE-BROWSER.md
+[2m08:12:18[22m [34m[200][39m /our-projects [2m331ms[22m
+[2m08:12:19[22m [34m[200][39m / [2m11ms[22m
+[2m08:12:19[22m [34m[200][39m / [2m11ms[22m
+[2m08:12:54[22m [34m[watch][39m AUDIT-REPORT-6-MOBILE-BROWSER.md
+[2m08:12:54[22m [34m[watch][39m AUDIT-REPORT-6-MOBILE-BROWSER.md
+[2m08:12:55[22m [34m[200][39m / [2m28ms[22m
+[2m08:12:55[22m [34m[200][39m /our-projects [2m383ms[22m
+[2m08:12:55[22m [34m[200][39m / [2m8ms[22m
