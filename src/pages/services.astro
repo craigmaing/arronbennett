@@ -1,7 +1,7 @@
 ---
 /**
  * Services Page - Arron Bennett Building Contractors
- * URL: /our-services
+ * URL: /services
  */
 
 import BaseLayout from '../layouts/BaseLayout.astro';
@@ -9,6 +9,7 @@ import { Image } from 'astro:assets';
 import { services } from '../data/services.ts';
 import { getProjectImage } from '../data/imageRegistry';
 import ServicesPageSchema from '../components/schema/ServicesPageSchema.astro';
+import Button from '../components/Button.astro';
 
 // Sort services by featured status and then by title
 const sortedServices = services.sort((a, b) => {
@@ -18,9 +19,9 @@ const sortedServices = services.sort((a, b) => {
 });
 
 // Page metadata
-const pageTitle = "Our Services | Expert Building Services in Cornwall & Devon";
+const pageTitle = "Building Services Roseland Peninsula | Arron Bennett";
 const pageDescription = "Comprehensive construction services from traditional stone masonry to modern renewable heating systems. Quality craftsmanship backed by over 20 years of experience.";
-const canonicalURL = new URL('/our-services', Astro.site);
+const canonicalURL = new URL('/services', Astro.site);
 ---
 
 <BaseLayout
@@ -87,7 +88,7 @@ const canonicalURL = new URL('/our-services', Astro.site);
                 </ul>
               )}
 
-              <a href="/contact-us" class="btn">Discuss This Project</a>
+              <Button href="/contact-us" variant="primary" size="md" class="text-sm uppercase tracking-wider">Discuss This Project</Button>
             </div>
           </article>
         ))}
@@ -139,7 +140,7 @@ const canonicalURL = new URL('/our-services', Astro.site);
         <p>Browse our portfolio of completed projects across the Roseland Peninsula to see the quality of our craftsmanship.</p>
       </div>
       <div style="text-align: center; margin-top: 30px;">
-        <a href="/our-projects" class="btn btn-primary">View Our Projects</a>
+        <Button href="/our-projects" variant="secondary" size="lg">View Our Projects</Button>
       </div>
     </div>
   </section>
@@ -150,15 +151,15 @@ const canonicalURL = new URL('/our-services', Astro.site);
       <h2>Ready to Discuss Your Project?</h2>
       <p>Get in touch today for a free consultation and no-obligation quote.</p>
       <div class="cta-buttons">
-        <a href="tel:07773463383" class="btn">Call 07773 463383</a>
-        <a href="/contact-us" class="btn btn-primary">Send Enquiry</a>
+        <Button href="tel:07773463383" variant="ghost" size="lg" class="min-w-[200px] !border-white !text-white hover:!bg-white hover:!text-coral-500">Call 07773 463383</Button>
+        <Button href="/contact-us" variant="secondary" size="lg" class="min-w-[200px]">Send Enquiry</Button>
       </div>
     </div>
   </section>
 
   <!-- Comprehensive Schema.org Structured Data -->
   <ServicesPageSchema
-    pageUrl="/our-services"
+    pageUrl="/services"
     pageTitle={pageTitle}
     pageDescription={pageDescription}
     siteUrl={Astro.site?.toString()}
@@ -438,7 +439,7 @@ const canonicalURL = new URL('/our-services', Astro.site);
   }
 
   .process-step p {
-    color: #4A5568;
+    color: #2D3748; /* WCAG AA compliant - 4.5:1 contrast ratio */
     line-height: 1.7;
     font-size: 1rem;
   }

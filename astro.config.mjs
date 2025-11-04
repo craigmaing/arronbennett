@@ -20,21 +20,16 @@ export default defineConfig({
   ],
 
   redirects: {
-    '/about': '/about-us',
-    '/our-services': '/services'
+    '/about': '/about-us'
   },
 
   image: {
     service: {
       entrypoint: 'astro/assets/services/sharp',
       config: {
-        avif: {
-          quality: 80
-        }
+        limitInputPixels: false
       }
-    },
-    // Enable AVIF format alongside WebP for better compression
-    formats: ['avif', 'webp']
+    }
   },
 
   build: {

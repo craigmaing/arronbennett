@@ -1,49 +1,55 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/Button.astro';
 
-const pageTitle = "Page Not Found (404) | Arron Bennett Building - Cornwall";
+const pageTitle = "Page Not Found | Arron Bennett Roseland Builders";
 const pageDescription = "The page you're looking for cannot be found. Return to our homepage or contact us for help with your building project on the Roseland Peninsula, Cornwall.";
 ---
 
 <BaseLayout title={pageTitle} description={pageDescription} noindex={true}>
   <!-- Hero Section -->
   <section
-    class="hero bg-navy-900 text-white py-16 lg:py-20 px-4"
+    class="hero text-white py-16 lg:py-20 px-4"
+    style="background-color: #1a2d4d;"
     aria-label="404 Error page"
     role="region"
   >
     <div class="max-w-4xl mx-auto text-center">
       <!-- 404 Large Number -->
       <div class="mb-8">
-        <h1 class="text-8xl md:text-9xl font-bold opacity-20 select-none" aria-hidden="true">
+        <h1 class="text-8xl md:text-9xl font-bold select-none" style="opacity: 0.25; text-shadow: 0 2px 8px rgba(0,0,0,0.1);" aria-hidden="true">
           404
         </h1>
       </div>
 
       <!-- Main Heading -->
-      <h2 class="text-4xl md:text-5xl font-bold mb-6">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6" style="text-shadow: 0 2px 4px rgba(0,0,0,0.2);">
         Page Not Found
       </h2>
 
       <!-- Description -->
-      <p class="text-xl md:text-2xl opacity-95 mb-8 max-w-2xl mx-auto leading-relaxed">
+      <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto leading-relaxed" style="opacity: 1; text-shadow: 0 1px 3px rgba(0,0,0,0.15);">
         Sorry, we couldn't find the page you're looking for. It may have been moved or doesn't exist.
       </p>
 
       <!-- Action Buttons -->
       <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <a
+        <Button
           href="/"
-          class="inline-block bg-white text-navy-900 font-semibold px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-navy-900"
+          variant="primary"
+          size="lg"
+          class="!bg-[#F27A5E] hover:!bg-[#E06B4E]"
         >
           Return Home
-        </a>
-        <a
+        </Button>
+        <Button
           href="/contact-us"
-          class="inline-block bg-transparent border-2 border-white text-white font-semibold px-8 py-4 rounded-lg hover:bg-white hover:text-navy-900 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-navy-900"
+          variant="ghost"
+          size="lg"
+          class="!border-white !text-white hover:!bg-white hover:!text-navy-900"
         >
           Contact Us
-        </a>
+        </Button>
       </div>
     </div>
   </section>
@@ -125,22 +131,22 @@ const pageDescription = "The page you're looking for cannot be found. Return to 
         Call us directly or send an email
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a
+        <Button
           href="tel:07773463383"
-          class="inline-block bg-white font-semibold px-8 py-4 rounded-lg hover:bg-gray-50 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
-          style="color: #A83820;"
+          variant="ghost"
+          size="lg"
+          class="!bg-white !text-coral-500 hover:!bg-gray-50 !border-0"
         >
           Call 07773 463383
-        </a>
-        <a
+        </Button>
+        <Button
           href="mailto:enquiries@arronbennettbuilding.co.uk"
-          class="inline-block text-white font-semibold px-8 py-4 rounded-lg transition-colors duration-200 border-2 border-white hover:bg-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
-          style="hover:color: #A83820;"
-          onmouseover="this.style.backgroundColor='#ffffff'; this.style.color='#A83820';"
-          onmouseout="this.style.backgroundColor='transparent'; this.style.color='#ffffff';"
+          variant="ghost"
+          size="lg"
+          class="!border-white !text-white hover:!bg-white hover:!text-coral-500"
         >
           Send Email
-        </a>
+        </Button>
       </div>
     </div>
   </section>
