@@ -109,7 +109,6 @@
   package = "@netlify/plugin-lighthouse"
   [plugins.inputs]
     output_path = "lighthouse-reports"
-    uploads_dir = "dist"
 
 # Environment-specific configurations
 [env]
