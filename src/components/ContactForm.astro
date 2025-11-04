@@ -103,17 +103,34 @@
       </p>
     </div>
 
-    <!-- Privacy notice -->
-    <div class="privacy-notice text-sm text-gray-600 bg-gray-50 p-4 rounded-lg">
-      <p>
-        By submitting this form, you agree to our Privacy Policy. We will never share your information with third parties.
+    <!-- Privacy policy checkbox -->
+    <div class="form-group">
+      <label class="flex items-start gap-3 cursor-pointer">
+        <input
+          type="checkbox"
+          id="privacy-consent"
+          name="privacy-consent"
+          required
+          aria-required="true"
+          aria-describedby="privacy-error"
+          class="mt-1 w-5 h-5 rounded border-gray-300 focus:ring-2 focus:ring-blue-500"
+        />
+        <span class="text-sm text-gray-700">
+          I agree to the <a href="/privacy-policy" class="text-blue-600 hover:underline" target="_blank">Privacy Policy</a> and understand that my information will be used to respond to my inquiry. <span class="text-red-600" aria-label="required">*</span>
+        </span>
+      </label>
+      <p id="privacy-error" class="error-message text-red-600 text-sm mt-1 hidden" role="alert">
+        You must agree to the privacy policy to submit the form
       </p>
     </div>
 
     <!-- Submit button -->
     <button
       type="submit"
-      class="submit-button w-full bg-navy-900 text-white font-semibold py-4 px-8 rounded-lg hover:bg-navy-800 focus:outline-none focus:ring-2 focus:ring-navy-500 focus:ring-offset-2 transition-all duration-200"
+      class="submit-button w-full text-white font-semibold py-4 px-8 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all duration-200"
+      style="background-color: #1A2D4D;"
+      onmouseover="this.style.backgroundColor='#152540'"
+      onmouseout="this.style.backgroundColor='#1A2D4D'"
     >
       Send Message
     </button>
