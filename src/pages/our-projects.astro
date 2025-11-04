@@ -118,7 +118,13 @@ const pageDescription = 'View our portfolio of completed building projects on th
       <div class="container">
         <h2>Explore Our Services</h2>
         <p>From traditional stone masonry to modern renovations, discover the full range of building services we offer across the Roseland Peninsula</p>
-        <a href="/services" class="cta-button-secondary">View All Services</a>
+        <a
+          href="/services"
+          class="cta-button"
+          style="background-color: #A83820; color: white;"
+          onmouseover="this.style.backgroundColor='#8B2E19';"
+          onmouseout="this.style.backgroundColor='#A83820';"
+        >View All Services</a>
       </div>
     </section>
 
@@ -127,7 +133,13 @@ const pageDescription = 'View our portfolio of completed building projects on th
       <div class="container">
         <h2>Ready to Start Your Project?</h2>
         <p>Get in touch today to discuss your building requirements and see how we can bring your vision to life.</p>
-        <a href="/contact-us" class="cta-button">Contact Us Today</a>
+        <a
+          href="/contact-us"
+          class="cta-button"
+          style="background-color: #A83820; color: white;"
+          onmouseover="this.style.backgroundColor='#8B2E19';"
+          onmouseout="this.style.backgroundColor='#A83820';"
+        >Contact Us Today</a>
       </div>
     </section>
   
@@ -448,7 +460,7 @@ const pageDescription = 'View our portfolio of completed building projects on th
     font-weight: 600;
     text-transform: uppercase;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 9999px;
     transition: all 0.3s ease;
     letter-spacing: 1px;
   }
