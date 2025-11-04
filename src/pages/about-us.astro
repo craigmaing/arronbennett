@@ -127,7 +127,16 @@ const pageDescription = 'Learn about Arron Bennett, a highly skilled traditional
       <div class="container">
         <h2>Ready to Start Your Project?</h2>
         <p>Get in touch today to discuss your building requirements and receive a free, no-obligation quote.</p>
-        <a href="/contact-us" class="cta-button">Contact Us Today</a>
+        <a
+          href="/contact-us"
+          class="inline-block px-8 py-4 rounded-full text-white font-semibold text-lg hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-coral-300 transition-all duration-200"
+          style="background-color: #A83820; color: white;"
+          onmouseover="this.style.backgroundColor='#8B2E19'; this.style.color='white';"
+          onmouseout="this.style.backgroundColor='#A83820'; this.style.color='white';"
+          aria-label="Contact us to discuss your building project"
+        >
+          Contact Us Today
+        </a>
       </div>
     </section>
 </BaseLayout>
@@ -316,27 +325,6 @@ const pageDescription = 'Learn about Arron Bennett, a highly skilled traditional
     color: white;
     margin: 0 0 30px 0;
     opacity: 0.9;
-  }
-
-  .cta-button {
-    display: inline-block;
-    padding: 16px 40px;
-    background-color: #A83820;
-    color: white !important;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    letter-spacing: 1px;
-  }
-
-  .cta-button:hover {
-    background-color: #A83820;
-    color: white !important;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(242, 122, 94, 0.3);
   }
 
   /* Responsive */
