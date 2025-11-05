@@ -8,9 +8,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { testimonials as testimonialsData } from '../data/testimonials';
 import { Image } from 'astro:assets';
 import { getProjectImage, getGalleryImage } from '../data/imageRegistry';
-import LocalBusinessWithReviews from '../components/schema/LocalBusinessWithReviews.astro';
-import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
-import { generateWebPageSchema, createSchemaGraph } from '../utils/schema-helpers';
 
 // SEO metadata matching original
 const pageTitle = 'Arron Bennett – Traditional Builder in Cornwall';
@@ -451,16 +448,6 @@ const testimonials = testimonialsData.map(t => ({
     </section>
   </main>
 
-  <!-- Comprehensive Schema.org Structured Data -->
-  <LocalBusinessWithReviews siteUrl={canonicalURL} />
-
-  <!-- Breadcrumb Navigation -->
-  <BreadcrumbSchema
-    items={[
-      { name: 'Home', url: '/' }
-    ]}
-    siteUrl={canonicalURL}
-  />
 </BaseLayout>
 
 <style>
