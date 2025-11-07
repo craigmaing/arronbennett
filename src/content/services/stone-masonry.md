@@ -4,6 +4,7 @@ description: "Specialist stone and block masonry including stone cladding, chimn
 order: 6
 featured: true
 image: "/images/services/stone-masonry.jpg"
+imageAlt: "Stone Walling granite/block paving works"
 icon: "brick-wall"
 features:
   - "Traditional stone masonry"

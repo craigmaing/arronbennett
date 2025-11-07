@@ -13,6 +13,7 @@ export interface Service {
   description: string;
   icon?: string;
   image?: ImageMetadata;
+  imageAlt?: string;
   features: string[];
   category: 'building' | 'masonry' | 'renovation' | 'specialist';
   featured: boolean;
@@ -42,6 +43,7 @@ export const services: Service[] = [
     slug: 'renovations',
     description: 'Full restoration and renovation projects combining traditional methods with new technology. We\'re sympathetic to existing buildings while bringing them into the modern age.',
     image: getServiceImage('renovations.jpg'),
+    imageAlt: 'Refurbishment Works',
     features: [
       'Full property restoration',
       'Period property expertise',
@@ -110,6 +112,7 @@ export const services: Service[] = [
     slug: 'stone-block-masonry',
     description: 'Specialist stone and block masonry including stone cladding, chimneys, boundary walls, retaining walls, Cornish dry stone walling, and granite hedging.',
     image: getServiceImage('stone-masonry.jpg'),
+    imageAlt: 'Stone Walling granite/block paving works',
     features: [
       'Stone cladding',
       'Chimney construction',
@@ -161,6 +164,7 @@ export const services: Service[] = [
     slug: 'lime-works',
     description: 'Lime rendering, plastering, lime putties, and repointing for conservation and new traditional builds. Over 20 years of experience working with lime.',
     image: getServiceImage('lime-works.jpg'),
+    imageAlt: 'Lime works to old stone barn refurb',
     features: [
       'Lime rendering',
       'Lime plastering',

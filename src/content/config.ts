@@ -10,6 +10,7 @@ const servicesCollection = defineCollection({
     order: z.number().default(0),
     featured: z.boolean().default(false),
     image: z.string().optional(),
+    imageAlt: z.string().optional(),
     features: z.array(z.string()).default([]),
     keywords: z.array(z.string()).default([]),
     seoTitle: z.string().optional(),

@@ -4,6 +4,7 @@ description: "Full restoration and renovation projects that are sympathetic to e
 order: 2
 featured: true
 image: "/images/services/renovations.jpg"
+imageAlt: "Refurbishment Works"
 icon: "wrench"
 features:
   - "Full property restoration"

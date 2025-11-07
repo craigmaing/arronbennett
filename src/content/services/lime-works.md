@@ -4,6 +4,7 @@ description: "Specialist lime rendering, plastering, and restoration services. O
 order: 9
 featured: false
 image: "/images/services/lime-works.jpg"
+imageAlt: "Lime works to old stone barn refurb"
 icon: "paint-brush"
 features:
   - "Lime rendering and plastering"
