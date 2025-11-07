@@ -13,6 +13,7 @@
  * - Better navigation spacing at all breakpoints
  * - Added smooth transitions throughout
  * - Optimized logo with Astro Image component for AVIF/WebP conversion
+ * - Added Astro View Transitions support for mobile menu
  */
 
 import { Image } from 'astro:assets';
@@ -546,11 +547,50 @@ const phoneNumber = '07773 463383';
 </style>
 
 <script>
-  // Mobile menu toggle functionality with focus trap and animations
-  const mobileMenuButton = document.getElementById('mobile-menu-button');
-  const mobileMenu = document.getElementById('mobile-menu');
+  // Mobile menu toggle functionality with View Transitions support
+  // Following Astro's official View Transitions documentation pattern
 
-  if (mobileMenuButton && mobileMenu) {
+  // Store references to event listeners for cleanup
+  let menuButtonClickHandler = null;
+  let menuKeydownHandler = null;
+  let documentClickHandler = null;
+  let documentKeydownHandler = null;
+
+  // Cleanup function to remove all event listeners
+  const cleanupEventListeners = () => {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuButton && menuButtonClickHandler) {
+      mobileMenuButton.removeEventListener('click', menuButtonClickHandler);
+      menuButtonClickHandler = null;
+    }
+
+    if (mobileMenu && menuKeydownHandler) {
+      mobileMenu.removeEventListener('keydown', menuKeydownHandler);
+      menuKeydownHandler = null;
+    }
+
+    if (documentClickHandler) {
+      document.removeEventListener('click', documentClickHandler);
+      documentClickHandler = null;
+    }
+
+    if (documentKeydownHandler) {
+      document.removeEventListener('keydown', documentKeydownHandler);
+      documentKeydownHandler = null;
+    }
+  };
+
+  document.addEventListener('astro:page-load', () => {
+    // Clean up any existing event listeners first
+    cleanupEventListeners();
+
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (!mobileMenuButton || !mobileMenu) return;
+
     // Get all focusable elements in mobile menu
     const getFocusableElements = () => {
       return mobileMenu.querySelectorAll(
@@ -558,8 +598,8 @@ const phoneNumber = '07773 463383';
       );
     };
 
-    mobileMenuButton.addEventListener('click', () => {
-      const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+    // Toggle menu function
+    const toggleMenu = () => {
       const isHidden = mobileMenu.hasAttribute('hidden');
 
       if (isHidden) {
@@ -570,19 +610,22 @@ const phoneNumber = '07773 463383';
         setTimeout(() => {
           const focusableElements = getFocusableElements();
           if (focusableElements.length > 0) {
-            (focusableElements[0] as HTMLElement).focus();
+            focusableElements[0].focus();
           }
         }, 100);
       } else {
         mobileMenu.setAttribute('hidden', '');
         mobileMenuButton.setAttribute('aria-expanded', 'false');
       }
-    });
+    };
+
+    // Create event handler functions and store references
+    menuButtonClickHandler = toggleMenu;
 
     // Focus trap in mobile menu
-    mobileMenu.addEventListener('keydown', (event) => {
+    menuKeydownHandler = (event) => {
       if (event.key === 'Tab' && !mobileMenu.hasAttribute('hidden')) {
-        const focusableElements = Array.from(getFocusableElements()) as HTMLElement[];
+        const focusableElements = Array.from(getFocusableElements());
         const firstElement = focusableElements[0];
         const lastElement = focusableElements[focusableElements.length - 1];
 
@@ -600,28 +643,48 @@ const phoneNumber = '07773 463383';
           }
         }
       }
-    });
+    };
 
     // Close menu when clicking outside
-    document.addEventListener('click', (event) => {
-      const target = event.target as HTMLElement;
+    documentClickHandler = (event) => {
       if (
-        !mobileMenuButton.contains(target) &&
-        !mobileMenu.contains(target) &&
+        !mobileMenuButton.contains(event.target) &&
+        !mobileMenu.contains(event.target) &&
         !mobileMenu.hasAttribute('hidden')
       ) {
         mobileMenu.setAttribute('hidden', '');
         mobileMenuButton.setAttribute('aria-expanded', 'false');
       }
-    });
+    };
 
     // Close menu on ESC key
-    document.addEventListener('keydown', (event) => {
+    documentKeydownHandler = (event) => {
       if (event.key === 'Escape' && !mobileMenu.hasAttribute('hidden')) {
         mobileMenu.setAttribute('hidden', '');
         mobileMenuButton.setAttribute('aria-expanded', 'false');
         mobileMenuButton.focus();
       }
-    });
-  }
+    };
+
+    // Add event listeners with stored references
+    mobileMenuButton.addEventListener('click', menuButtonClickHandler);
+    mobileMenu.addEventListener('keydown', menuKeydownHandler);
+    document.addEventListener('click', documentClickHandler);
+    document.addEventListener('keydown', documentKeydownHandler);
+  });
+
+  // Clean up event listeners before swap to prevent duplication
+  document.addEventListener('astro:before-swap', () => {
+    // Clean up all event listeners
+    cleanupEventListeners();
+
+    // Close menu before navigation to prevent it staying open
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+
+    if (mobileMenu && mobileMenuButton) {
+      mobileMenu.setAttribute('hidden', '');
+      mobileMenuButton.setAttribute('aria-expanded', 'false');
+    }
+  });
 </script>
