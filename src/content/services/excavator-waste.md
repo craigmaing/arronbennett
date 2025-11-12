@@ -3,8 +3,9 @@ title: "Mini Excavator and Waste Away Services"
 description: "Professional site preparation and waste disposal services using industry-standard mini excavators. Responsible waste management for all construction projects."
 order: 5
 featured: false
-image: "/images/services/excavator.jpg"
+image: "../../assets/images/services/excavator-waste.jpg"
 icon: "truck"
+category: "building"
 features:
   - "Site preparation and groundworks"
   - "Industry-standard mini excavators"

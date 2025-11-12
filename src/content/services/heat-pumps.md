@@ -3,8 +3,9 @@ title: "Ground Source and Air Source Heat Pump Installations"
 description: "Professional heat pump installations for energy-efficient, sustainable heating. Certified team with extensive knowledge and experience in renewable heating systems."
 order: 8
 featured: false
-image: "/images/services/heat-pumps.jpg"
+image: "../../assets/images/services/heat-pumps.jpg"
 icon: "thermometer"
+category: "specialist"
 features:
   - "Ground source heat pump installation"
   - "Air source heat pump installation"

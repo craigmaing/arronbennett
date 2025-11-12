@@ -3,9 +3,10 @@ title: "Stone and Blockwork Masonry"
 description: "Specialist stone and block masonry including stone cladding, chimneys, boundary walls, retaining walls, Cornish dry stone walling, and granite hedging."
 order: 6
 featured: true
-image: "/images/services/stone-masonry.jpg"
+image: "../../assets/images/services/A-Bennett-108.jpg"
 imageAlt: "Stone Walling granite/block paving works"
 icon: "brick-wall"
+category: "masonry"
 features:
   - "Traditional stone masonry"
   - "Stone cladding to timber frames"

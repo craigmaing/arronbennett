@@ -3,9 +3,10 @@ title: "Renovations"
 description: "Full restoration and renovation projects that are sympathetic to existing buildings while incorporating modern technology and energy efficiency."
 order: 2
 featured: true
-image: "/images/services/renovations.jpg"
+image: "../../assets/images/services/renovations.jpg"
 imageAlt: "Refurbishment Works"
 icon: "wrench"
+category: "renovation"
 features:
   - "Full property restoration"
   - "Period property renovation"

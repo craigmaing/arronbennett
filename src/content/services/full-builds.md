@@ -3,8 +3,9 @@ title: "Full Builds"
 description: "Bespoke properties using traditional and modern methods. From new builds to barn conversions, we bring your vision to life with expert craftsmanship."
 order: 1
 featured: true
-image: "/images/services/full-builds.jpg"
+image: "../../assets/images/services/full-builds.jpg"
 icon: "building"
+category: "building"
 features:
   - "Bespoke new build properties"
   - "Barn conversions and heritage builds"

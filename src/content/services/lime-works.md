@@ -3,9 +3,10 @@ title: "Lime Works"
 description: "Specialist lime rendering, plastering, and restoration services. Over 20 years experience working with lime putties, lime mortars, and traditional lime techniques."
 order: 9
 featured: false
-image: "/images/services/lime-works.jpg"
+image: "../../assets/images/services/A-Bennett-80.jpg"
 imageAlt: "Lime works to old stone barn refurb"
 icon: "paint-brush"
+category: "specialist"
 features:
   - "Lime rendering and plastering"
   - "Lime repointing"

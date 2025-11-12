@@ -3,8 +3,9 @@ title: "Bathroom and Kitchen Renovations"
 description: "Full bathroom and kitchen renovation projects that preserve traditional character while incorporating modern touches and new technology."
 order: 3
 featured: true
-image: "/images/services/kitchen-bathroom.jpg"
+image: "../../assets/images/services/kitchen-bathroom.jpg"
 icon: "home"
+category: "renovation"
 features:
   - "Complete kitchen renovations"
   - "Luxury bathroom installations"

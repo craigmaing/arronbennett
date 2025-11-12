@@ -3,8 +3,9 @@ title: "Hard Landscaping"
 description: "Expert hard landscaping services including Cornish dry stone walling, retaining walls, block paving for patios, driveways, and entrances."
 order: 4
 featured: false
-image: "/images/services/hard-landscaping.jpg"
+image: "../../assets/images/services/hard-landscaping.jpg"
 icon: "terrain"
+category: "masonry"
 features:
   - "Cornish dry stone walling"
   - "Retaining walls and boundaries"

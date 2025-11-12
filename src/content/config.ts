@@ -1,17 +1,19 @@
 import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
 
 // Services collection schema
 const servicesCollection = defineCollection({
-  type: 'content',
-  schema: z.object({
+  loader: glob({ pattern: '**/*.md', base: './src/content/services' }),
+  schema: ({ image }) => z.object({
     title: z.string(),
     description: z.string(),
     icon: z.string().optional(),
     order: z.number().default(0),
     featured: z.boolean().default(false),
-    image: z.string().optional(),
+    image: image().optional(),
     imageAlt: z.string().optional(),
     features: z.array(z.string()).default([]),
+    category: z.enum(['building', 'masonry', 'renovation', 'specialist']).default('building'),
     keywords: z.array(z.string()).default([]),
     seoTitle: z.string().optional(),
     seoDescription: z.string().optional(),
@@ -20,30 +22,35 @@ const servicesCollection = defineCollection({
 
 // Testimonials collection schema
 const testimonialsCollection = defineCollection({
-  type: 'content',
+  loader: glob({ pattern: '**/*.md', base: './src/content/testimonials' }),
   schema: z.object({
     name: z.string(),
-    role: z.string().optional(),
-    company: z.string().optional(),
+    location: z.string(),
+    project: z.string(),
     rating: z.number().min(1).max(5).default(5),
-    date: z.date(),
+    date: z.coerce.date(),
     featured: z.boolean().default(false),
+    duration: z.string().optional(),
+    highlights: z.array(z.string()).default([]),
     image: z.string().optional(),
   }),
 });
 
 // Projects/Portfolio collection schema
 const projectsCollection = defineCollection({
-  type: 'content',
-  schema: z.object({
+  loader: glob({ pattern: '**/*.md', base: './src/content/projects' }),
+  schema: ({ image }) => z.object({
     title: z.string(),
     description: z.string(),
     category: z.string(),
-    location: z.string().optional(),
-    completionDate: z.date().optional(),
-    featured: z.boolean().default(false),
-    images: z.array(z.string()).default([]),
-    thumbnail: z.string().optional(),
+    location: z.string(),
+    image: image(),
+    details: z.array(z.string()),
+    images: z.array(z.object({
+      src: image(),
+      alt: z.string(),
+      order: z.number(),
+    })),
   }),
 });
 

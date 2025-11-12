@@ -3,8 +3,9 @@ title: "Project Management"
 description: "Full project oversight from material ordering to finishing touches. Professional liaison with clients, contractors, architects, and engineers throughout your build."
 order: 7
 featured: true
-image: "/images/services/project-management.jpg"
+image: "../../assets/images/services/project-management.jpg"
 icon: "clipboard-list"
+category: "building"
 features:
   - "Complete project oversight"
   - "Material ordering and procurement"
