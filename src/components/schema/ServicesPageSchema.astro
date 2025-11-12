@@ -6,7 +6,7 @@
  * - BreadcrumbList
  * - Multiple Service schemas
  */
-import { services } from '../../data/services';
+import { getCollection } from 'astro:content';
 import { companyInfo } from '../../data/company-info';
 import {
   generateWebPageSchema,
@@ -24,6 +24,16 @@ interface Props {
 
 const { siteUrl = companyInfo.url, pageUrl, pageTitle, pageDescription } = Astro.props;
 
+// Get all services from content collection with error handling
+let servicesEntries = [];
+try {
+  servicesEntries = await getCollection('services');
+} catch (error) {
+  console.error('Error loading services for schema:', error);
+  // Fallback to empty array if collection fails to load
+  servicesEntries = [];
+}
+
 // Generate individual schemas
 const webPageSchema = generateWebPageSchema({
   title: pageTitle,
@@ -36,11 +46,11 @@ const breadcrumbSchema = generateBreadcrumbSchema([
   { name: 'Services', url: pageUrl }
 ], siteUrl);
 
-const serviceSchemas = services.map(service =>
+const serviceSchemas = servicesEntries.map(service =>
   generateServiceSchema({
-    name: service.title,
-    description: service.description,
-    features: service.features
+    name: service.data.title,
+    description: service.data.description,
+    features: service.data.features
   }, siteUrl)
 );
 

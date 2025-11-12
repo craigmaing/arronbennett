@@ -1,0 +1,42 @@
+{
+  // JSON Schema support for content collections
+  // As recommended by Astro docs: https://docs.astro.build/en/guides/content-collections/#collection-json-schemas
+  // This enables IntelliSense and type-checking for JSON/YAML data files
+  "json.schemas": [
+    {
+      "fileMatch": ["/src/content/services/**/*.json"],
+      "url": "./.astro/collections/services.schema.json"
+    },
+    {
+      "fileMatch": ["/src/content/testimonials/**/*.json"],
+      "url": "./.astro/collections/testimonials.schema.json"
+    },
+    {
+      "fileMatch": ["/src/content/projects/**/*.json"],
+      "url": "./.astro/collections/projects.schema.json"
+    }
+  ],
+
+  // YAML Schema support (requires Red Hat YAML extension)
+  // As recommended by Astro docs for YAML files in content collections
+  "yaml.schemas": {
+    "./.astro/collections/services.schema.json": ["/src/content/services/*.yml", "/src/content/services/*.yaml"],
+    "./.astro/collections/testimonials.schema.json": ["/src/content/testimonials/*.yml", "/src/content/testimonials/*.yaml"],
+    "./.astro/collections/projects.schema.json": ["/src/content/projects/*.yml", "/src/content/projects/*.yaml"]
+  },
+
+  // Astro-specific settings
+  "astro.content-intellisense": true,
+
+  // Editor settings for better Astro development experience
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+
+  // File associations
+  "files.associations": {
+    "*.astro": "astro"
+  }
+}

@@ -4,7 +4,19 @@
  */
 
 import { companyInfo } from '../data/company-info';
-import type { Testimonial } from '../data/testimonials';
+
+// Define Testimonial interface locally to avoid dependency on data file
+export interface Testimonial {
+  id: string;
+  name: string;
+  location: string;
+  project: string;
+  content: string;
+  rating: number;
+  duration?: string;
+  highlights: string[];
+  featured: boolean;
+}
 
 /**
  * Generate Organization schema

@@ -319,6 +319,7 @@
 
     private currentProject: ProjectData | null = null;
     private currentImageIndex = 0;
+    private keyboardHandler: ((e: KeyboardEvent) => void) | null = null;
 
     constructor() {
       this.init();
@@ -351,8 +352,8 @@
       this.prevBtn?.addEventListener('click', () => this.showPrevImage());
       this.nextBtn?.addEventListener('click', () => this.showNextImage());
 
-      // Keyboard navigation
-      document.addEventListener('keydown', (e) => {
+      // Keyboard navigation - store handler for cleanup
+      this.keyboardHandler = (e: KeyboardEvent) => {
         if (!this.lightbox?.classList.contains('active')) return;
 
         switch (e.key) {
@@ -366,7 +367,9 @@
             this.showNextImage();
             break;
         }
-      });
+      };
+
+      document.addEventListener('keydown', this.keyboardHandler);
     }
 
     private attachProjectCardListeners() {
@@ -476,14 +479,37 @@
         if (this.nextBtn) this.nextBtn.style.display = 'flex';
       }
     }
+
+    public cleanup() {
+      // Remove keyboard handler
+      if (this.keyboardHandler) {
+        document.removeEventListener('keydown', this.keyboardHandler);
+      }
+
+      // Close lightbox if open
+      this.close();
+    }
   }
 
-  // Initialize lightbox when DOM is ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-      new ProjectLightbox();
-    });
-  } else {
-    new ProjectLightbox();
-  }
+  // Global variable to store instance for cleanup
+  let lightboxInstance: ProjectLightbox | null = null;
+
+  // Initialize lightbox with View Transitions support
+  document.addEventListener('astro:page-load', () => {
+    // Clean up previous instance if exists
+    if (lightboxInstance) {
+      lightboxInstance.cleanup();
+    }
+
+    // Create new instance
+    lightboxInstance = new ProjectLightbox();
+  });
+
+  // Clean up before page swap
+  document.addEventListener('astro:before-swap', () => {
+    if (lightboxInstance) {
+      lightboxInstance.cleanup();
+      lightboxInstance = null;
+    }
+  });
 </script>

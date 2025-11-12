@@ -12,7 +12,12 @@
  * - Fixed header height for consistency
  * - Better navigation spacing at all breakpoints
  * - Added smooth transitions throughout
+ * - Optimized logo with Astro Image component for AVIF/WebP conversion
+ * - Added Astro View Transitions support for mobile menu
  */
+
+import { Image } from 'astro:assets';
+import logoImage from '../assets/images/logo.png';
 
 interface Props {
   class?: string;
@@ -25,7 +30,6 @@ const navLinks = [
   { label: 'ABOUT US', href: '/about-us' },
   { label: 'OUR SERVICES', href: '/services' },
   { label: 'OUR PROJECTS', href: '/our-projects' },
-  { label: 'WORK GALLERY', href: '/work-gallery' },
   { label: 'CONTACT US', href: '/contact-us' },
 ];
 
@@ -39,12 +43,16 @@ const phoneNumber = '07773 463383';
         <!-- Logo Section -->
         <div class="branding">
           <a href="/" class="branding-logo" aria-label="Arron Bennett Building Contractors home">
-            <img
-              src="/images/logo/ab-building-contractor-1.jpg"
-              alt="Arron Bennett"
+            <Image
+              src={logoImage}
+              alt="Arron Bennett Building Contractors"
               class="logo-image"
-              width="180"
-              height="107"
+              width={180}
+              height={107}
+              loading="eager"
+              format="avif"
+              quality={90}
+              densities={[1, 2]}
             />
           </a>
         </div>
@@ -196,9 +204,6 @@ const phoneNumber = '07773 463383';
     max-height: 70px;
     width: auto;
     display: block;
-    /* Fix white background on logo by using blend mode */
-    mix-blend-mode: screen;
-    filter: brightness(1.1);
   }
 
   /* Navigation */
@@ -542,82 +547,124 @@ const phoneNumber = '07773 463383';
 </style>
 
 <script>
-  // Mobile menu toggle functionality with focus trap and animations
-  const mobileMenuButton = document.getElementById('mobile-menu-button');
-  const mobileMenu = document.getElementById('mobile-menu');
+  // Mobile menu toggle functionality with focus trap, animations, and View Transitions support
 
-  if (mobileMenuButton && mobileMenu) {
-    // Get all focusable elements in mobile menu
-    const getFocusableElements = () => {
-      return mobileMenu.querySelectorAll(
-        'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled])'
-      );
-    };
+  // Store event listener references for cleanup
+  let clickHandler: ((event: MouseEvent) => void) | null = null;
+  let escapeHandler: ((event: KeyboardEvent) => void) | null = null;
 
-    mobileMenuButton.addEventListener('click', () => {
-      const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
-      const isHidden = mobileMenu.hasAttribute('hidden');
+  function initializeMobileMenu() {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-      if (isHidden) {
-        mobileMenu.removeAttribute('hidden');
-        mobileMenuButton.setAttribute('aria-expanded', 'true');
+    if (mobileMenuButton && mobileMenu) {
+      // Get all focusable elements in mobile menu
+      const getFocusableElements = () => {
+        return mobileMenu.querySelectorAll(
+          'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled])'
+        );
+      };
 
-        // Focus first link in menu after animation
-        setTimeout(() => {
-          const focusableElements = getFocusableElements();
-          if (focusableElements.length > 0) {
-            (focusableElements[0] as HTMLElement).focus();
-          }
-        }, 100);
-      } else {
-        mobileMenu.setAttribute('hidden', '');
-        mobileMenuButton.setAttribute('aria-expanded', 'false');
-      }
-    });
+      // Toggle menu
+      const toggleMenu = () => {
+        const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        const isHidden = mobileMenu.hasAttribute('hidden');
 
-    // Focus trap in mobile menu
-    mobileMenu.addEventListener('keydown', (event) => {
-      if (event.key === 'Tab' && !mobileMenu.hasAttribute('hidden')) {
-        const focusableElements = Array.from(getFocusableElements()) as HTMLElement[];
-        const firstElement = focusableElements[0];
-        const lastElement = focusableElements[focusableElements.length - 1];
+        if (isHidden) {
+          mobileMenu.removeAttribute('hidden');
+          mobileMenuButton.setAttribute('aria-expanded', 'true');
 
-        if (event.shiftKey) {
-          // Shift + Tab
-          if (document.activeElement === firstElement) {
-            event.preventDefault();
-            lastElement.focus();
-          }
+          // Focus first link in menu after animation
+          setTimeout(() => {
+            const focusableElements = getFocusableElements();
+            if (focusableElements.length > 0) {
+              (focusableElements[0] as HTMLElement).focus();
+            }
+          }, 100);
         } else {
-          // Tab
-          if (document.activeElement === lastElement) {
-            event.preventDefault();
-            firstElement.focus();
+          mobileMenu.setAttribute('hidden', '');
+          mobileMenuButton.setAttribute('aria-expanded', 'false');
+        }
+      };
+
+      // Add click handler
+      mobileMenuButton.addEventListener('click', toggleMenu);
+
+      // Focus trap in mobile menu
+      mobileMenu.addEventListener('keydown', (event) => {
+        if (event.key === 'Tab' && !mobileMenu.hasAttribute('hidden')) {
+          const focusableElements = Array.from(getFocusableElements()) as HTMLElement[];
+          const firstElement = focusableElements[0];
+          const lastElement = focusableElements[focusableElements.length - 1];
+
+          if (event.shiftKey) {
+            // Shift + Tab
+            if (document.activeElement === firstElement) {
+              event.preventDefault();
+              lastElement.focus();
+            }
+          } else {
+            // Tab
+            if (document.activeElement === lastElement) {
+              event.preventDefault();
+              firstElement.focus();
+            }
           }
         }
-      }
-    });
+      });
 
-    // Close menu when clicking outside
-    document.addEventListener('click', (event) => {
-      const target = event.target as HTMLElement;
-      if (
-        !mobileMenuButton.contains(target) &&
-        !mobileMenu.contains(target) &&
-        !mobileMenu.hasAttribute('hidden')
-      ) {
-        mobileMenu.setAttribute('hidden', '');
-        mobileMenuButton.setAttribute('aria-expanded', 'false');
-      }
-    });
+      // Close menu when clicking outside
+      clickHandler = (event: MouseEvent) => {
+        const target = event.target as HTMLElement;
+        if (
+          !mobileMenuButton.contains(target) &&
+          !mobileMenu.contains(target) &&
+          !mobileMenu.hasAttribute('hidden')
+        ) {
+          mobileMenu.setAttribute('hidden', '');
+          mobileMenuButton.setAttribute('aria-expanded', 'false');
+        }
+      };
 
-    // Close menu on ESC key
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && !mobileMenu.hasAttribute('hidden')) {
-        mobileMenu.setAttribute('hidden', '');
-        mobileMenuButton.setAttribute('aria-expanded', 'false');
-        mobileMenuButton.focus();
+      // Remove old handler if exists
+      if (clickHandler) {
+        document.removeEventListener('click', clickHandler);
       }
-    });
+      document.addEventListener('click', clickHandler);
+
+      // Close menu on ESC key
+      escapeHandler = (event: KeyboardEvent) => {
+        if (event.key === 'Escape' && !mobileMenu.hasAttribute('hidden')) {
+          mobileMenu.setAttribute('hidden', '');
+          mobileMenuButton.setAttribute('aria-expanded', 'false');
+          mobileMenuButton.focus();
+        }
+      };
+
+      // Remove old handler if exists
+      if (escapeHandler) {
+        document.removeEventListener('keydown', escapeHandler);
+      }
+      document.addEventListener('keydown', escapeHandler);
+    }
   }
+
+  // Initialize on page load
+  initializeMobileMenu();
+
+  // Re-initialize after View Transitions navigation
+  document.addEventListener('astro:page-load', () => {
+    initializeMobileMenu();
+  });
+
+  // Close menu before navigation to prevent it staying open
+  document.addEventListener('astro:before-swap', () => {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+
+    if (mobileMenu && mobileMenuButton) {
+      mobileMenu.setAttribute('hidden', '');
+      mobileMenuButton.setAttribute('aria-expanded', 'false');
+    }
+  });
 </script>

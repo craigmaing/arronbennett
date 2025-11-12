@@ -3,14 +3,38 @@
  * LocalBusiness with Reviews Schema Component
  * Generates complete LocalBusiness markup including aggregate rating and individual reviews
  */
+import { getCollection } from 'astro:content';
 import { generateLocalBusinessSchema } from '../../utils/schema-helpers';
-import { testimonials } from '../../data/testimonials';
 
 interface Props {
   siteUrl?: string;
 }
 
 const { siteUrl } = Astro.props;
+
+// Fetch testimonials from content collection with error handling
+let allTestimonials = [];
+try {
+  allTestimonials = await getCollection('testimonials');
+} catch (error) {
+  console.error('Error loading testimonials for schema:', error);
+  // Fallback to empty array if collection fails to load
+  allTestimonials = [];
+}
+
+// Transform to match the Testimonial interface expected by schema helpers
+const testimonials = allTestimonials.map(t => ({
+  id: t.id,
+  name: t.data.name,
+  location: t.data.location,
+  project: t.data.project,
+  content: t.body,
+  rating: t.data.rating,
+  duration: t.data.duration,
+  highlights: t.data.highlights,
+  featured: t.data.featured
+}));
+
 const schema = generateLocalBusinessSchema(testimonials, siteUrl);
 ---
 

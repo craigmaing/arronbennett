@@ -6,16 +6,26 @@
 
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
-import { services } from '../data/services.ts';
+import { getCollection } from 'astro:content';
 import { getProjectImage } from '../data/imageRegistry';
 import ServicesPageSchema from '../components/schema/ServicesPageSchema.astro';
 import Button from '../components/Button.astro';
 
+// Get all services from content collection with error handling
+let servicesEntries = [];
+try {
+  servicesEntries = await getCollection('services');
+} catch (error) {
+  console.error('Error loading services collection:', error);
+  // Fallback to empty array if collection fails to load
+  servicesEntries = [];
+}
+
 // Sort services by featured status and then by title
-const sortedServices = services.sort((a, b) => {
-  if (a.featured && !b.featured) return -1;
-  if (!a.featured && b.featured) return 1;
-  return a.title.localeCompare(b.title);
+const sortedServices = servicesEntries.sort((a, b) => {
+  if (a.data.featured && !b.data.featured) return -1;
+  if (!a.data.featured && b.data.featured) return 1;
+  return a.data.title.localeCompare(b.data.title);
 });
 
 // Page metadata
@@ -65,24 +75,25 @@ const canonicalURL = new URL('/services', Astro.site);
       <div class="services-grid">
         {sortedServices.map((service) => (
           <article class="service-card">
-            {service.image && (
+            {service.data.image && (
               <Image
-                src={service.image}
-                alt={service.imageAlt || service.title}
+                src={service.data.image}
+                alt={service.data.imageAlt || service.data.title}
                 class="service-image"
                 width={400}
                 height={250}
                 loading="lazy"
                 format="avif"
+                quality="high"
               />
             )}
             <div class="service-content">
-              <h3>{service.title}</h3>
-              <p class="service-description">{service.description}</p>
+              <h3>{service.data.title}</h3>
+              <p class="service-description">{service.data.description}</p>
 
-              {service.features && service.features.length > 0 && (
+              {service.data.features && service.data.features.length > 0 && (
                 <ul class="service-features">
-                  {service.features.slice(0, 4).map((feature) => (
+                  {service.data.features.slice(0, 4).map((feature) => (
                     <li>{feature}</li>
                   ))}
                 </ul>
